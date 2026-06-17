@@ -58,9 +58,45 @@ body {
 .reveal-2 { animation-delay: 0.2s; }
 .reveal-3 { animation-delay: 0.34s; }
 
+/* Hero slow zoom/pan (Ken Burns) — mirrors Elementor background motion fx */
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(0, -1.5%, 0);
+  }
+}
+
+.kenburns {
+  animation: kenburns 16s ease-in-out infinite alternate;
+}
+
+/* Soft glow pulse for the scroll cue line */
+@keyframes cuepulse {
+  0%, 100% { opacity: 0.35; transform: scaleY(0.7); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+.cue-line {
+  animation: cuepulse 2.2s ease-in-out infinite;
+  transform-origin: top;
+}
+
 ::selection {
   background: var(--gold);
   color: #fff;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .kenburns,
+  .cue-line {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Hide scrollbar on horizontal rails */
