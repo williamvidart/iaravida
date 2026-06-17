@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Cormorant_Garamond } from "next/font/google";
+import { Montserrat, Shadows_Into_Light } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
+const montserrat = Montserrat({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-serif",
+const script = Shadows_Into_Light({
+  variable: "--font-script",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
   title: "Iara Vida — Artista",
   description:
-    "Iara Vida — artista. Obras, projetos e contato.",
+    "A artista que habita em mim honra a artista que habita em você. Aquarelas, telas, geotintas e imersões de Iara Vida.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

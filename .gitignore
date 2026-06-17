@@ -43,3 +43,5 @@ next-env.d.ts
 # local reference / temp scratch files
 .tmp_*
 *.local.html
+
+.vercel
