@@ -7,6 +7,7 @@ const links = [
   { href: "#quem-sou", label: "Quem Sou" },
   { href: "#portfolio", label: "Portfólio" },
   { href: "#imersoes", label: "Imersões" },
+  { href: "/oraculo", label: "Oráculo" },
   { href: "#contato", label: "Contato" },
 ];
 
