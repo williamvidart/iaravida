@@ -141,7 +141,7 @@ function QuemSou() {
                 className="h-full w-full"
                 style={{
                   backgroundColor: "#c79b58",
-                  backgroundImage: "url('/retrato.jpg')",
+                  backgroundImage: "url('/mural.jpg')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
