@@ -59,7 +59,7 @@ function Hero() {
     <section id="topo" className="relative">
       <MobileNav />
 
-      <div className="relative flex min-h-[88vh] flex-col items-center justify-center overflow-hidden">
+      <div className="relative flex min-h-[88vh] flex-col items-center justify-end overflow-hidden">
         <div aria-hidden className="absolute inset-0 overflow-hidden">
           <div
             className="kenburns absolute inset-[-6%]"
@@ -80,7 +80,7 @@ function Hero() {
           }}
         />
 
-        <p className="reveal reveal-2 font-script relative px-8 text-center text-3xl leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:text-4xl">
+        <p className="reveal reveal-2 font-script relative mb-28 px-8 text-center text-3xl leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:text-4xl">
           A artista que habita em mim
           <br />
           honra a artista que habita em você
