@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import MobileNav from "../components/MobileNav";
 import Reveal from "../components/Reveal";
+import MotionFx from "../components/MotionFx";
 
 export const metadata: Metadata = {
   title: "Telas e Aquarelas | Iara Vida",
@@ -25,6 +26,7 @@ export default function TelasEAquarelas() {
     >
       <Hero />
       <NaoSaoComuns />
+      <TerraFaixa />
       <Credibilidade />
       <VideoMary />
       <Processo />
@@ -129,6 +131,38 @@ function NaoSaoComuns() {
           <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">
             Cada tela e cada aquarela nasce personalizada, pensada para você.
             Nenhuma é igual à outra — é única, como a sua história.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* --------------------------- TERRA FAIXA ---------------------------- */
+function TerraFaixa() {
+  return (
+    <section className="relative h-[380px] overflow-hidden">
+      <MotionFx speedY={5} className="absolute inset-x-0 -top-20 z-0">
+        <div
+          className="h-[500px] w-full"
+          style={{
+            backgroundImage: "url('/terra-camadas.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </MotionFx>
+      <div aria-hidden className="absolute inset-0 z-10 bg-dark-deep/50" />
+      <div className="relative z-20 flex h-full flex-col items-center justify-center px-8 text-center">
+        <Reveal dir="fade">
+          <p className="font-script text-4xl leading-snug text-white drop-shadow-md">
+            a terra que habita cada obra
+          </p>
+        </Reveal>
+        <Reveal dir="up" delay={160}>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/80">
+            Pigmentos colhidos em viagens — África, Marrocos, Brasil —<br />
+            transformados em arte única para a sua casa.
           </p>
         </Reveal>
       </div>
