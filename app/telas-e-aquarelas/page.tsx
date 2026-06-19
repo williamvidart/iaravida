@@ -30,7 +30,7 @@ export default function TelasEAquarelas() {
       <NaoSaoComuns />
       <TerraFaixa />
       <Credibilidade />
-      <VideoMary />
+      <VideoMari />
       <Processo />
       <Galeria />
       <Precos />
@@ -204,7 +204,7 @@ function Credibilidade() {
 }
 
 /* ---------------------------- VÍDEO MARY ---------------------------- */
-function VideoMary() {
+function VideoMari() {
   return (
     <section className="bg-cream px-6 py-20">
       <div className="mx-auto max-w-md text-center">
@@ -213,34 +213,20 @@ function VideoMary() {
             uma encomenda real
           </span>
           <h2 className="mt-3 text-3xl font-bold text-ink">
-            A arte que criei para a Mary
+            A arte que criei para a Mari
           </h2>
         </Reveal>
 
-        {/* Espaço reservado para o vídeo (a Iara vai enviar) */}
         <Reveal dir="up" delay={150}>
           <div className="mx-auto mt-8 w-full max-w-[300px]">
-            <div className="relative flex aspect-[9/16] items-center justify-center overflow-hidden rounded-2xl border border-ink/10 bg-dark shadow-lg">
-              <div
-                aria-hidden
-                className="absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage: "url('/mural.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-              <div className="relative flex flex-col items-center gap-3 text-cream">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full border border-cream/60">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7L8 5Z" />
-                  </svg>
-                </span>
-                <span className="text-[11px] uppercase tracking-[0.2em] text-cream/80">
-                  vídeo — encomenda da Mary
-                </span>
-              </div>
-            </div>
+            <video
+              src="/mari-video.mp4"
+              controls
+              playsInline
+              preload="none"
+              className="w-full rounded-2xl shadow-lg"
+              style={{ aspectRatio: "9/16", objectFit: "cover" }}
+            />
           </div>
         </Reveal>
       </div>
