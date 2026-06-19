@@ -367,18 +367,18 @@ const tabela = [
     tipo: "Aquarelas",
     nota: "Papel de algodão, pigmentos naturais",
     itens: [
-      { tam: "Pequena", medida: "± 21 × 30 cm", preco: "a consultar" },
-      { tam: "Média", medida: "± 30 × 40 cm", preco: "a consultar" },
-      { tam: "Grande", medida: "± 40 × 60 cm", preco: "a consultar" },
+      { tam: "Pequena", medida: "± 21 × 30 cm", preco: "R$ —" },
+      { tam: "Média", medida: "± 30 × 40 cm", preco: "R$ —" },
+      { tam: "Grande", medida: "± 40 × 60 cm", preco: "R$ —" },
     ],
   },
   {
     tipo: "Telas",
     nota: "Tela em bastidor, terras e tintas",
     itens: [
-      { tam: "Pequena", medida: "± 30 × 40 cm", preco: "a consultar" },
-      { tam: "Média", medida: "± 50 × 70 cm", preco: "a consultar" },
-      { tam: "Grande", medida: "± 70 × 100 cm", preco: "a consultar" },
+      { tam: "Pequena", medida: "± 30 × 40 cm", preco: "R$ —" },
+      { tam: "Média", medida: "± 50 × 70 cm", preco: "R$ —" },
+      { tam: "Grande", medida: "± 70 × 100 cm", preco: "R$ —" },
     ],
   },
 ];
