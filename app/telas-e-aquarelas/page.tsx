@@ -102,22 +102,38 @@ function Hero() {
 /* ------------------------- NÃO SÃO COMUNS --------------------------- */
 function NaoSaoComuns() {
   return (
-    <section className="bg-cream px-6 py-20">
-      <div className="mx-auto max-w-md text-center">
+    <section className="relative overflow-hidden px-6 py-24">
+      {/* Textura de terra como fundo */}
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/terra-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center 30%",
+        }}
+      />
+      {/* Overlay creme suave para legibilidade */}
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{ background: "rgba(232, 210, 185, 0.72)" }}
+      />
+      <div className="relative mx-auto max-w-md text-center">
         <Reveal dir="up">
-          <h2 className="font-script text-4xl text-gold">
+          <h2 className="font-script text-4xl text-dark">
             não são pinturas comuns
           </h2>
         </Reveal>
         <Reveal dir="up" delay={120}>
-          <p className="mt-6 text-lg leading-relaxed text-ink">
+          <p className="mt-6 text-lg leading-relaxed text-dark">
             São artes feitas com <strong>terras que coletei nas minhas
             viagens</strong> — uma oportunidade de ter a energia da natureza
             dentro da sua casa.
           </p>
         </Reveal>
         <Reveal dir="up" delay={220}>
-          <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">
+          <p className="mt-5 text-[15px] leading-relaxed text-dark/75">
             Cada tela e cada aquarela nasce personalizada, pensada para você.
             Nenhuma é igual à outra — é única, como a sua história.
           </p>
