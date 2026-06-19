@@ -337,6 +337,14 @@ const almaImages = [
   { src: "/alma-5.jpg", alt: "Alma Baiana — detalhe 5" },
 ];
 
+const inocenciaImages = [
+  { src: "/inocencia-1.jpg", alt: "Inocência — detalhe 1" },
+  { src: "/inocencia-2.jpg", alt: "Inocência — detalhe 2" },
+  { src: "/inocencia-3.jpg", alt: "Inocência — detalhe 3" },
+  { src: "/inocencia-4.jpg", alt: "Inocência — detalhe 4" },
+  { src: "/inocencia-5.jpg", alt: "Inocência — detalhe 5" },
+];
+
 const obras = [
   {
     nome: "Cerrado Vivo",
@@ -348,7 +356,11 @@ const obras = [
     desc: "Aves em voo, cheirinho do mar e a fé que pulsa na Bahia — tudo numa só tela.",
     images: almaImages,
   },
-  { nome: "Obra III", desc: "Descrição da arte, em breve.", images: null },
+  {
+    nome: "Inocência",
+    desc: "Uma criança Tupi Guarani indo tomar banho de rio, com o olhar simples e conectado com a natureza.",
+    images: inocenciaImages,
+  },
   { nome: "Obra IV",  desc: "Descrição da arte, em breve.", images: null },
 ];
 
