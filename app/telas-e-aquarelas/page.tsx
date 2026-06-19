@@ -329,15 +329,26 @@ const cerradoImages = [
   { src: "/cerrado-4.jpg", alt: "Cerrado Vivo — detalhe 4" },
 ];
 
+const almaImages = [
+  { src: "/alma-1.jpg", alt: "Alma Baiana — detalhe 1" },
+  { src: "/alma-2.jpg", alt: "Alma Baiana — detalhe 2" },
+  { src: "/alma-3.jpg", alt: "Alma Baiana — detalhe 3" },
+  { src: "/alma-4.jpg", alt: "Alma Baiana — detalhe 4" },
+];
+
 const obras = [
   {
     nome: "Cerrado Vivo",
     desc: "Uma intenção de proteger e cultivar o cerrado através do cuidado com a natureza.",
-    carousel: true,
+    images: cerradoImages,
   },
-  { nome: "Obra II",  desc: "Descrição da arte, em breve.", carousel: false },
-  { nome: "Obra III", desc: "Descrição da arte, em breve.", carousel: false },
-  { nome: "Obra IV",  desc: "Descrição da arte, em breve.", carousel: false },
+  {
+    nome: "Alma Baiana",
+    desc: "Aves em voo, cheirinho do mar e a fé que pulsa na Bahia — tudo numa só tela.",
+    images: almaImages,
+  },
+  { nome: "Obra III", desc: "Descrição da arte, em breve.", images: null },
+  { nome: "Obra IV",  desc: "Descrição da arte, em breve.", images: null },
 ];
 
 function Galeria() {
@@ -357,8 +368,8 @@ function Galeria() {
           {obras.map((o, i) => (
             <Reveal key={o.nome} dir="up" delay={i * 90}>
               <figure>
-                {o.carousel ? (
-                  <ObraCarousel images={cerradoImages} />
+                {o.images ? (
+                  <ObraCarousel images={o.images} />
                 ) : (
                   <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-[#c79b58]">
                     <span className="rounded-full border border-white/50 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white/85">
