@@ -21,6 +21,8 @@ export default function TelasEAquarelas() {
         {
           "--gold": "#c4897a",
           "--gold-dark": "#b07262",
+          "--ink": "#8c3010",
+          "--ink-soft": "#7a4030",
         } as React.CSSProperties
       }
     >
