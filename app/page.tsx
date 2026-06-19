@@ -281,7 +281,7 @@ function Galeria() {
       <MotionFx speedY={4} className="absolute inset-x-0 -top-16 z-0">
         <Foto className="h-[460px] w-full" tom="#8a5a2c" label="foto de fundo" />
       </MotionFx>
-      <div aria-hidden className="absolute inset-0 z-10 bg-black/45" />
+      <div aria-hidden className="absolute inset-0 z-10 bg-dark-deep/55" />
       <div className="relative z-20 flex h-full flex-col items-center justify-center px-8 text-center">
         <Reveal dir="fade">
           <p className="font-script text-3xl text-white drop-shadow-md sm:text-4xl">
