@@ -164,7 +164,7 @@ function TerraFaixa() {
             Eu mesma coletei cada pigmento nas minhas viagens. São terras com
             energia única e pura — de solos do Brasil como{" "}
             <span className="font-medium text-white">
-              MG, SP, GO, RJ, Bahia e SC
+              MG, SP, GO, RJ, BA e SC
             </span>
             , e de lugares pelo mundo como{" "}
             <span className="font-medium text-white">
