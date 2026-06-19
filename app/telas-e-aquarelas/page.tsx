@@ -160,9 +160,17 @@ function TerraFaixa() {
           </p>
         </Reveal>
         <Reveal dir="up" delay={160}>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/80">
-            Pigmentos colhidos em viagens — África, Marrocos, Brasil —<br />
-            transformados em arte única para a sua casa.
+          <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-white/90">
+            Eu mesma coletei cada pigmento nas minhas viagens. São terras com
+            energia única e pura — de solos do Brasil como{" "}
+            <span className="font-medium text-white">
+              MG, SP, GO, RJ, Bahia e SC
+            </span>
+            , e de lugares pelo mundo como{" "}
+            <span className="font-medium text-white">
+              Inglaterra, Portugal, África, Marrocos e Israel
+            </span>
+            . Cada cor carrega a alma do lugar onde nasceu.
           </p>
         </Reveal>
       </div>
