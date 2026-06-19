@@ -149,13 +149,13 @@ function TerraFaixa() {
         <div
           className="h-[500px] w-full"
           style={{
-            backgroundImage: "url('/terra-camadas.jpg')",
+            backgroundImage: "url('/terra-rachada.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
       </MotionFx>
-      <div aria-hidden className="absolute inset-0 z-10 bg-dark-deep/50" />
+      <div aria-hidden className="absolute inset-0 z-10 bg-black/60" />
       <div className="relative z-20 flex h-full flex-col items-center justify-center px-8 text-center">
         <Reveal dir="fade">
           <p className="font-script text-4xl leading-snug text-white drop-shadow-md">
