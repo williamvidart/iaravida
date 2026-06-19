@@ -13,7 +13,16 @@ const CONTATO = "https://www.instagram.com/iaravidart/";
 
 export default function TelasEAquarelas() {
   return (
-    <div className="flex flex-1 flex-col bg-white">
+    // Override --gold só nesta página: rosa terroso no lugar do ocre
+    <div
+      className="flex flex-1 flex-col bg-white"
+      style={
+        {
+          "--gold": "#c4897a",
+          "--gold-dark": "#b07262",
+        } as React.CSSProperties
+      }
+    >
       <Hero />
       <NaoSaoComuns />
       <Credibilidade />
