@@ -60,12 +60,16 @@ function Hero() {
       <div className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden bg-dark px-6 text-center">
         <div
           aria-hidden
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0"
           style={{
-            backgroundImage: "url('/mural.jpg')",
+            backgroundImage: "url('/telas-hero.jpg')",
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center top",
           }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-dark/55"
         />
         <div className="relative">
           <Reveal dir="fade">
