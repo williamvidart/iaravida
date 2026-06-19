@@ -272,10 +272,23 @@ const etapas = [
 
 function Processo() {
   return (
-    <section id="processo" className="bg-gold px-6 py-20">
-      <div className="mx-auto max-w-md">
+    <section id="processo" className="relative overflow-hidden px-6 py-20">
+      {/* Fundo: aquarela de areia em parallax */}
+      <MotionFx speedY={3} className="absolute inset-x-0 -top-16 z-0">
+        <div
+          className="h-[120%] w-full"
+          style={{
+            backgroundImage: "url('/processo-bg.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center bottom",
+          }}
+        />
+      </MotionFx>
+      {/* Overlay translúcido para garantir legibilidade dos cards */}
+      <div aria-hidden className="absolute inset-0 z-10 bg-white/20" />
+      <div className="relative z-20 mx-auto max-w-md">
         <Reveal dir="up">
-          <h2 className="text-center text-4xl font-bold tracking-tight text-white">
+          <h2 className="text-center text-4xl font-bold tracking-tight text-dark">
             Como a arte chega
             <br />
             até a sua casa
@@ -302,7 +315,7 @@ function Processo() {
 
         <Reveal dir="up" delay={200}>
           <div className="mt-10 text-center">
-            <Cta variant="light">Encomende sua arte</Cta>
+            <Cta variant="solid">Encomende sua arte</Cta>
           </div>
         </Reveal>
       </div>
