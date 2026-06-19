@@ -334,6 +334,7 @@ const almaImages = [
   { src: "/alma-2.jpg", alt: "Alma Baiana — detalhe 2" },
   { src: "/alma-3.jpg", alt: "Alma Baiana — detalhe 3" },
   { src: "/alma-4.jpg", alt: "Alma Baiana — detalhe 4" },
+  { src: "/alma-5.jpg", alt: "Alma Baiana — detalhe 5" },
 ];
 
 const obras = [
