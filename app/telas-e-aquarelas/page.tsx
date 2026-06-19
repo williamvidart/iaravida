@@ -260,13 +260,13 @@ function Processo() {
   return (
     <section id="processo" className="relative overflow-hidden px-6 py-20">
       {/* Fundo: aquarela de areia em parallax */}
-      <MotionFx speedY={3} className="absolute inset-x-0 -top-16 z-0">
+      <MotionFx speedY={3} className="absolute inset-x-0 -top-20 z-0">
         <div
-          className="h-[120%] w-full"
+          className="h-[900px] w-full"
           style={{
             backgroundImage: "url('/processo-bg.jpg')",
             backgroundSize: "cover",
-            backgroundPosition: "center bottom",
+            backgroundPosition: "center",
           }}
         />
       </MotionFx>
