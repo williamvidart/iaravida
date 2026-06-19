@@ -326,6 +326,7 @@ const cerradoImages = [
   { src: "/cerrado-1.jpg", alt: "Cerrado Vivo — detalhe 1" },
   { src: "/cerrado-2.jpg", alt: "Cerrado Vivo — detalhe 2" },
   { src: "/cerrado-3.jpg", alt: "Cerrado Vivo — detalhe 3" },
+  { src: "/cerrado-4.jpg", alt: "Cerrado Vivo — detalhe 4" },
 ];
 
 const obras = [
