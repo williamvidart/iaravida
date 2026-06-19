@@ -5,9 +5,10 @@ import { useState } from "react";
 const links = [
   { href: "#topo", label: "Início" },
   { href: "#quem-sou", label: "Quem Sou" },
-  { href: "#portfolio", label: "Portfólio" },
-  { href: "#imersoes", label: "Imersões" },
+  { href: "#curso", label: "Curso" },
+  { href: "#portfolio", label: "Telas e Aquarelas" },
   { href: "/oraculo", label: "Oráculo" },
+  { href: "#imersoes", label: "Imersões" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -54,7 +55,7 @@ export default function MobileNav() {
       {/* Slide-down menu */}
       <nav
         className={`overflow-hidden bg-dark/95 backdrop-blur-sm transition-[max-height] duration-500 ease-out ${
-          open ? "max-h-80" : "max-h-0"
+          open ? "max-h-[460px]" : "max-h-0"
         }`}
       >
         <ul className="flex flex-col gap-1 px-5 py-4">
