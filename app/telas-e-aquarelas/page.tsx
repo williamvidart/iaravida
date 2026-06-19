@@ -1,0 +1,425 @@
+import type { Metadata } from "next";
+import MobileNav from "../components/MobileNav";
+import Reveal from "../components/Reveal";
+
+export const metadata: Metadata = {
+  title: "Telas e Aquarelas | Iara Vida",
+  description:
+    "Encomende uma arte personalizada e única — telas e aquarelas feitas com terras coletadas em viagens. Designer de interiores e psicologia das cores por Iara Vida.",
+};
+
+// Contato — CTAs (ajuste para o WhatsApp da Iara quando tiver o número)
+const CONTATO = "https://www.instagram.com/iaravidart/";
+
+export default function TelasEAquarelas() {
+  return (
+    <div className="flex flex-1 flex-col bg-white">
+      <Hero />
+      <NaoSaoComuns />
+      <Credibilidade />
+      <VideoMary />
+      <Processo />
+      <Galeria />
+      <Precos />
+      <Footer />
+    </div>
+  );
+}
+
+/* ------------------------------- CTA -------------------------------- */
+function Cta({
+  children,
+  variant = "solid",
+  href = CONTATO,
+}: {
+  children: React.ReactNode;
+  variant?: "solid" | "outline" | "light";
+  href?: string;
+}) {
+  const base =
+    "inline-flex h-12 items-center justify-center rounded-full px-8 text-sm font-medium uppercase tracking-[0.15em] transition-colors";
+  const styles = {
+    solid: "bg-gold text-white hover:bg-gold-dark",
+    outline:
+      "border border-ink/25 text-ink hover:border-gold hover:text-gold",
+    light:
+      "border border-cream/40 text-cream hover:border-gold hover:text-gold",
+  }[variant];
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={`${base} ${styles}`}>
+      {children}
+    </a>
+  );
+}
+
+/* ------------------------------ HERO -------------------------------- */
+function Hero() {
+  return (
+    <section id="topo" className="relative">
+      <MobileNav />
+      <div className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden bg-dark px-6 text-center">
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: "url('/mural.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="relative">
+          <Reveal dir="fade">
+            <p className="font-script text-3xl text-gold">arte personalizada</p>
+          </Reveal>
+          <Reveal dir="up" delay={120}>
+            <h1 className="mt-3 text-5xl font-bold leading-[1.05] tracking-tight text-cream sm:text-6xl">
+              Telas &amp;
+              <br />
+              Aquarelas
+            </h1>
+          </Reveal>
+          <Reveal dir="up" delay={220}>
+            <p className="mx-auto mt-6 max-w-sm text-base leading-relaxed text-cream/80">
+              Pintadas à mão, personalizadas e únicas — para habitar a sua casa
+              e a sua história.
+            </p>
+          </Reveal>
+          <Reveal dir="up" delay={320}>
+            <div className="mt-9">
+              <Cta variant="solid">Marque uma chamada</Cta>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------- NÃO SÃO COMUNS --------------------------- */
+function NaoSaoComuns() {
+  return (
+    <section className="bg-cream px-6 py-20">
+      <div className="mx-auto max-w-md text-center">
+        <Reveal dir="up">
+          <h2 className="font-script text-4xl text-gold">
+            não são pinturas comuns
+          </h2>
+        </Reveal>
+        <Reveal dir="up" delay={120}>
+          <p className="mt-6 text-lg leading-relaxed text-ink">
+            São artes feitas com <strong>terras que coletei nas minhas
+            viagens</strong> — uma oportunidade de ter a energia da natureza
+            dentro da sua casa.
+          </p>
+        </Reveal>
+        <Reveal dir="up" delay={220}>
+          <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">
+            Cada tela e cada aquarela nasce personalizada, pensada para você.
+            Nenhuma é igual à outra — é única, como a sua história.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* --------------------------- CREDIBILIDADE -------------------------- */
+function Credibilidade() {
+  return (
+    <section className="bg-dark px-6 py-20">
+      <div className="mx-auto max-w-md text-center">
+        <Reveal dir="fade">
+          <span className="text-xs uppercase tracking-[0.3em] text-gold">
+            harmonia &amp; profundidade
+          </span>
+        </Reveal>
+        <Reveal dir="up" delay={120}>
+          <p className="mt-6 text-lg leading-relaxed text-cream">
+            Como <strong className="text-gold">designer de interiores</strong> e
+            especialista em <strong className="text-gold">psicologia das
+            cores</strong>, uno harmonia estética à profundidade emocional —
+            observando com atenção o propósito que essa arte tem para você.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------------------- VÍDEO MARY ---------------------------- */
+function VideoMary() {
+  return (
+    <section className="bg-cream px-6 py-20">
+      <div className="mx-auto max-w-md text-center">
+        <Reveal dir="up">
+          <span className="text-xs uppercase tracking-[0.3em] text-gold">
+            uma encomenda real
+          </span>
+          <h2 className="mt-3 text-3xl font-bold text-ink">
+            A arte que criei para a Mary
+          </h2>
+        </Reveal>
+
+        {/* Espaço reservado para o vídeo (a Iara vai enviar) */}
+        <Reveal dir="up" delay={150}>
+          <div className="mx-auto mt-8 w-full max-w-[300px]">
+            <div className="relative flex aspect-[9/16] items-center justify-center overflow-hidden rounded-2xl border border-ink/10 bg-dark shadow-lg">
+              <div
+                aria-hidden
+                className="absolute inset-0 opacity-30"
+                style={{
+                  backgroundImage: "url('/mural.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative flex flex-col items-center gap-3 text-cream">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full border border-cream/60">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7L8 5Z" />
+                  </svg>
+                </span>
+                <span className="text-[11px] uppercase tracking-[0.2em] text-cream/80">
+                  vídeo — encomenda da Mary
+                </span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ----------------------------- PROCESSO ----------------------------- */
+const etapas = [
+  {
+    n: "01",
+    titulo: "Uma chamada por vídeo",
+    texto:
+      "Primeiro marcamos uma chamada — um momento em que me coloco à disposição para ouvir a sua história e entender o propósito da arte.",
+  },
+  {
+    n: "02",
+    titulo: "Capturo a sua essência",
+    texto:
+      "Transformo o que você busca em uma arte única, que conversa e compõe com o seu ambiente.",
+  },
+  {
+    n: "03",
+    titulo: "Realizamos juntos",
+    texto:
+      "Se você se sentir conectad@, me manda uma mensagem e damos vida a esse projeto lindo junt@s.",
+  },
+];
+
+function Processo() {
+  return (
+    <section id="processo" className="bg-gold px-6 py-20">
+      <div className="mx-auto max-w-md">
+        <Reveal dir="up">
+          <h2 className="text-center text-4xl font-bold tracking-tight text-white">
+            Como a arte chega
+            <br />
+            até a sua casa
+          </h2>
+        </Reveal>
+
+        <div className="mt-12 flex flex-col gap-6">
+          {etapas.map((e, i) => (
+            <Reveal key={e.n} dir="up" delay={i * 130}>
+              <div className="relative rounded-2xl bg-white/95 p-6 shadow-md">
+                <span className="font-script text-5xl leading-none text-gold">
+                  {e.n}
+                </span>
+                <h3 className="mt-2 text-xl font-semibold text-ink">
+                  {e.titulo}
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
+                  {e.texto}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal dir="up" delay={200}>
+          <div className="mt-10 text-center">
+            <Cta variant="light">Encomende sua arte</Cta>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ----------------------------- GALERIA ------------------------------ */
+/* Espaço de fotos com descrições — a Iara vai enviar as imagens e os textos. */
+const obras = [
+  { nome: "Obra I", desc: "Descrição da arte — em breve." },
+  { nome: "Obra II", desc: "Descrição da arte — em breve." },
+  { nome: "Obra III", desc: "Descrição da arte — em breve." },
+  { nome: "Obra IV", desc: "Descrição da arte — em breve." },
+];
+
+function Galeria() {
+  return (
+    <section id="galeria" className="bg-cream px-6 py-20">
+      <div className="mx-auto max-w-md">
+        <Reveal dir="up">
+          <h2 className="text-center text-4xl font-bold tracking-tight text-ink">
+            Cada arte, uma história
+          </h2>
+          <p className="mx-auto mt-3 max-w-xs text-center text-sm text-ink-soft">
+            Um recorte de obras já criadas. Cada peça carrega um propósito.
+          </p>
+        </Reveal>
+
+        <div className="mt-10 grid grid-cols-2 gap-4">
+          {obras.map((o, i) => (
+            <Reveal key={o.nome} dir="up" delay={i * 90}>
+              <figure>
+                <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-[#c79b58]">
+                  <span className="rounded-full border border-white/50 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white/85">
+                    foto
+                  </span>
+                </div>
+                <figcaption className="mt-2">
+                  <span className="block text-sm font-semibold text-ink">
+                    {o.nome}
+                  </span>
+                  <span className="block text-xs text-ink-soft">{o.desc}</span>
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal dir="up" delay={200}>
+          <div className="mt-10 text-center">
+            <Cta variant="solid">Quero uma arte em casa</Cta>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------------ PREÇOS ------------------------------ */
+const tabela = [
+  {
+    tipo: "Aquarelas",
+    nota: "Papel de algodão, pigmentos naturais",
+    itens: [
+      { tam: "Pequena", medida: "± 21 × 30 cm", preco: "R$ —" },
+      { tam: "Média", medida: "± 30 × 40 cm", preco: "R$ —" },
+      { tam: "Grande", medida: "± 40 × 60 cm", preco: "R$ —" },
+    ],
+  },
+  {
+    tipo: "Telas",
+    nota: "Tela em bastidor, terras e tintas",
+    itens: [
+      { tam: "Pequena", medida: "± 30 × 40 cm", preco: "R$ —" },
+      { tam: "Média", medida: "± 50 × 70 cm", preco: "R$ —" },
+      { tam: "Grande", medida: "± 70 × 100 cm", preco: "R$ —" },
+    ],
+  },
+];
+
+function Precos() {
+  return (
+    <section id="orcamento" className="bg-dark px-6 py-20">
+      <div className="mx-auto max-w-md">
+        <Reveal dir="up">
+          <h2 className="text-center text-4xl font-bold tracking-tight text-cream">
+            Orçamento
+          </h2>
+          <p className="mx-auto mt-3 max-w-xs text-center text-sm text-cream/70">
+            Valores médios de referência. Cada encomenda é personalizada e o
+            valor final é definido na conversa.
+          </p>
+        </Reveal>
+
+        <div className="mt-10 flex flex-col gap-6">
+          {tabela.map((bloco, i) => (
+            <Reveal key={bloco.tipo} dir="up" delay={i * 130}>
+              <div className="rounded-2xl border border-cream/15 bg-white/5 p-6">
+                <h3 className="font-script text-3xl text-gold">{bloco.tipo}</h3>
+                <p className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/50">
+                  {bloco.nota}
+                </p>
+                <ul className="mt-4 divide-y divide-cream/10">
+                  {bloco.itens.map((it) => (
+                    <li
+                      key={it.tam}
+                      className="flex items-baseline justify-between py-3"
+                    >
+                      <span>
+                        <span className="text-sm font-medium text-cream">
+                          {it.tam}
+                        </span>
+                        <span className="ml-2 text-xs text-cream/50">
+                          {it.medida}
+                        </span>
+                      </span>
+                      <span className="text-sm font-semibold text-gold">
+                        {it.preco}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal dir="up" delay={200}>
+          <div className="mt-10 text-center">
+            <p className="font-script text-2xl text-gold">
+              vamos criar junt@s?
+            </p>
+            <div className="mt-5">
+              <Cta variant="solid">Me manda uma mensagem</Cta>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------------ FOOTER ------------------------------ */
+function Footer() {
+  return (
+    <footer className="bg-dark px-6 pb-12 pt-4 text-center text-cream">
+      <div className="mx-auto max-w-md border-t border-cream/10 pt-10">
+        <a href="/" className="font-script text-2xl text-gold">
+          Iara Vida
+        </a>
+        <div className="mt-5 flex justify-center gap-6 text-xs uppercase tracking-[0.2em] text-cream/70">
+          <a
+            href="https://www.instagram.com/iaravidart/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-gold"
+          >
+            Instagram
+          </a>
+          <a href="/oraculo" className="transition-colors hover:text-gold">
+            Oráculo
+          </a>
+          <a
+            href="mailto:contato@iaravida.com"
+            className="transition-colors hover:text-gold"
+          >
+            Email
+          </a>
+        </div>
+        <p className="mt-8 text-xs text-cream/45">
+          © {new Date().getFullYear()} Iara Vida · Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  );
+}

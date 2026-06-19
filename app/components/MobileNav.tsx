@@ -6,7 +6,7 @@ const links = [
   { href: "#topo", label: "Início" },
   { href: "#quem-sou", label: "Quem Sou" },
   { href: "#curso", label: "Curso" },
-  { href: "#portfolio", label: "Telas e Aquarelas" },
+  { href: "/telas-e-aquarelas", label: "Telas e Aquarelas" },
   { href: "/oraculo", label: "Oráculo" },
   { href: "#imersoes", label: "Imersões" },
   { href: "#contato", label: "Contato" },
