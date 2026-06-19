@@ -370,7 +370,7 @@ const obras = [
   },
   {
     nome: "Cristo",
-    desc: "O amor mais puro e doce — pintado com as terras da terra sagrada.",
+    desc: "Amor puro e doce que nos inspira através do seu olhar sereno e da energia que transforma.",
     images: cristoImages,
   },
 ];
