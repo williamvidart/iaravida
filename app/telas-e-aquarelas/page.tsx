@@ -370,7 +370,7 @@ const obras = [
   },
   {
     nome: "Cristo",
-    desc: "Amor puro e doce que nos inspira através do seu olhar sereno e da energia que transforma.",
+    desc: "Amor puro e doce que nos inspira através do seu olhar sereno e da energia que nos faz evoluir.",
     images: cristoImages,
   },
 ];
