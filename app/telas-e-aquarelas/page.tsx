@@ -345,6 +345,13 @@ const inocenciaImages = [
   { src: "/inocencia-5.jpg", alt: "Inocência — detalhe 5" },
 ];
 
+const cristoImages = [
+  { src: "/cristo-1.jpg", alt: "Cristo — detalhe 1" },
+  { src: "/cristo-2.jpg", alt: "Cristo — detalhe 2" },
+  { src: "/cristo-3.jpg", alt: "Cristo — detalhe 3" },
+  { src: "/cristo-4.jpg", alt: "Cristo — detalhe 4" },
+];
+
 const obras = [
   {
     nome: "Cerrado Vivo",
@@ -361,7 +368,11 @@ const obras = [
     desc: "Uma criança Tupi Guarani indo tomar banho de rio, com o olhar simples e conectado com a natureza.",
     images: inocenciaImages,
   },
-  { nome: "Obra IV",  desc: "Descrição da arte, em breve.", images: null },
+  {
+    nome: "Cristo",
+    desc: "O amor mais puro e doce — pintado com as terras da terra sagrada.",
+    images: cristoImages,
+  },
 ];
 
 function Galeria() {
