@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import MobileNav from "../components/MobileNav";
 import Reveal from "../components/Reveal";
 import MotionFx from "../components/MotionFx";
+import ObraCarousel from "../components/ObraCarousel";
 
 export const metadata: Metadata = {
   title: "Telas e Aquarelas | Iara Vida",
@@ -217,13 +218,27 @@ function VideoMari() {
           </h2>
         </Reveal>
 
-        <Reveal dir="up" delay={150}>
+        <Reveal dir="up" delay={120}>
+          <p className="mx-auto mt-5 max-w-xs text-[15px] leading-relaxed text-ink-soft">
+            A obra <span className="font-medium text-ink">Renovação</span> foi
+            criada para abençoar o lar da Mariana após o luto que ela viveu,
+            trazendo a energia linda e eterna dos seus entes queridos através
+            da paisagem de Ubatuba — um lugar cheio de memórias e elementos
+            que pintei com todo o cuidado.
+          </p>
+          <p className="mt-4 text-sm font-medium text-gold">
+            Assiste o vídeo e entenda mais
+          </p>
+        </Reveal>
+
+        <Reveal dir="up" delay={220}>
           <div className="mx-auto mt-8 w-full max-w-[300px]">
             <video
               src="/mari-video.mp4"
+              poster="/capa-mari.jpg"
               controls
               playsInline
-              preload="none"
+              preload="metadata"
               className="w-full rounded-2xl shadow-lg"
               style={{ aspectRatio: "9/16", objectFit: "cover" }}
             />
@@ -258,23 +273,20 @@ const etapas = [
 
 function Processo() {
   return (
-    <section id="processo" className="relative overflow-hidden px-6 py-20">
-      {/* Fundo: aquarela de areia em parallax */}
-      <MotionFx speedY={3} className="absolute inset-x-0 -top-20 z-0">
-        <div
-          className="h-[900px] w-full"
-          style={{
-            backgroundImage: "url('/processo-bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-      </MotionFx>
-      {/* Overlay translúcido para garantir legibilidade dos cards */}
+    <section id="processo" className="relative overflow-hidden px-6 pt-10 pb-20">
+      <div
+        aria-hidden
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/processo-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center 35%",
+        }}
+      />
       <div aria-hidden className="absolute inset-0 z-10 bg-white/20" />
       <div className="relative z-20 mx-auto max-w-md">
         <Reveal dir="up">
-          <h2 className="text-center text-4xl font-bold tracking-tight text-dark">
+          <h2 className="text-center text-4xl font-bold tracking-tight text-white drop-shadow-sm">
             Como a arte chega
             <br />
             até a sua casa
@@ -310,17 +322,26 @@ function Processo() {
 }
 
 /* ----------------------------- GALERIA ------------------------------ */
-/* Espaço de fotos com descrições — a Iara vai enviar as imagens e os textos. */
+const cerradoImages = [
+  { src: "/cerrado-1.jpg", alt: "Cerrado Vivo — detalhe 1" },
+  { src: "/cerrado-2.jpg", alt: "Cerrado Vivo — detalhe 2" },
+  { src: "/cerrado-3.jpg", alt: "Cerrado Vivo — detalhe 3" },
+];
+
 const obras = [
-  { nome: "Obra I", desc: "Descrição da arte, em breve." },
-  { nome: "Obra II", desc: "Descrição da arte, em breve." },
-  { nome: "Obra III", desc: "Descrição da arte, em breve." },
-  { nome: "Obra IV", desc: "Descrição da arte, em breve." },
+  {
+    nome: "Cerrado Vivo",
+    desc: "Uma intenção de proteger e cultivar o cerrado através do cuidado com a natureza.",
+    carousel: true,
+  },
+  { nome: "Obra II",  desc: "Descrição da arte, em breve.", carousel: false },
+  { nome: "Obra III", desc: "Descrição da arte, em breve.", carousel: false },
+  { nome: "Obra IV",  desc: "Descrição da arte, em breve.", carousel: false },
 ];
 
 function Galeria() {
   return (
-    <section id="galeria" className="bg-cream px-6 py-20">
+    <section id="galeria" className="bg-[#faf7f4] px-6 py-20">
       <div className="mx-auto max-w-md">
         <Reveal dir="up">
           <h2 className="text-center text-4xl font-bold tracking-tight text-ink">
@@ -335,11 +356,15 @@ function Galeria() {
           {obras.map((o, i) => (
             <Reveal key={o.nome} dir="up" delay={i * 90}>
               <figure>
-                <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-[#c79b58]">
-                  <span className="rounded-full border border-white/50 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white/85">
-                    foto
-                  </span>
-                </div>
+                {o.carousel ? (
+                  <ObraCarousel images={cerradoImages} />
+                ) : (
+                  <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-[#c79b58]">
+                    <span className="rounded-full border border-white/50 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white/85">
+                      foto
+                    </span>
+                  </div>
+                )}
                 <figcaption className="mt-2">
                   <span className="block text-sm font-semibold text-ink">
                     {o.nome}
@@ -362,26 +387,39 @@ function Galeria() {
 }
 
 /* ------------------------------ PREÇOS ------------------------------ */
-const tabela = [
-  {
-    tipo: "Aquarelas",
-    nota: "Papel de algodão, pigmentos naturais",
-    itens: [
-      { tam: "Pequena", medida: "± 21 × 30 cm", preco: "R$ —" },
-      { tam: "Média", medida: "± 30 × 40 cm", preco: "R$ —" },
-      { tam: "Grande", medida: "± 40 × 60 cm", preco: "R$ —" },
-    ],
-  },
-  {
-    tipo: "Telas",
-    nota: "Tela em bastidor, terras e tintas",
-    itens: [
-      { tam: "Pequena", medida: "± 30 × 40 cm", preco: "R$ —" },
-      { tam: "Média", medida: "± 50 × 70 cm", preco: "R$ —" },
-      { tam: "Grande", medida: "± 70 × 100 cm", preco: "R$ —" },
-    ],
-  },
-];
+const aquarelas = {
+  tipo: "Aquarelas",
+  nota: "Papel de algodão, pigmentos naturais",
+  grupos: [
+    {
+      label: "Sem moldura",
+      itens: [
+        { tam: "A4", medida: "21 × 29,7 cm", preco: "R$ 1.444" },
+        { tam: "A3", medida: "29,7 × 42 cm",  preco: "R$ 1.703" },
+        { tam: "A2", medida: "42 × 59,4 cm",  preco: "R$ 2.110" },
+      ],
+    },
+    {
+      label: "Com moldura",
+      itens: [
+        { tam: "A4", medida: "21 × 29,7 cm", preco: "R$ 1.555" },
+        { tam: "A3", medida: "29,7 × 42 cm",  preco: "R$ 1.888" },
+        { tam: "A2", medida: "42 × 59,4 cm",  preco: "R$ 2.313" },
+      ],
+    },
+  ],
+};
+
+const telas = {
+  tipo: "Telas",
+  nota: "Tela em bastidor, terras e tintas",
+  itens: [
+    { tam: "Pequena",      medida: "até 75 cm",      preco: "R$ 1.555" },
+    { tam: "Média",        medida: "75 – 90 cm",     preco: "R$ 1.933" },
+    { tam: "Grande",       medida: "90 – 100 cm",    preco: "R$ 2.677" },
+    { tam: "Extra Grande", medida: "100 – 120 cm",   preco: "R$ 3.555" },
+  ],
+};
 
 function Precos() {
   return (
@@ -392,24 +430,53 @@ function Precos() {
             Orçamento
           </h2>
           <p className="mx-auto mt-3 max-w-xs text-center text-sm text-cream/70">
-            Valores médios de referência. Cada encomenda é personalizada e o
+            Valores de referência. Cada encomenda é personalizada e o
             valor final é definido na conversa.
           </p>
         </Reveal>
 
         <div className="mt-10 flex flex-col gap-6">
-          {tabela.map((bloco, i) => (
-            <Reveal key={bloco.tipo} dir="up" delay={i * 130}>
-              <div className="rounded-2xl border border-cream/15 bg-white/5 p-6">
-                <h3 className="font-script text-3xl text-gold">{bloco.tipo}</h3>
-                <p className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/50">
-                  {bloco.nota}
-                </p>
-                <ul className="mt-4 divide-y divide-cream/10">
-                  {bloco.itens.map((it) => (
-                    <li
-                      key={it.tam}
-                      className="flex items-baseline justify-between py-3"
+
+          {/* Aquarelas — com dois grupos: sem e com moldura */}
+          <Reveal dir="up">
+            <div className="rounded-2xl border border-cream/15 bg-white/5 p-6">
+              <h3 className="font-script text-3xl text-gold">{aquarelas.tipo}</h3>
+              <p className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/50">
+                {aquarelas.nota}
+              </p>
+              {aquarelas.grupos.map((grupo) => (
+                <div key={grupo.label} className="mt-5">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-gold/70">
+                    {grupo.label}
+                  </p>
+                  <ul className="mt-2 divide-y divide-cream/10">
+                    {grupo.itens.map((it) => (
+                      <li key={it.tam + grupo.label} className="flex items-baseline justify-between py-2.5">
+                        <span>
+                          <span className="text-sm font-medium text-cream">{it.tam}</span>
+                          <span className="ml-2 text-xs text-cream/50">{it.medida}</span>
+                        </span>
+                        <span className="text-sm font-semibold text-gold">{it.preco}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* Telas */}
+          <Reveal dir="up" delay={130}>
+            <div className="rounded-2xl border border-cream/15 bg-white/5 p-6">
+              <h3 className="font-script text-3xl text-gold">{telas.tipo}</h3>
+              <p className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/50">
+                {telas.nota}
+              </p>
+              <ul className="mt-4 divide-y divide-cream/10">
+                {telas.itens.map((it) => (
+                  <li
+                    key={it.tam}
+                    className="flex items-baseline justify-between py-3"
                     >
                       <span>
                         <span className="text-sm font-medium text-cream">
@@ -427,7 +494,7 @@ function Precos() {
                 </ul>
               </div>
             </Reveal>
-          ))}
+
         </div>
 
         <Reveal dir="up" delay={200}>
