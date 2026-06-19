@@ -97,7 +97,7 @@ function Hero() {
           </Reveal>
           <Reveal dir="up" delay={220}>
             <p className="mx-auto mt-6 max-w-sm text-base leading-relaxed text-cream/80">
-              Pintadas à mão, personalizadas e únicas — para habitar a sua casa
+              Pintadas à mão, personalizadas e únicas. Para habitar a sua casa
               e a sua história.
             </p>
           </Reveal>
@@ -125,14 +125,14 @@ function NaoSaoComuns() {
         <Reveal dir="up" delay={120}>
           <p className="mt-6 text-lg leading-relaxed text-ink">
             São artes feitas com <strong>terras que coletei nas minhas
-            viagens</strong> — uma oportunidade de ter a energia da natureza
+            viagens</strong>. Uma oportunidade de ter a energia da natureza
             dentro da sua casa.
           </p>
         </Reveal>
         <Reveal dir="up" delay={220}>
           <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">
             Cada tela e cada aquarela nasce personalizada, pensada para você.
-            Nenhuma é igual à outra — é única, como a sua história.
+            Nenhuma é igual à outra. Cada uma é única, como a sua história.
           </p>
         </Reveal>
       </div>
@@ -164,7 +164,7 @@ function TerraFaixa() {
         <Reveal dir="up" delay={160}>
           <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-white/90">
             Eu mesma coletei cada pigmento nas minhas viagens. São terras com
-            energia única e pura — de solos do Brasil como{" "}
+            energia única e pura, de solos do Brasil como{" "}
             <span className="font-medium text-white">
               MG, SP, GO, RJ, BA e SC
             </span>
@@ -194,7 +194,7 @@ function Credibilidade() {
           <p className="mt-6 text-lg leading-relaxed text-cream">
             Como <strong className="text-gold">designer de interiores</strong> e
             especialista em <strong className="text-gold">psicologia das
-            cores</strong>, uno harmonia estética à profundidade emocional —
+            cores</strong>, uno harmonia estética à profundidade emocional,
             observando com atenção o propósito que essa arte tem para você.
           </p>
         </Reveal>
@@ -240,7 +240,7 @@ const etapas = [
     n: "01",
     titulo: "Uma chamada por vídeo",
     texto:
-      "Primeiro marcamos uma chamada — um momento em que me coloco à disposição para ouvir a sua história e entender o propósito da arte.",
+      "Primeiro marcamos uma chamada. Um momento em que me coloco à disposição para ouvir a sua história e entender o propósito da arte.",
   },
   {
     n: "02",
@@ -312,10 +312,10 @@ function Processo() {
 /* ----------------------------- GALERIA ------------------------------ */
 /* Espaço de fotos com descrições — a Iara vai enviar as imagens e os textos. */
 const obras = [
-  { nome: "Obra I", desc: "Descrição da arte — em breve." },
-  { nome: "Obra II", desc: "Descrição da arte — em breve." },
-  { nome: "Obra III", desc: "Descrição da arte — em breve." },
-  { nome: "Obra IV", desc: "Descrição da arte — em breve." },
+  { nome: "Obra I", desc: "Descrição da arte, em breve." },
+  { nome: "Obra II", desc: "Descrição da arte, em breve." },
+  { nome: "Obra III", desc: "Descrição da arte, em breve." },
+  { nome: "Obra IV", desc: "Descrição da arte, em breve." },
 ];
 
 function Galeria() {
@@ -367,18 +367,18 @@ const tabela = [
     tipo: "Aquarelas",
     nota: "Papel de algodão, pigmentos naturais",
     itens: [
-      { tam: "Pequena", medida: "± 21 × 30 cm", preco: "R$ —" },
-      { tam: "Média", medida: "± 30 × 40 cm", preco: "R$ —" },
-      { tam: "Grande", medida: "± 40 × 60 cm", preco: "R$ —" },
+      { tam: "Pequena", medida: "± 21 × 30 cm", preco: "a consultar" },
+      { tam: "Média", medida: "± 30 × 40 cm", preco: "a consultar" },
+      { tam: "Grande", medida: "± 40 × 60 cm", preco: "a consultar" },
     ],
   },
   {
     tipo: "Telas",
     nota: "Tela em bastidor, terras e tintas",
     itens: [
-      { tam: "Pequena", medida: "± 30 × 40 cm", preco: "R$ —" },
-      { tam: "Média", medida: "± 50 × 70 cm", preco: "R$ —" },
-      { tam: "Grande", medida: "± 70 × 100 cm", preco: "R$ —" },
+      { tam: "Pequena", medida: "± 30 × 40 cm", preco: "a consultar" },
+      { tam: "Média", medida: "± 50 × 70 cm", preco: "a consultar" },
+      { tam: "Grande", medida: "± 70 × 100 cm", preco: "a consultar" },
     ],
   },
 ];
