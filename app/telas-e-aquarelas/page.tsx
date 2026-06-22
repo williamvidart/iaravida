@@ -234,14 +234,15 @@ function VideoMari() {
         <Reveal dir="up" delay={220}>
           <div className="mx-auto mt-8 w-full max-w-[300px]">
             <video
-              src="/mari-video.mp4"
               poster="/capa-mari.jpg"
               controls
               playsInline
               preload="metadata"
               className="w-full rounded-2xl shadow-lg"
               style={{ aspectRatio: "9/16", objectFit: "cover" }}
-            />
+            >
+              <source src="/mari-video.mp4" type="video/mp4" />
+            </video>
           </div>
         </Reveal>
       </div>
