@@ -28,7 +28,7 @@ const fotos = [
   "/portfolio/IMG_8811.jpg",
   "/portfolio/IMG_5010.jpg",
   "/portfolio/IMG_0796.PNG",
-  "/portfolio/IMG_2032_jpg.jpg",
+  "/portfolio/canva4.png",
   "/portfolio/IMG_2841.jpg",
   "/portfolio/IMG_8650.jpg",
   "/portfolio/IMG_8790.jpg",
@@ -83,6 +83,24 @@ export default function Portfolio() {
             >
               <p className="font-grandenhas text-4xl leading-tight text-terra">
                 Arte é quando você coloca a sua alma no mundo e alguém se reconhece nela
+              </p>
+            </div>
+          ) : i === 27 ? (
+            <div key="quote7" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
+              <p className="font-grandenhas text-4xl leading-tight text-terra">
+                A arte tem o poder de nos trazer para o momento presente
+              </p>
+            </div>
+          ) : i === 24 ? (
+            <div key="quote6" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
+              <p className="font-grandenhas text-4xl leading-tight text-terra">
+                Criar exige sentir
+              </p>
+            </div>
+          ) : i === 21 ? (
+            <div key="quote5" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
+              <p className="font-grandenhas text-4xl leading-tight text-terra">
+                Faça arte, não para mostrar para o mundo, mas para se ver nele
               </p>
             </div>
           ) : i === 33 ? (
