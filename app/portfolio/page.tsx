@@ -155,7 +155,7 @@ export default function Portfolio() {
               {quote}
               {divider}
               <div
-                className="overflow-hidden"
+                className="overflow-hidden relative"
                 style={{
                   gridColumn: isLarge ? "span 2" : undefined,
                   height: isLarge ? "340px" : "180px",
@@ -164,8 +164,15 @@ export default function Portfolio() {
                 <img
                   src={src}
                   alt=""
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105 select-none pointer-events-none"
                   loading={i < 3 ? "eager" : "lazy"}
+                  draggable={false}
+                />
+                {/* overlay blocks right-click / long-press save */}
+                <div
+                  className="absolute inset-0"
+                  onContextMenu={(e) => e.preventDefault()}
+                  style={{ WebkitTouchCallout: "none" } as React.CSSProperties}
                 />
               </div>
             </React.Fragment>
