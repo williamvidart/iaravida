@@ -542,8 +542,8 @@ function Footer() {
   return (
     <footer className="bg-dark px-6 pb-12 pt-4 text-center text-creme">
       <div className="mx-auto max-w-md border-t border-creme/10 pt-10">
-        <a href="/" className="font-grandenhas text-5xl text-areia">
-          Iara Vida
+        <a href="/">
+          <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto h-14 w-auto" style={{ filter: "brightness(10) sepia(1) saturate(0)" }} />
         </a>
         <div className="mt-5 flex justify-center gap-6 text-xs uppercase tracking-[0.2em] text-creme/70">
           <a

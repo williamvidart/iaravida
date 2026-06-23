@@ -22,9 +22,9 @@ export default function MobileNav() {
         <a
           href="#topo"
           onClick={() => setOpen(false)}
-          className="font-script text-3xl leading-none text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.45)]"
+          className="leading-none"
         >
-          Iara Vida
+          <img src="/logo-iara.png" alt="Iara Vida" className="h-8 w-auto" style={{ mixBlendMode: "screen", filter: "brightness(10)" }} />
         </a>
 
         <button
