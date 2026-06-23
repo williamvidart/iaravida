@@ -1,0 +1,358 @@
+import type { Metadata } from "next";
+import MobileNav from "../components/MobileNav";
+import Reveal from "../components/Reveal";
+
+export const metadata: Metadata = {
+  title: "Aquarela da Terra | Iara Vida",
+  description:
+    "Transforme o solo que você pisa na sua maior fonte de expressão. Curso online de aquarela natural com pigmentos da terra.",
+};
+
+const modulos = [
+  {
+    num: "01",
+    titulo: "Boas-vindas — Materiais para o seu despertar",
+    aulas: 3,
+    descricao:
+      "A trajetória de cura através das geotintas, os materiais e ferramentas necessários e uma visão do que você vai criar.",
+  },
+  {
+    num: "02",
+    titulo: "O Mapa das Cores — Onde e como coletar suas terras",
+    aulas: 2,
+    descricao:
+      "Como identificar o solo, onde encontrar argila e o guia completo de coleta na natureza.",
+  },
+  {
+    num: "03",
+    titulo: "Filtragem e Refinamento",
+    aulas: 2,
+    descricao:
+      "Do barro bruto ao pó pigmento: liberando a cor e o processo de decantação — o tempo e a separação.",
+  },
+  {
+    num: "04",
+    titulo: "Aglutinantes, Conservação e Montagem da Paleta",
+    aulas: 3,
+    descricao:
+      "Preparo da goma arábica, o toque dos óleos essenciais para conservação e a montagem da sua paleta de aquarela natural.",
+  },
+  {
+    num: "05",
+    titulo: "O Primeiro Toque — Testes e Pintura",
+    aulas: 4,
+    descricao:
+      "Ativando sua paleta, pintando seu mapa cromático, arte abstrata com a mão não dominante e as técnicas da aquarela da terra.",
+  },
+  {
+    num: "06",
+    titulo: "Os Princípios da Arte Orgânica",
+    aulas: 2,
+    descricao:
+      "Arte monocromática e a brincadeira das manchas fluidas — deixando a tinta conduzir.",
+  },
+  {
+    num: "07",
+    titulo: "A Natureza Como Fonte de Inspiração",
+    aulas: 3,
+    descricao:
+      "O olhar criativo para coletar inspirações, pintando folhas e a Árvore da Vida com princípios de composição.",
+  },
+  {
+    num: "08",
+    titulo: "Eternize Suas Obras",
+    aulas: 1,
+    descricao:
+      "Conservadores naturais, fotografia das obras e edição com inteligência artificial.",
+  },
+  {
+    num: "09",
+    titulo: "Rotina Criativa",
+    aulas: 5,
+    descricao:
+      "Arte como autoconhecimento, diário criativo, criança interior, como lidar com o bloqueio criativo e o Oráculo Alma Criativa.",
+  },
+];
+
+const paraQuem = [
+  {
+    emoji: "🍃",
+    titulo: "Arte-educador(a)",
+    descricao:
+      "Que irá compartilhar a técnica das cores naturais de forma consciente.",
+  },
+  {
+    emoji: "🎨",
+    titulo: "Artista",
+    descricao:
+      "Que sentiu o chamado de agregar conhecimento e técnicas naturais às suas obras.",
+  },
+  {
+    emoji: "🌱",
+    titulo: "Mãe, Pai ou Responsável",
+    descricao:
+      "Que deseja substituir as tintas convencionais por naturais nas experiências com as crianças.",
+  },
+  {
+    emoji: "✨",
+    titulo: "Empreendedor(a) Consciente",
+    descricao:
+      "Que busca se reaproximar da natureza e potencializar suas virtudes criativas.",
+  },
+  {
+    emoji: "🌍",
+    titulo: "Para você",
+    descricao:
+      "Que deseja melhorar a forma de conviver com a natureza diariamente e transbordar a criatividade existente — ou adormecida — dentro de si.",
+  },
+];
+
+export default function CursoPage() {
+  return (
+    <div className="flex flex-1 flex-col">
+      {/* ─── HERO ─────────────────────────────────────────────────── */}
+      <section className="relative min-h-[90vh] flex flex-col">
+        <MobileNav />
+
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/curso1.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(30,20,10,0.55) 0%, rgba(30,20,10,0.35) 40%, rgba(30,20,10,0.72) 100%)",
+          }}
+        />
+
+        <div className="relative z-10 flex flex-1 flex-col items-center justify-end pb-20 px-6 text-center mt-16">
+          <Reveal dir="up">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/70 mb-3">
+              curso online
+            </p>
+          </Reveal>
+          <Reveal dir="up" delay={80}>
+            <h1 className="font-grandenhas text-6xl leading-none text-white drop-shadow-lg sm:text-8xl">
+              Aquarela<br />da Terra
+            </h1>
+          </Reveal>
+          <Reveal dir="up" delay={160}>
+            <p className="mt-6 max-w-sm text-base leading-relaxed text-white/85">
+              Transforme o solo que você pisa na sua maior fonte de expressão.
+            </p>
+          </Reveal>
+          <Reveal dir="up" delay={240}>
+            <a
+              href="#inscricao"
+              className="mt-10 inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
+            >
+              Quero me inscrever
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── JORNADA A → B ────────────────────────────────────────── */}
+      <section className="bg-creme px-6 py-20">
+        <div className="mx-auto max-w-md">
+          <Reveal dir="up">
+            <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">
+              sua jornada
+            </p>
+            <h2 className="font-grandenhas text-5xl text-terra leading-tight">
+              De onde você está<br />para onde você vai
+            </h2>
+          </Reveal>
+
+          <div className="mt-12 space-y-10">
+            {/* Ponto A */}
+            <Reveal dir="left">
+              <div className="border-l-2 border-terra/20 pl-5">
+                <p className="text-xs uppercase tracking-[0.25em] text-terra/40 mb-3">antes</p>
+                <ul className="space-y-3 text-[15px] leading-relaxed text-terra/65">
+                  <li>Você sente vontade de criar, mas não sabe por onde começar</li>
+                  <li>Usa tintas industriais e sente que falta algo mais vivo, mais seu</li>
+                  <li>Sente que se distanciou da natureza sem perceber</li>
+                  <li>Tem uma criatividade adormecida esperando um convite</li>
+                </ul>
+              </div>
+            </Reveal>
+
+            {/* Seta */}
+            <div className="flex justify-center">
+              <div className="h-12 w-px bg-terra/25" />
+            </div>
+
+            {/* Ponto B */}
+            <Reveal dir="right">
+              <div className="border-l-2 border-siena pl-5">
+                <p className="text-xs uppercase tracking-[0.25em] text-siena/60 mb-3">depois</p>
+                <ul className="space-y-3 text-[15px] leading-relaxed text-terra">
+                  <li>Você coleta seus próprios pigmentos da terra onde mora</li>
+                  <li>Cria sua paleta de aquarela natural com ingredientes vivos</li>
+                  <li>Pinta com confiança usando técnicas orgânicas e fluidas</li>
+                  <li>Tem uma rotina criativa que reconecta com a natureza diariamente</li>
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── IMAGEM + FRASE ───────────────────────────────────────── */}
+      <section className="relative h-[320px] overflow-hidden">
+        <img
+          src="/canva7.png"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-dark/50" />
+        <div className="relative z-10 flex h-full items-center justify-center px-8 text-center">
+          <Reveal dir="fade">
+            <p className="font-grandenhas text-5xl leading-tight text-white drop-shadow-md">
+              A terra que você pisa<br />já guarda a sua cor
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── PARA QUEM É ──────────────────────────────────────────── */}
+      <section className="bg-dark px-6 py-20 text-creme">
+        <div className="mx-auto max-w-md">
+          <Reveal dir="up">
+            <p className="text-xs uppercase tracking-[0.3em] text-creme/40 mb-2">para quem é</p>
+            <h2 className="font-grandenhas text-5xl leading-tight text-areia">
+              Este curso é<br />para você
+            </h2>
+          </Reveal>
+
+          <div className="mt-12 space-y-8">
+            {paraQuem.map((item, i) => (
+              <Reveal key={i} dir="up" delay={i * 80}>
+                <div className="flex gap-4">
+                  <span className="text-2xl mt-0.5">{item.emoji}</span>
+                  <div>
+                    <p className="font-medium text-creme">{item.titulo}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-creme/60">
+                      {item.descricao}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── MÓDULOS ──────────────────────────────────────────────── */}
+      <section className="bg-creme px-6 py-20">
+        <div className="mx-auto max-w-md">
+          <Reveal dir="up">
+            <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">conteúdo</p>
+            <h2 className="font-grandenhas text-5xl text-terra leading-tight">
+              9 módulos.<br />25 aulas.
+            </h2>
+            <p className="mt-4 text-sm text-terra/60">
+              Uma trilha completa — da terra às obras.
+            </p>
+          </Reveal>
+
+          <div className="mt-12 space-y-0">
+            {modulos.map((m, i) => (
+              <Reveal key={i} dir="up" delay={i * 40}>
+                <details className="group border-b border-terra/15 py-5">
+                  <summary className="flex cursor-pointer items-start gap-4 list-none">
+                    <span className="font-grandenhas text-2xl text-terra/30 leading-none mt-0.5 shrink-0">
+                      {m.num}
+                    </span>
+                    <div className="flex-1">
+                      <p className="text-[15px] font-medium text-terra leading-snug">
+                        {m.titulo}
+                      </p>
+                      <p className="text-xs text-terra/45 mt-1">
+                        {m.aulas} {m.aulas === 1 ? "aula" : "aulas"}
+                      </p>
+                    </div>
+                    <span className="text-terra/40 mt-1 transition-transform duration-300 group-open:rotate-45 shrink-0 text-xl leading-none">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-4 ml-10 text-sm leading-relaxed text-terra/60">
+                    {m.descricao}
+                  </p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CTA FINAL ────────────────────────────────────────────── */}
+      <section id="inscricao" className="bg-peach px-6 py-24 text-center">
+        <div className="mx-auto max-w-sm">
+          <Reveal dir="up">
+            <p className="font-grandenhas text-6xl text-siena leading-none">
+              pronta?
+            </p>
+          </Reveal>
+          <Reveal dir="up" delay={100}>
+            <h2 className="mt-3 text-3xl font-bold text-terra leading-tight">
+              Comece a criar<br />com a terra
+            </h2>
+          </Reveal>
+          <Reveal dir="up" delay={180}>
+            <p className="mt-5 text-[15px] leading-relaxed text-terra/70">
+              O solo que você pisa já guarda a sua paleta. Você só precisa aprender a ouvi-lo.
+            </p>
+          </Reveal>
+          <Reveal dir="up" delay={260}>
+            <a
+              href="https://hotmart.com/product/aquarela-da-terra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
+            >
+              Quero me inscrever
+            </a>
+          </Reveal>
+          <Reveal dir="fade" delay={340}>
+            <p className="mt-6 text-xs text-terra/40">
+              Acesso imediato pela Hotmart
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── FOOTER ───────────────────────────────────────────────── */}
+      <footer className="bg-dark px-6 py-16 text-creme text-center">
+        <img
+          src="/logo-iara.png"
+          alt="Iara Vida"
+          className="mx-auto mb-8 h-24 w-auto"
+          style={{ filter: "brightness(10) sepia(1) saturate(0)" }}
+        />
+        <div className="space-y-3 text-base">
+          <a
+            href="https://instagram.com/iaravidart"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block transition-colors hover:text-areia"
+          >
+            @iaravidart
+          </a>
+          <a
+            href="mailto:contato@iaravida.com"
+            className="block transition-colors hover:text-areia"
+          >
+            contato@iaravida.com
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
