@@ -24,7 +24,7 @@ export default function MobileNav() {
           onClick={() => setOpen(false)}
           className="leading-none"
         >
-          <img src="/logo-iara.png" alt="Iara Vida" className="h-8 w-auto" style={{ mixBlendMode: "screen", filter: "brightness(10)" }} />
+          <img src="/logo-iara.png" alt="Iara Vida" className="h-14 w-auto" style={{ mixBlendMode: "screen", filter: "brightness(10)" }} />
         </a>
 
         <button

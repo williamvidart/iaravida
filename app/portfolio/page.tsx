@@ -157,7 +157,7 @@ export default function Portfolio() {
 
       {/* Contato */}
       <footer className="bg-dark px-6 py-16 text-creme text-center">
-        <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto mb-8 h-14 w-auto" style={{ filter: "brightness(10) sepia(1) saturate(0)" }} />
+        <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto mb-8 h-24 w-auto" style={{ filter: "brightness(10) sepia(1) saturate(0)" }} />
         <div className="space-y-3 text-base">
           <a
             href="https://instagram.com/iaravidart"

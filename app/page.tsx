@@ -195,7 +195,7 @@ function QuemSou() {
           <h2 className="text-5xl font-bold tracking-tight text-terra">Quem Sou</h2>
         </Reveal>
         <Reveal dir="right" delay={120}>
-          <img src="/logo-iara.png" alt="Iara Vida" className="mt-2 h-16 w-auto" />
+          <img src="/logo-iara.png" alt="Iara Vida" className="mt-2 h-28 w-auto" />
         </Reveal>
 
         <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-terra/75">
@@ -372,7 +372,7 @@ function Footer() {
             <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-areia">Oráculo</a>
           </div>
 
-          <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto mt-10 h-14 w-auto" style={{ filter: "brightness(10) sepia(1) saturate(0)" }} />
+          <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto mt-10 h-24 w-auto" style={{ filter: "brightness(10) sepia(1) saturate(0)" }} />
           <p className="mt-2 text-xs text-creme/50">© {new Date().getFullYear()} Iara Vida. Todos os direitos reservados.</p>
         </div>
       </Reveal>
