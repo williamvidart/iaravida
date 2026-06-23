@@ -167,11 +167,6 @@ export default function Portfolio() {
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105 select-none pointer-events-none"
                   loading={i < 3 ? "eager" : "lazy"}
                   draggable={false}
-                />
-                {/* overlay blocks right-click / long-press save */}
-                <div
-                  className="absolute inset-0"
-                  onContextMenu={(e) => e.preventDefault()}
                   style={{ WebkitTouchCallout: "none" } as React.CSSProperties}
                 />
               </div>
