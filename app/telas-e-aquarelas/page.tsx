@@ -10,23 +10,11 @@ export const metadata: Metadata = {
     "Encomende uma arte personalizada e única — telas e aquarelas feitas com terras coletadas em viagens. Designer de interiores e psicologia das cores por Iara Vida.",
 };
 
-// Contato — CTAs (ajuste para o WhatsApp da Iara quando tiver o número)
 const CONTATO = "https://www.instagram.com/iaravidart/";
 
 export default function TelasEAquarelas() {
   return (
-    // Override --gold só nesta página: rosa terroso no lugar do ocre
-    <div
-      className="flex flex-1 flex-col bg-white"
-      style={
-        {
-          "--gold": "#c4897a",
-          "--gold-dark": "#b07262",
-          "--ink": "#8c3010",
-          "--ink-soft": "#7a4030",
-        } as React.CSSProperties
-      }
-    >
+    <div className="flex flex-1 flex-col bg-peach">
       <Hero />
       <NaoSaoComuns />
       <TerraFaixa />
@@ -53,11 +41,11 @@ function Cta({
   const base =
     "inline-flex h-12 items-center justify-center rounded-full px-8 text-sm font-medium uppercase tracking-[0.15em] transition-colors";
   const styles = {
-    solid: "bg-gold text-white hover:bg-gold-dark",
+    solid: "bg-rosa text-creme hover:bg-siena",
     outline:
-      "border border-ink/25 text-ink hover:border-gold hover:text-gold",
+      "border border-terra/25 text-terra hover:border-rosa hover:text-rosa",
     light:
-      "border border-cream/40 text-cream hover:border-gold hover:text-gold",
+      "border border-creme/40 text-creme hover:border-areia hover:text-areia",
   }[variant];
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className={`${base} ${styles}`}>
@@ -71,7 +59,7 @@ function Hero() {
   return (
     <section id="topo" className="relative">
       <MobileNav />
-      <div className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden bg-dark px-6 text-center">
+      <div className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden bg-terra px-6 text-center">
         <div
           aria-hidden
           className="absolute inset-0"
@@ -83,21 +71,21 @@ function Hero() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-dark/55"
+          className="absolute inset-0 bg-terra/55"
         />
         <div className="relative">
           <Reveal dir="fade">
-            <p className="font-script text-3xl text-gold">arte personalizada</p>
+            <p className="font-grandenhas text-7xl text-areia">arte personalizada</p>
           </Reveal>
           <Reveal dir="up" delay={120}>
-            <h1 className="mt-3 text-5xl font-bold leading-[1.05] tracking-tight text-cream sm:text-6xl">
+            <h1 className="mt-3 text-5xl font-bold leading-[1.05] tracking-tight text-creme sm:text-6xl">
               Telas &amp;
               <br />
               Aquarelas
             </h1>
           </Reveal>
           <Reveal dir="up" delay={220}>
-            <p className="mx-auto mt-6 max-w-sm text-base leading-relaxed text-cream/80">
+            <p className="mx-auto mt-6 max-w-sm text-base leading-relaxed text-creme/80">
               Pintadas à mão, personalizadas e únicas. Para habitar a sua casa
               e a sua história.
             </p>
@@ -116,22 +104,22 @@ function Hero() {
 /* ------------------------- NÃO SÃO COMUNS --------------------------- */
 function NaoSaoComuns() {
   return (
-    <section className="bg-cream px-6 py-20">
+    <section className="bg-creme px-6 py-20">
       <div className="mx-auto max-w-md text-center">
         <Reveal dir="up">
-          <h2 className="font-script text-4xl text-gold">
+          <h2 className="font-grandenhas text-6xl text-rosa">
             não são pinturas comuns
           </h2>
         </Reveal>
         <Reveal dir="up" delay={120}>
-          <p className="mt-6 text-lg leading-relaxed text-ink">
+          <p className="mt-6 text-lg leading-relaxed text-terra">
             São artes feitas com <strong>terras que coletei nas minhas
             viagens</strong>. Uma oportunidade de ter a energia da natureza
             dentro da sua casa.
           </p>
         </Reveal>
         <Reveal dir="up" delay={220}>
-          <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">
+          <p className="mt-5 text-[15px] leading-relaxed text-terra/70">
             Cada tela e cada aquarela nasce personalizada, pensada para você.
             Nenhuma é igual à outra. Cada uma é única, como a sua história.
           </p>
@@ -158,7 +146,7 @@ function TerraFaixa() {
       <div aria-hidden className="absolute inset-0 z-10 bg-black/60" />
       <div className="relative z-20 flex h-full flex-col items-center justify-center px-8 text-center">
         <Reveal dir="fade">
-          <p className="font-script text-4xl leading-snug text-white drop-shadow-md">
+          <p className="font-grandenhas text-6xl leading-snug text-white drop-shadow-md">
             a terra que habita cada obra
           </p>
         </Reveal>
@@ -187,14 +175,14 @@ function Credibilidade() {
     <section className="bg-dark px-6 py-20">
       <div className="mx-auto max-w-md text-center">
         <Reveal dir="fade">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">
+          <span className="text-xs uppercase tracking-[0.3em] text-areia">
             harmonia &amp; profundidade
           </span>
         </Reveal>
         <Reveal dir="up" delay={120}>
-          <p className="mt-6 text-lg leading-relaxed text-cream">
-            Como <strong className="text-gold">designer de interiores</strong> e
-            especialista em <strong className="text-gold">psicologia das
+          <p className="mt-6 text-lg leading-relaxed text-creme">
+            Como <strong className="text-areia">designer de interiores</strong> e
+            especialista em <strong className="text-areia">psicologia das
             cores</strong>, uno harmonia estética à profundidade emocional,
             observando com atenção o propósito que essa arte tem para você.
           </p>
@@ -207,26 +195,26 @@ function Credibilidade() {
 /* ---------------------------- VÍDEO MARY ---------------------------- */
 function VideoMari() {
   return (
-    <section className="bg-cream px-6 py-20">
+    <section className="bg-creme px-6 py-20">
       <div className="mx-auto max-w-md text-center">
         <Reveal dir="up">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">
+          <span className="text-xs uppercase tracking-[0.3em] text-siena">
             uma encomenda real
           </span>
-          <h2 className="mt-3 text-3xl font-bold text-ink">
+          <h2 className="mt-3 text-3xl font-bold text-terra">
             A arte que criei para a Mari
           </h2>
         </Reveal>
 
         <Reveal dir="up" delay={120}>
-          <p className="mx-auto mt-5 max-w-xs text-[15px] leading-relaxed text-ink-soft">
-            A obra <span className="font-medium text-ink">Renovação</span> foi
+          <p className="mx-auto mt-5 max-w-xs text-[15px] leading-relaxed text-terra/70">
+            A obra <span className="font-medium text-terra">Renovação</span> foi
             criada para abençoar o lar da Mariana após o luto que ela viveu,
             trazendo a energia linda e eterna dos seus entes queridos através
             da paisagem de Ubatuba — um lugar cheio de memórias e elementos
             que pintei com todo o cuidado.
           </p>
-          <p className="mt-4 text-sm font-medium text-gold">
+          <p className="mt-4 text-sm font-medium text-rosa">
             Assiste o vídeo e entenda mais
           </p>
         </Reveal>
@@ -284,7 +272,7 @@ function Processo() {
           backgroundPosition: "center 35%",
         }}
       />
-      <div aria-hidden className="absolute inset-0 z-10 bg-white/20" />
+      <div aria-hidden className="absolute inset-0 z-10 bg-peach/20" />
       <div className="relative z-20 mx-auto max-w-md">
         <Reveal dir="up">
           <h2 className="text-center text-4xl font-bold tracking-tight text-white drop-shadow-sm">
@@ -297,14 +285,14 @@ function Processo() {
         <div className="mt-12 flex flex-col gap-6">
           {etapas.map((e, i) => (
             <Reveal key={e.n} dir="up" delay={i * 130}>
-              <div className="relative rounded-2xl bg-white/95 p-6 shadow-md">
-                <span className="font-script text-5xl leading-none text-gold">
+              <div className="relative rounded-2xl bg-creme/95 p-6 shadow-md">
+                <span className="font-grandenhas text-7xl leading-none text-rosa">
                   {e.n}
                 </span>
-                <h3 className="mt-2 text-xl font-semibold text-ink">
+                <h3 className="mt-2 text-xl font-semibold text-terra">
                   {e.titulo}
                 </h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
+                <p className="mt-2 text-[15px] leading-relaxed text-terra/70">
                   {e.texto}
                 </p>
               </div>
@@ -378,13 +366,13 @@ const obras = [
 
 function Galeria() {
   return (
-    <section id="galeria" className="bg-[#faf7f4] px-6 py-20">
+    <section id="galeria" className="bg-peach px-6 py-20">
       <div className="mx-auto max-w-md">
         <Reveal dir="up">
-          <h2 className="text-center text-4xl font-bold tracking-tight text-ink">
+          <h2 className="text-center text-4xl font-bold tracking-tight text-terra">
             Cada arte, uma história
           </h2>
-          <p className="mx-auto mt-3 max-w-xs text-center text-sm text-ink-soft">
+          <p className="mx-auto mt-3 max-w-xs text-center text-sm text-terra/65">
             Um recorte de obras já criadas. Cada peça carrega um propósito.
           </p>
         </Reveal>
@@ -396,17 +384,17 @@ function Galeria() {
                 {o.images ? (
                   <ObraCarousel images={o.images} />
                 ) : (
-                  <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-[#c79b58]">
+                  <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-areia">
                     <span className="rounded-full border border-white/50 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white/85">
                       foto
                     </span>
                   </div>
                 )}
                 <figcaption className="mt-2">
-                  <span className="block text-sm font-semibold text-ink">
+                  <span className="block text-sm font-semibold text-terra">
                     {o.nome}
                   </span>
-                  <span className="block text-xs text-ink-soft">{o.desc}</span>
+                  <span className="block text-xs text-terra/65">{o.desc}</span>
                 </figcaption>
               </figure>
             </Reveal>
@@ -463,10 +451,10 @@ function Precos() {
     <section id="orcamento" className="bg-dark px-6 py-20">
       <div className="mx-auto max-w-md">
         <Reveal dir="up">
-          <h2 className="text-center text-4xl font-bold tracking-tight text-cream">
+          <h2 className="text-center text-4xl font-bold tracking-tight text-creme">
             Orçamento
           </h2>
-          <p className="mx-auto mt-3 max-w-xs text-center text-sm text-cream/70">
+          <p className="mx-auto mt-3 max-w-xs text-center text-sm text-creme/70">
             Valores de referência. Cada encomenda é personalizada e o
             valor final é definido na conversa.
           </p>
@@ -476,24 +464,24 @@ function Precos() {
 
           {/* Aquarelas — com dois grupos: sem e com moldura */}
           <Reveal dir="up">
-            <div className="rounded-2xl border border-cream/15 bg-white/5 p-6">
-              <h3 className="font-script text-3xl text-gold">{aquarelas.tipo}</h3>
-              <p className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/50">
+            <div className="rounded-2xl border border-creme/20 bg-creme/10 p-6">
+              <h3 className="font-grandenhas text-5xl text-areia">{aquarelas.tipo}</h3>
+              <p className="mt-1 text-xs uppercase tracking-[0.15em] text-creme/50">
                 {aquarelas.nota}
               </p>
               {aquarelas.grupos.map((grupo) => (
                 <div key={grupo.label} className="mt-5">
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-gold/70">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-areia/80">
                     {grupo.label}
                   </p>
-                  <ul className="mt-2 divide-y divide-cream/10">
+                  <ul className="mt-2 divide-y divide-creme/10">
                     {grupo.itens.map((it) => (
                       <li key={it.tam + grupo.label} className="flex items-baseline justify-between py-2.5">
                         <span>
-                          <span className="text-sm font-medium text-cream">{it.tam}</span>
-                          <span className="ml-2 text-xs text-cream/50">{it.medida}</span>
+                          <span className="text-sm font-medium text-creme">{it.tam}</span>
+                          <span className="ml-2 text-xs text-creme/50">{it.medida}</span>
                         </span>
-                        <span className="text-sm font-semibold text-gold">{it.preco}</span>
+                        <span className="text-sm font-semibold text-areia">{it.preco}</span>
                       </li>
                     ))}
                   </ul>
@@ -504,26 +492,26 @@ function Precos() {
 
           {/* Telas */}
           <Reveal dir="up" delay={130}>
-            <div className="rounded-2xl border border-cream/15 bg-white/5 p-6">
-              <h3 className="font-script text-3xl text-gold">{telas.tipo}</h3>
-              <p className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/50">
+            <div className="rounded-2xl border border-creme/20 bg-creme/10 p-6">
+              <h3 className="font-grandenhas text-5xl text-areia">{telas.tipo}</h3>
+              <p className="mt-1 text-xs uppercase tracking-[0.15em] text-creme/50">
                 {telas.nota}
               </p>
-              <ul className="mt-4 divide-y divide-cream/10">
+              <ul className="mt-4 divide-y divide-creme/10">
                 {telas.itens.map((it) => (
                   <li
                     key={it.tam}
                     className="flex items-baseline justify-between py-3"
                     >
                       <span>
-                        <span className="text-sm font-medium text-cream">
+                        <span className="text-sm font-medium text-creme">
                           {it.tam}
                         </span>
-                        <span className="ml-2 text-xs text-cream/50">
+                        <span className="ml-2 text-xs text-creme/50">
                           {it.medida}
                         </span>
                       </span>
-                      <span className="text-sm font-semibold text-gold">
+                      <span className="text-sm font-semibold text-areia">
                         {it.preco}
                       </span>
                     </li>
@@ -536,7 +524,7 @@ function Precos() {
 
         <Reveal dir="up" delay={200}>
           <div className="mt-10 text-center">
-            <p className="font-script text-2xl text-gold">
+            <p className="font-grandenhas text-6xl text-areia">
               vamos criar junt@s?
             </p>
             <div className="mt-5">
@@ -552,31 +540,31 @@ function Precos() {
 /* ------------------------------ FOOTER ------------------------------ */
 function Footer() {
   return (
-    <footer className="bg-dark px-6 pb-12 pt-4 text-center text-cream">
-      <div className="mx-auto max-w-md border-t border-cream/10 pt-10">
-        <a href="/" className="font-script text-2xl text-gold">
+    <footer className="bg-dark px-6 pb-12 pt-4 text-center text-creme">
+      <div className="mx-auto max-w-md border-t border-creme/10 pt-10">
+        <a href="/" className="font-grandenhas text-5xl text-areia">
           Iara Vida
         </a>
-        <div className="mt-5 flex justify-center gap-6 text-xs uppercase tracking-[0.2em] text-cream/70">
+        <div className="mt-5 flex justify-center gap-6 text-xs uppercase tracking-[0.2em] text-creme/70">
           <a
             href="https://www.instagram.com/iaravidart/"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-gold"
+            className="transition-colors hover:text-areia"
           >
             Instagram
           </a>
-          <a href="/oraculo" className="transition-colors hover:text-gold">
+          <a href="/oraculo" className="transition-colors hover:text-areia">
             Oráculo
           </a>
           <a
             href="mailto:contato@iaravida.com"
-            className="transition-colors hover:text-gold"
+            className="transition-colors hover:text-areia"
           >
             Email
           </a>
         </div>
-        <p className="mt-8 text-xs text-cream/45">
+        <p className="mt-8 text-xs text-creme/45">
           © {new Date().getFullYear()} Iara Vida · Todos os direitos reservados.
         </p>
       </div>

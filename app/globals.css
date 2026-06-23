@@ -1,29 +1,56 @@
 @import "tailwindcss";
 
+/* ── DESIGN SYSTEM — Iara Vida ─────────────────────────────────────────── */
+
+/* Grandenhas — fonte manuscrita criada pela Iara */
+@font-face {
+  font-family: 'Grandenhas';
+  src: url('/fonts/Grandenhas-WithComma.otf?v=5') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
-  --white: #ffffff;
-  --cream: #e8e2e2;
-  --gold: #c79b58;
-  --gold-dark: #b3863f;
-  --orange: #d77332;
-  --ink: #333333;
-  --ink-soft: #6b6b6b;
-  --dark: #3e2316;
-  --dark-deep: #281007;
+  /* DESIGN.md palette */
+  --peach:  #E8D5C8;   /* bg principal — Pele de Pêssego */
+  --areia:  #C9A882;   /* surface — Areia Quente */
+  --creme:  #F5EDE4;   /* highlight — Creme */
+  --rosa:   #B07A6E;   /* accent — Rosa Argila */
+  --siena:  #9C6244;   /* secondary — Siena */
+  --terra:  #3D1F15;   /* ink — Terra Escura */
+  --grandenhas: 'Grandenhas';
+
+  /* Legacy tokens remapped to DESIGN.md palette */
+  --white:      var(--creme);
+  --cream:      var(--creme);
+  --gold:       var(--rosa);
+  --gold-dark:  var(--siena);
+  --orange:     var(--rosa);
+  --ink:        var(--terra);
+  --ink-soft:   var(--siena);
+  --dark:       var(--siena);
+  --dark-deep:  var(--terra);
 }
 
 @theme inline {
-  --color-white: var(--white);
-  --color-cream: var(--cream);
-  --color-gold: var(--gold);
+  --color-peach:  var(--peach);
+  --color-areia:  var(--areia);
+  --color-creme:  var(--creme);
+  --color-rosa:   var(--rosa);
+  --color-siena:  var(--siena);
+  --color-terra:  var(--terra);
+  /* Legacy aliases so existing Tailwind classes still compile */
+  --color-white:     var(--white);
+  --color-cream:     var(--cream);
+  --color-gold:      var(--gold);
   --color-gold-dark: var(--gold-dark);
-  --color-orange: var(--orange);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-dark: var(--dark);
+  --color-orange:    var(--orange);
+  --color-ink:       var(--ink);
+  --color-ink-soft:  var(--ink-soft);
+  --color-dark:      var(--dark);
   --color-dark-deep: var(--dark-deep);
-  --font-sans: var(--font-sans);
-  --font-script: var(--font-script);
+  --font-sans:       var(--font-sans);
+  --font-grandenhas: var(--grandenhas);
 }
 
 html {
@@ -31,53 +58,46 @@ html {
 }
 
 body {
-  background: var(--white);
-  color: var(--ink);
+  background: var(--peach);
+  color: var(--terra);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+/* Grandenhas — fonte de assinatura, reservada para títulos */
+.font-grandenhas {
+  font-family: var(--grandenhas), cursive;
+  font-weight: 400;
+}
+
+/* Legacy alias — maps to Grandenhas */
 .font-script {
-  font-family: var(--font-script), cursive;
+  font-family: var(--grandenhas), cursive;
   font-weight: 400;
 }
 
 /* Reveal on load */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.reveal {
-  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
+.reveal   { animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .reveal-1 { animation-delay: 0.08s; }
 .reveal-2 { animation-delay: 0.2s; }
 .reveal-3 { animation-delay: 0.34s; }
 
-/* Hero slow zoom/pan (Ken Burns) — mirrors Elementor background motion fx */
+/* Hero slow zoom/pan (Ken Burns) */
 @keyframes kenburns {
-  0% {
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-  100% {
-    transform: scale(1.12) translate3d(0, -1.5%, 0);
-  }
+  0%   { transform: scale(1) translate3d(0, 0, 0); }
+  100% { transform: scale(1.12) translate3d(0, -1.5%, 0); }
 }
 
-.kenburns {
-  animation: kenburns 16s ease-in-out infinite alternate;
-}
+.kenburns { animation: kenburns 16s ease-in-out infinite alternate; }
 
 /* Soft glow pulse for the scroll cue line */
 @keyframes cuepulse {
   0%, 100% { opacity: 0.35; transform: scaleY(0.7); }
-  50% { opacity: 1; transform: scaleY(1); }
+  50%       { opacity: 1;    transform: scaleY(1); }
 }
 .cue-line {
   animation: cuepulse 2.2s ease-in-out infinite;
@@ -85,27 +105,16 @@ body {
 }
 
 ::selection {
-  background: var(--gold);
-  color: #fff;
+  background: var(--rosa);
+  color: var(--creme);
 }
 
 /* Respect users who prefer less motion */
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .kenburns,
-  .cue-line {
-    animation: none !important;
-  }
-  html {
-    scroll-behavior: auto;
-  }
+  .reveal, .kenburns, .cue-line { animation: none !important; }
+  html { scroll-behavior: auto; }
 }
 
 /* Hide scrollbar on horizontal rails */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

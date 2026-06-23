@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "iaravida-start",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["next", "start"],
+      "port": 4602,
+      "autoPort": false
+    }
+  ]
+}

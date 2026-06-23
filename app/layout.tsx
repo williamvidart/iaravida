@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat, Shadows_Into_Light } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const nunito = Nunito({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
-});
-
-const script = Shadows_Into_Light({
-  variable: "--font-script",
-  subsets: ["latin"],
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -26,10 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${montserrat.variable} ${script.variable} h-full antialiased`}
-    >
+    <html lang="pt-BR" className={`${nunito.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

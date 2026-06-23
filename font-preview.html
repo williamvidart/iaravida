@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face {
+    font-family: 'Grandenhas';
+    src: url('/fonts/Grandenhas.otf') format('opentype');
+  }
+  body { background: #E8D5C8; display: flex; flex-direction: column; align-items: center; padding: 60px; font-family: 'Grandenhas', serif; }
+  .sample { font-size: 120px; color: #3D1F15; letter-spacing: 4px; margin: 20px 0; }
+  .small { font-size: 60px; color: #3D1F15; margin: 10px 0; }
+  .label { font-family: sans-serif; font-size: 12px; color: #9C6244; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+  <div class="label">Letras maiúsculas</div>
+  <div class="sample">ABCDEFG</div>
+  <div class="sample">HIJKLMN</div>
+  <div class="sample">OPQRSTU</div>
+  <div class="sample">VWXYZ</div>
+  <div class="label">Letras minúsculas</div>
+  <div class="small">abcdefghijklmn</div>
+  <div class="small">opqrstuvwxyz</div>
+  <div class="label">Números e pontuação existente</div>
+  <div class="small">0123456789 . ! ? ; : " '</div>
+  <div class="label">Vírgula (ausente)</div>
+  <div class="small">Iara, Arte, Terra,</div>
+</body>
+</html>

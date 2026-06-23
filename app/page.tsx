@@ -4,7 +4,7 @@ import MotionFx from "./components/MotionFx";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col bg-white">
+    <div className="flex flex-1 flex-col bg-peach">
       <Hero />
       <Stats />
       <QuemSou />
@@ -80,10 +80,10 @@ function Hero() {
           }}
         />
 
-        <p className="reveal reveal-2 font-script relative mb-28 px-8 text-center text-3xl leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:text-4xl">
-          A artista que habita em mim
-          <br />
-          honra a artista que habita em você
+        <p className="reveal reveal-2 font-grandenhas relative mb-28 px-6 text-center text-5xl leading-none text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:text-7xl">
+          <span className="block">A artista que habita em mim</span>
+          <span className="block -mt-8 sm:-mt-12">honra a artista que</span>
+          <span className="block -mt-8 sm:-mt-12">habita em você</span>
         </p>
 
         <a
@@ -101,7 +101,7 @@ function Hero() {
 /* --------------------------- STATS (colônia com motion) ------------ */
 function Stats() {
   return (
-    <section className="overflow-hidden bg-dark px-6 py-20 text-cream">
+    <section className="overflow-hidden bg-dark px-6 py-20 text-creme">
       <div className="mx-auto max-w-md">
         {/* Colagem de fotos com motion: central escala, laterais deslizam opostas */}
         <div className="relative mx-auto h-[420px]">
@@ -147,9 +147,9 @@ function Stats() {
           </Reveal>
 
           <Reveal dir="fade" delay={240}>
-            <div className="flex justify-center gap-8 pt-2 text-xs uppercase tracking-[0.2em] text-cream/80">
-              <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold">Instagram</a>
-              <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold">Oráculo</a>
+            <div className="flex justify-center gap-8 pt-2 text-xs uppercase tracking-[0.2em] text-creme/70">
+              <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-areia">Instagram</a>
+              <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-areia">Oráculo</a>
             </div>
           </Reveal>
         </div>
@@ -161,10 +161,10 @@ function Stats() {
 function Stat({ numero, titulo, sub }: { numero: string; titulo: string; sub: string }) {
   return (
     <div className="text-center">
-      <div className="font-script text-2xl text-gold">+de</div>
-      <div className="text-5xl font-semibold leading-none text-cream">{numero}</div>
-      <div className="mt-3 text-base font-medium text-cream">{titulo}</div>
-      <div className="mt-1 text-sm text-cream/60">{sub}</div>
+      <div className="font-grandenhas text-6xl text-areia">+de</div>
+      <div className="text-5xl font-semibold leading-none text-creme">{numero}</div>
+      <div className="mt-3 text-base font-medium text-creme">{titulo}</div>
+      <div className="mt-1 text-sm text-creme/60">{sub}</div>
     </div>
   );
 }
@@ -172,7 +172,7 @@ function Stat({ numero, titulo, sub }: { numero: string; titulo: string; sub: st
 /* --------------------------- QUEM SOU (parallax em camadas) -------- */
 function QuemSou() {
   return (
-    <section id="quem-sou" className="overflow-hidden bg-cream px-6 py-20">
+    <section id="quem-sou" className="overflow-hidden bg-creme px-6 py-20">
       <div className="mx-auto max-w-md">
         {/* Duas imagens com velocidades de parallax diferentes (4 e 5.5) */}
         <div className="relative mx-auto mb-12 h-[380px]">
@@ -185,19 +185,19 @@ function QuemSou() {
           {/* imagem secundária — placeholder, parallax mais rápido, sobreposta */}
           <div className="absolute right-0 bottom-0 z-20">
             <MotionFx speedY={5.5}>
-              <Foto className="h-48 w-40 rounded-sm border-4 border-cream shadow-xl" tom="#b07d3f" label="foto" />
+              <Foto className="h-48 w-40 rounded-sm border-4 border-peach shadow-xl" tom="#b07d3f" label="foto" />
             </MotionFx>
           </div>
         </div>
 
         <Reveal dir="right">
-          <h2 className="text-5xl font-bold tracking-tight text-ink">Quem Sou</h2>
+          <h2 className="text-5xl font-bold tracking-tight text-terra">Quem Sou</h2>
         </Reveal>
         <Reveal dir="right" delay={120}>
-          <p className="font-script mt-2 text-2xl text-gold">Iara Vida</p>
+          <p className="font-grandenhas mt-2 text-7xl text-rosa">Iara Vida</p>
         </Reveal>
 
-        <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-ink-soft">
+        <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-terra/75">
           <Reveal dir="up" delay={100}>
             <p>
               Sou Iara Vida — artista visual. Pinto com aquarelas, telas e
@@ -226,48 +226,57 @@ function QuemSou() {
   );
 }
 
-/* --------------------------- PORTFÓLIO (galeria) ------------------ */
-const categorias = [
-  { nome: "Aquarelas", tom: "#c79b58" },
-  { nome: "Telas", tom: "#b07d3f" },
-  { nome: "Geotintas", tom: "#9c6b3a" },
-  { nome: "Oráculo", tom: "#bf8a4d" },
-  { nome: "África & Marrocos", tom: "#a86f35" },
-  { nome: "Imersões", tom: "#ca9a5b" },
+/* --------------------------- PORTFÓLIO (moodboard) ------------------ */
+const fotos = [
+  "/portfolio/IMG_0762.jpg",
+  "/portfolio/IMG_1727.JPG",
+  "/portfolio/IMG_4895.jpg",
+  "/portfolio/aba86080-9f89-11f0-92fe-51c137129a48.jpg",
+  "/portfolio/IMG_9200.jpg",
+  "/portfolio/IMG_0766.jpg",
+  "/portfolio/IMG_8811.jpg",
+  "/portfolio/IMG_0207.jpg",
+  "/portfolio/IMG_1337.jpg",
+  "/portfolio/IMG_8650.jpg",
+  "/portfolio/IMG_5021.jpg",
+  "/portfolio/IMG_8934.jpg",
+  "/portfolio/IMG_4869.jpg",
+  "/portfolio/IMG_6924.jpg",
+  "/portfolio/IMG_5017.jpg",
+  "/portfolio/IMG_8773.jpg",
+  "/portfolio/IMG_8718.jpg",
+  "/portfolio/IMG_0509.PNG",
+  "/portfolio/IMG_5023.jpg",
+  "/portfolio/IMG_0796.PNG",
+  "/portfolio/IMG_1349.jpg",
+  "/portfolio/IMG_2841.jpg",
+  "/portfolio/IMG_8786.jpg",
+  "/portfolio/IMG_8790.jpg",
+  "/portfolio/IMG_8940.jpg",
+  "/portfolio/IMG_8939.jpg",
+  "/portfolio/IMG_1557.jpg",
+  "/portfolio/IMG_2748.jpg",
+  "/portfolio/IMG_2752.jpg",
+  "/portfolio/IMG_5010.jpg",
 ];
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="overflow-hidden bg-gold px-6 py-20">
-      <div className="mx-auto max-w-md">
-        <Reveal dir="up">
-          <h2 className="text-center text-5xl font-bold tracking-tight text-white">Portfólio</h2>
-        </Reveal>
-        <Reveal dir="up" delay={100}>
-          <p className="mx-auto mt-3 max-w-xs text-center text-sm text-white/85">
-            Um recorte do que tenho criado. Cada peça é parte de um momento.
-          </p>
-        </Reveal>
-
-        <div className="mt-10 grid grid-cols-2 gap-4">
-          {categorias.map((c, i) => (
-            <Reveal key={c.nome} dir="up" delay={i * 90}>
-              <MotionFx speedY={i % 2 === 0 ? 1.5 : 2.6}>
-                <a
-                  href="#contato"
-                  className="group relative flex aspect-square h-full flex-col justify-end overflow-hidden rounded-sm p-4 shadow-md transition-transform duration-300 hover:-translate-y-1"
-                  style={{ backgroundColor: c.tom }}
-                >
-                  <div aria-hidden className="absolute inset-0 flex items-center justify-center">
-                    <span className="rounded-full border border-white/40 px-2.5 py-0.5 text-[9px] uppercase tracking-[0.2em] text-white/70">foto</span>
-                  </div>
-                  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent transition-opacity duration-300 group-hover:from-black/60" />
-                  <span className="relative text-sm font-semibold uppercase tracking-wide text-white">{c.nome}</span>
-                </a>
-              </MotionFx>
-            </Reveal>
-          ))}
-        </div>
+    <section id="portfolio" className="px-0 py-0">
+      <div
+        className="grid gap-0"
+        style={{ gridTemplateColumns: "1fr 1fr 1fr", gridAutoRows: "280px" }}
+      >
+        {fotos.map((src, i) => (
+          <div key={i} className="overflow-hidden">
+            <img
+              src={src}
+              alt=""
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -281,10 +290,10 @@ function Galeria() {
       <MotionFx speedY={4} className="absolute inset-x-0 -top-16 z-0">
         <Foto className="h-[460px] w-full" tom="#8a5a2c" label="foto de fundo" />
       </MotionFx>
-      <div aria-hidden className="absolute inset-0 z-10 bg-dark-deep/55" />
+      <div aria-hidden className="absolute inset-0 z-10 bg-terra/55" />
       <div className="relative z-20 flex h-full flex-col items-center justify-center px-8 text-center">
         <Reveal dir="fade">
-          <p className="font-script text-3xl text-white drop-shadow-md sm:text-4xl">
+          <p className="font-grandenhas text-6xl text-white drop-shadow-md sm:text-7xl">
             cada parede, uma história
           </p>
         </Reveal>
@@ -302,7 +311,7 @@ function Galeria() {
 /* --------------------------- IMERSÕES / ORÁCULO (destaque) -------- */
 function Imersoes() {
   return (
-    <section id="imersoes" className="overflow-hidden bg-cream px-6 py-20">
+    <section id="imersoes" className="overflow-hidden bg-peach px-6 py-20">
       <div className="mx-auto max-w-md">
         {/* Imagem destaque com translateY suave (speed 2) */}
         <Reveal dir="fade">
@@ -313,13 +322,13 @@ function Imersoes() {
 
         <div className="text-center">
           <Reveal dir="up">
-            <p className="font-script text-2xl text-gold">um convite</p>
+            <p className="font-grandenhas text-6xl text-siena">um convite</p>
           </Reveal>
           <Reveal dir="up" delay={100}>
-            <h2 className="mt-2 text-4xl font-bold leading-tight text-ink">Oráculo & Imersões</h2>
+            <h2 className="mt-2 text-4xl font-bold leading-tight text-terra">Oráculo & Imersões</h2>
           </Reveal>
           <Reveal dir="up" delay={180}>
-            <p className="mx-auto mt-5 max-w-sm text-[15px] leading-relaxed text-ink-soft">
+            <p className="mx-auto mt-5 max-w-sm text-[15px] leading-relaxed text-terra/70">
               Encontros e experiências para reconectar com a arte que vive em
               você. Acompanhe os próximos retiros, imersões e o Oráculo.
             </p>
@@ -329,7 +338,7 @@ function Imersoes() {
               href="https://www.iaravida.com/oraculo"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-gold px-9 text-sm font-medium uppercase tracking-wide text-white transition-colors hover:bg-gold-dark"
+              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-rosa px-9 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
             >
               Quero saber mais
             </a>
@@ -343,7 +352,7 @@ function Imersoes() {
 /* ----------------------------- FOOTER ----------------------------- */
 function Footer() {
   return (
-    <footer id="contato" className="bg-dark px-6 py-16 text-cream">
+    <footer id="contato" className="bg-dark px-6 py-16 text-creme">
       <Reveal dir="up">
         <div className="mx-auto max-w-md text-center">
           <h2 className="text-2xl font-medium leading-snug">
@@ -353,17 +362,17 @@ function Footer() {
           </h2>
 
           <div className="mt-8 space-y-2 text-lg">
-            <a href="mailto:contato@iaravida.com" className="block transition-colors hover:text-gold">contato@iaravida.com</a>
-            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="block transition-colors hover:text-gold">@iaravidart</a>
+            <a href="mailto:contato@iaravida.com" className="block transition-colors hover:text-areia">contato@iaravida.com</a>
+            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="block transition-colors hover:text-areia">@iaravidart</a>
           </div>
 
-          <div className="mt-10 flex justify-center gap-8 text-xs uppercase tracking-[0.2em] text-cream/70">
-            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold">Instagram</a>
-            <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold">Oráculo</a>
+          <div className="mt-10 flex justify-center gap-8 text-xs uppercase tracking-[0.2em] text-creme/70">
+            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-areia">Instagram</a>
+            <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-areia">Oráculo</a>
           </div>
 
-          <p className="font-script mt-10 text-2xl text-gold">Iara Vida</p>
-          <p className="mt-2 text-xs text-cream/50">© {new Date().getFullYear()} Iara Vida. Todos os direitos reservados.</p>
+          <p className="font-grandenhas mt-10 text-6xl text-areia">Iara Vida</p>
+          <p className="mt-2 text-xs text-creme/50">© {new Date().getFullYear()} Iara Vida. Todos os direitos reservados.</p>
         </div>
       </Reveal>
     </footer>
