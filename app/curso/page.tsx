@@ -200,14 +200,41 @@ export default function CursoPage() {
       </section>
 
       {/* ─── IMAGEM + FRASE ───────────────────────────────────────── */}
-      <section className="relative h-[320px] overflow-hidden">
-        <img
-          src="/canva7.png"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
+      <section
+        style={{
+          position: "relative",
+          height: "320px",
+          backgroundColor: "var(--rosa)",
+          padding: "14px",
+          boxSizing: "border-box",
+        }}
+      >
+        {/* image fills the padded area — bg-image for consistent cross-platform cover */}
+        <div
+          style={{
+            position: "absolute",
+            top: "14px",
+            left: "14px",
+            right: "14px",
+            bottom: "14px",
+            backgroundImage: "url('/canva7.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
         />
-        <div className="absolute inset-0 bg-dark/50" />
-        <div className="relative z-10 flex h-full items-center justify-center px-8 text-center">
+        {/* dark overlay inside the same inset */}
+        <div
+          style={{
+            position: "absolute",
+            top: "14px",
+            left: "14px",
+            right: "14px",
+            bottom: "14px",
+            backgroundColor: "rgba(61,31,21,0.50)",
+          }}
+        />
+        <div className="relative z-10 flex h-full items-center justify-center text-center px-8">
           <Reveal dir="fade">
             <p className="font-grandenhas text-5xl leading-tight text-white drop-shadow-md">
               A terra que você pisa<br />já guarda a sua cor
