@@ -121,7 +121,7 @@ function Stats() {
           {/* central — escala (out-in) ao passar pelo centro */}
           <div className="absolute inset-x-0 top-2 z-20 flex justify-center">
             <MotionFx scaleAmt={0.18}>
-              <Foto className="h-72 w-56 rounded-sm shadow-xl" tom="#c79b58" label="foto principal" />
+              <Foto className="h-72 w-56 rounded-sm shadow-xl" src="/img8719.jpg" position="center" />
             </MotionFx>
           </div>
         </div>
