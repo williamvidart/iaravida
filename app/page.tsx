@@ -288,7 +288,7 @@ function Galeria() {
     <section className="relative h-[360px] overflow-hidden">
       {/* Fundo com parallax translateY (background_motion_fx) */}
       <MotionFx speedY={4} className="absolute inset-x-0 -top-16 z-0">
-        <Foto className="h-[460px] w-full" tom="#8a5a2c" label="foto de fundo" />
+        <Foto className="h-[460px] w-full" src="/img3326.jpg" position="center" />
       </MotionFx>
       <div aria-hidden className="absolute inset-0 z-10 bg-terra/55" />
       <div className="relative z-20 flex h-full flex-col items-center justify-center px-8 text-center">
