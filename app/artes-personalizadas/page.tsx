@@ -78,10 +78,8 @@ function Hero() {
             <p className="font-grandenhas text-7xl text-areia">arte personalizada</p>
           </Reveal>
           <Reveal dir="up" delay={120}>
-            <h1 className="mt-3 text-5xl font-bold leading-[1.05] tracking-tight text-creme sm:text-6xl">
-              Telas &amp;
-              <br />
-              Aquarelas
+            <h1 className="font-grandenhas mt-3 text-6xl leading-tight text-creme sm:text-7xl">
+              Telas &amp; Aquarelas
             </h1>
           </Reveal>
           <Reveal dir="up" delay={220}>
