@@ -340,7 +340,20 @@ export default function CursoPage() {
               <Reveal key={i} dir="up" delay={i * 40}>
                 <details className="group border-b border-terra/15 py-5">
                   <summary className="flex cursor-pointer items-start gap-4 list-none">
-                    <span className="font-grandenhas text-5xl text-terra/30 leading-none mt-0.5 shrink-0">
+                    <span
+                      className="font-grandenhas text-5xl leading-none mt-0.5 shrink-0"
+                      style={{ color: [
+                        "#C9A882", // areia
+                        "#B07A6E", // rosa
+                        "#9C6244", // siena
+                        "#A8845C", // ocre médio
+                        "#7A4F35", // castanho
+                        "#C4956A", // terracota claro
+                        "#6B3D2E", // mogno
+                        "#D4A574", // argila
+                        "#8B5E3C", // bronze
+                      ][i] }}
+                    >
                       {m.num}
                     </span>
                     <div className="flex-1">
