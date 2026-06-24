@@ -132,14 +132,14 @@ export default function CursoPage() {
 
         <div className="relative z-10 flex flex-1 flex-col items-center justify-end pb-20 px-6 text-center mt-16">
           <Reveal dir="up">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/70 mb-3">
+              curso online
+            </p>
+          </Reveal>
+          <Reveal dir="up" delay={80}>
             <h1 className="font-grandenhas text-6xl leading-none text-white drop-shadow-lg sm:text-8xl whitespace-nowrap">
               Aquarela da Terra
             </h1>
-          </Reveal>
-          <Reveal dir="up" delay={80}>
-            <p className="text-xs uppercase tracking-[0.35em] text-white/70 mt-3">
-              curso online
-            </p>
           </Reveal>
           <Reveal dir="up" delay={160}>
             <p className="mt-6 max-w-sm text-base leading-relaxed text-white/85">
