@@ -37,7 +37,7 @@ function Hero() {
 
       <a
         href={BUY_URL}
-        className="mt-5 inline-flex items-center gap-2 rounded-full bg-terra px-7 py-3 text-sm tracking-wide text-creme transition-opacity hover:opacity-90"
+        className="mt-5 inline-flex items-center gap-2 rounded-full bg-rosa px-7 py-3 text-sm tracking-wide text-creme transition-opacity hover:opacity-90"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M6 7h12l-1 12H7L6 7Z" strokeLinejoin="round" />
@@ -89,7 +89,7 @@ function Conteudo() {
 /* ------------------------------ FOOTER ------------------------------ */
 function Footer() {
   return (
-    <footer className="bg-terra px-6 pb-12 pt-10 text-center">
+    <footer className="bg-rosa px-6 pb-12 pt-10 text-center">
       <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto mb-6 h-16 w-auto icon-shimmer" style={{ filter: "brightness(10) sepia(1) saturate(0)" }} />
 
       <p className="text-xs tracking-[0.08em] text-creme/70">
