@@ -227,8 +227,8 @@ export default function CursoPage() {
         <div className="mx-auto max-w-md">
           <Reveal dir="up">
             <p className="text-xs uppercase tracking-[0.3em] text-creme/40 mb-2">para quem é</p>
-            <h2 className="font-grandenhas text-5xl leading-tight text-areia">
-              Este curso é<br />para você
+            <h2 className="font-grandenhas text-5xl leading-tight text-white whitespace-nowrap">
+              Este curso é para você
             </h2>
           </Reveal>
 
