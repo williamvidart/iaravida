@@ -315,7 +315,7 @@ export default function CursoPage() {
             <img
               src="/terrinhas.png"
               alt=""
-              className="mt-10 w-full rounded-xl object-cover"
+              className="mt-10 w-full rounded-3xl object-cover scale-105"
               style={{ mixBlendMode: "multiply" }}
             />
           </Reveal>
