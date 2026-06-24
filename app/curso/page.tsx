@@ -257,6 +257,17 @@ export default function CursoPage() {
               Você se reconheceu em algum desses caminhos? Então dê o próximo passo. Permita-se tocar a terra, sintonizar-se com os ciclos naturais e colorir a sua jornada com as cores da nossa grande mãe.
             </p>
           </Reveal>
+
+          <Reveal dir="up" delay={160}>
+            <div className="mt-10 text-center">
+              <a
+                href="#inscricao"
+                className="inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
+              >
+                Quero criar
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 
