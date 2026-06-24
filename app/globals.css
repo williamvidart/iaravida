@@ -53,7 +53,8 @@
   --font-grandenhas: var(--grandenhas);
 }
 
-html {
+html, body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
