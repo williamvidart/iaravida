@@ -35,7 +35,9 @@ function Hero() {
         Oráculo Alma Criativa
       </h1>
 
-      <a
+      <p className="font-grandenhas mt-4 text-4xl text-terra">R$ 111</p>
+
+      <
         href={BUY_URL}
         className="mt-5 inline-flex items-center gap-2 rounded-full bg-rosa px-7 py-3 text-sm tracking-wide text-creme transition-opacity hover:opacity-90"
       >
