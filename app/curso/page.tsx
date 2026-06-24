@@ -194,10 +194,7 @@ export default function CursoPage() {
               <div className="border-l-2 border-siena pl-5">
                 <p className="text-xs uppercase tracking-[0.25em] text-siena/60 mb-3">depois</p>
                 <ul className="space-y-3 text-[15px] leading-relaxed text-terra">
-                  <li>Você coleta seus próprios pigmentos da terra onde mora</li>
-                  <li>Cria sua paleta de aquarela natural com ingredientes vivos</li>
-                  <li>Pinta com confiança usando técnicas orgânicas e fluidas</li>
-                  <li>Tem uma rotina criativa que reconecta com a natureza diariamente</li>
+                  <li>Cria sua própria paleta sustentável e vive em harmonia com o seu corpo e com a natureza</li>
                 </ul>
               </div>
             </Reveal>
