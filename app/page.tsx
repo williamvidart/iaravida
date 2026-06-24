@@ -127,7 +127,7 @@ function Stats() {
         </div>
 
         {/* Números — entram pela esquerda e deslizam */}
-        <div className="mt-4 flex flex-col gap-10">
+        <div className="-mt-8 flex flex-col gap-10">
           <Reveal dir="left">
             <MotionFx speedX={2}>
               <Stat
