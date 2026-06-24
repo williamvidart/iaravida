@@ -276,7 +276,7 @@ function Processo() {
       <div aria-hidden className="absolute inset-0 z-10 bg-peach/20" />
       <div className="relative z-20 mx-auto max-w-md">
         <Reveal dir="up">
-          <h2 className="text-center text-4xl font-bold tracking-tight text-white drop-shadow-sm">
+          <h2 className="font-grandenhas text-center text-5xl leading-tight text-white drop-shadow-sm">
             Como a arte chega
             <br />
             até a sua casa
