@@ -252,7 +252,7 @@ export default function CursoPage() {
         <div className="relative z-10 flex h-full items-center justify-center text-center px-8">
           <Reveal dir="fade">
             <p className="font-grandenhas text-5xl leading-tight text-white drop-shadow-md">
-              A terra que você pisa<br />já guarda a sua cor
+              Viva em harmonia<br />com a mãe terra
             </p>
           </Reveal>
         </div>
