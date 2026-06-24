@@ -377,7 +377,7 @@ export default function CursoPage() {
       </section>
 
       {/* ─── CTA FINAL ────────────────────────────────────────────── */}
-      <section id="inscricao" className="bg-peach px-6 py-24 text-center">
+      <section id="inscricao" className="bg-peach px-6 pt-12 pb-24 text-center">
         <div className="mx-auto max-w-sm">
           <Reveal dir="up">
             <p className="font-grandenhas text-6xl text-siena leading-none">
