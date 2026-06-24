@@ -191,7 +191,7 @@ function QuemSou() {
         </div>
 
         <Reveal dir="right">
-          <h2 className="text-5xl font-bold tracking-tight text-terra">Quem Sou</h2>
+          <h2 className="font-grandenhas text-6xl text-siena">Quem Sou</h2>
         </Reveal>
         <Reveal dir="right" delay={120}>
           <img src="/logo-iara.png" alt="Iara Vida" className="mt-2 h-28 w-auto" />
