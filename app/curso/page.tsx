@@ -314,7 +314,7 @@ export default function CursoPage() {
         </div>
 
         <Reveal dir="up" delay={200}>
-          <div className="mt-10 rounded-3xl overflow-hidden -mx-6">
+          <div className="mt-10 overflow-hidden -mx-6">
             <img
               src="/terrinhas.png"
               alt=""
