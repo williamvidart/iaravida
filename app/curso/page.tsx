@@ -177,9 +177,9 @@ export default function CursoPage() {
                 <p className="text-xs uppercase tracking-[0.25em] text-terra/40 mb-3">antes</p>
                 <ul className="space-y-3 text-[15px] leading-relaxed text-terra/65">
                   <li>Você sente vontade de criar, mas não sabe por onde começar</li>
-                  <li>Usa tintas industriais e sente que falta algo mais vivo, mais seu</li>
+                  <li>Usa tintas industriais e sente que está se intoxicando e intoxicando o planeta</li>
                   <li>Sente que se distanciou da natureza sem perceber</li>
-                  <li>Tem uma criatividade adormecida esperando um convite</li>
+                  <li>Tem criatividade mas se sente bloqueada por não se dar tempo na rotina corrida</li>
                 </ul>
               </div>
             </Reveal>
