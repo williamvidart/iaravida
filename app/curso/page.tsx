@@ -366,23 +366,27 @@ export default function CursoPage() {
             ))}
           </div>
 
-          <Reveal dir="up">
-            <img
-              src="/img6628.jpg"
-              alt=""
-              className="mt-10 mb-2 w-full rounded-xl object-cover"
-            />
-          </Reveal>
         </div>
       </section>
 
-      {/* ─── FRASE CRIANÇA INTERIOR ───────────────────────────────── */}
-      <section className="bg-creme px-8 py-16 text-center">
-        <Reveal dir="fade">
-          <p className="font-grandenhas text-4xl leading-snug text-siena mx-auto max-w-xs">
-            Uma dica de que você está seguindo seu propósito: sua criança interior tem orgulho de você
-          </p>
-        </Reveal>
+      {/* ─── IMG6628 FULL-BLEED + FRASE ───────────────────────────── */}
+      <section className="relative" style={{ height: "420px" }}>
+        <img
+          src="/img6628.jpg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "rgba(30,15,8,0.52)" }}
+        />
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-8 text-center">
+          <Reveal dir="fade">
+            <p className="font-grandenhas text-4xl leading-snug text-white drop-shadow-md mx-auto max-w-xs">
+              Uma dica de que você está seguindo seu propósito: sua criança interior tem orgulho de você
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* ─── CTA FINAL ────────────────────────────────────────────── */}
