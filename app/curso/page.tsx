@@ -376,6 +376,15 @@ export default function CursoPage() {
         </div>
       </section>
 
+      {/* ─── FRASE CRIANÇA INTERIOR ───────────────────────────────── */}
+      <section className="bg-creme px-8 py-16 text-center">
+        <Reveal dir="fade">
+          <p className="font-grandenhas text-4xl leading-snug text-siena mx-auto max-w-xs">
+            Uma dica de que você está seguindo seu propósito: sua criança interior tem orgulho de você
+          </p>
+        </Reveal>
+      </section>
+
       {/* ─── CTA FINAL ────────────────────────────────────────────── */}
       <section id="inscricao" className="bg-peach px-6 pt-12 pb-24 text-center">
         <div className="mx-auto max-w-sm">
