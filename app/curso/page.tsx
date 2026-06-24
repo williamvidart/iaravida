@@ -328,11 +328,13 @@ export default function CursoPage() {
       <section className="bg-creme px-6 py-20">
         <div className="mx-auto max-w-md">
           <Reveal dir="up">
-            <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">conteúdo</p>
             <h2 className="font-grandenhas text-5xl text-terra leading-tight">
-              9 módulos.<br />25 aulas.
+              Conteúdo do Curso
             </h2>
-            <p className="mt-4 text-sm text-terra/60">
+            <p className="mt-4 text-sm uppercase tracking-[0.28em] text-terra/60 font-light">
+              9 módulos &nbsp;·&nbsp; 25 aulas
+            </p>
+            <p className="mt-2 text-sm text-terra/50 italic">
               Uma trilha completa — desde a coleta até sua expressão mais genuína.
             </p>
           </Reveal>
