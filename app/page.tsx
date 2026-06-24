@@ -150,7 +150,6 @@ function Stats() {
           <Reveal dir="fade" delay={240}>
             <div className="flex justify-center gap-8 pt-2 text-xs uppercase tracking-[0.2em] text-creme/70">
               <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-areia">Instagram</a>
-              <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-areia">Oráculo</a>
             </div>
           </Reveal>
         </div>
