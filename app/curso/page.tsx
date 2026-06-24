@@ -173,7 +173,7 @@ export default function CursoPage() {
               <img
                 src="/icone-canva1.png"
                 alt=""
-                className="absolute -top-2 right-0 w-28 pointer-events-none"
+                className="absolute -top-8 right-0 w-48 pointer-events-none"
                 style={{ mixBlendMode: "multiply" }}
               />
             </div>
