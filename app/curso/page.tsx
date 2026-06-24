@@ -407,7 +407,15 @@ export default function CursoPage() {
               O solo que você pisa já guarda a sua paleta. Você só precisa aprender a ouvi-lo.
             </p>
           </Reveal>
-          <Reveal dir="up" delay={260}>
+          <Reveal dir="up" delay={220}>
+            <div className="mt-8">
+              <p className="text-xs uppercase tracking-[0.25em] text-terra/45 mb-1">investimento</p>
+              <p className="font-grandenhas text-5xl text-terra leading-none">R$ 333</p>
+              <p className="mt-1 text-sm text-terra/55">ou 12x de R$ 34</p>
+            </div>
+          </Reveal>
+
+          <Reveal dir="up" delay={300}>
             <a
               href="https://hotmart.com/product/aquarela-da-terra"
               target="_blank"
