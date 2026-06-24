@@ -329,7 +329,7 @@ export default function CursoPage() {
         <div className="mx-auto max-w-md">
           <Reveal dir="up">
             <h2 className="font-grandenhas text-5xl text-terra leading-tight">
-              Conteúdo do Curso
+              Conteudo do Curso
             </h2>
             <p className="mt-4 text-sm uppercase tracking-[0.28em] text-terra/60 font-light">
               9 módulos &nbsp;·&nbsp; 25 aulas
