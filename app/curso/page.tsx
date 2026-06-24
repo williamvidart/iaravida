@@ -204,7 +204,7 @@ export default function CursoPage() {
         style={{
           position: "relative",
           height: "320px",
-          backgroundColor: "var(--peach)",
+          backgroundColor: "var(--rosa)",
           padding: "14px",
           boxSizing: "border-box",
         }}
