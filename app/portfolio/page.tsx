@@ -58,13 +58,15 @@ export default function Portfolio() {
         <div className="h-16" />
       </div>
 
-      {/* Title */}
-      <div className="px-6 pt-8 pb-6">
-        <p className="text-xs uppercase tracking-[0.3em] text-terra/50">obras</p>
-        <h1 className="font-grandenhas mt-1 text-5xl text-terra">Portfólio</h1>
-      </div>
+      <div className="mx-auto w-full max-w-sm">
+        {/* Title */}
+        <div className="px-6 pt-8 pb-6">
+          <p className="text-xs uppercase tracking-[0.3em] text-terra/50">obras</p>
+          <h1 className="font-grandenhas mt-1 text-5xl text-terra">Portfólio</h1>
+        </div>
 
-      <PortfolioGrid fotos={fotos} />
+        <PortfolioGrid fotos={fotos} />
+      </div>
 
       {/* Contato */}
       <footer className="bg-dark px-6 py-16 text-creme text-center">
