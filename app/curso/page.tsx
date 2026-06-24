@@ -89,7 +89,7 @@ const paraQuem = [
   },
   {
     img: "/paraquem3.png",
-    titulo: "Para você que é terapeuta holístico e enxerga na arte um portal de aterramento e cura",
+    titulo: "Para você que é terapeuta e enxerga na arte um portal de aterramento e cura",
     descricao:
       "Se você atua com arteterapia, psicologia integrativa ou práticas de cura sutil. O manejo da terra e a alquimia das cores naturais servem como um poderoso canal de expressão emocional. Você terá em mãos uma prática integrativa para ajudar seus interagentes a limparem o excesso da mente, silenciarem o barulho externo e resgatarem uma criatividade que talvez estivesse adormecida.",
   },
