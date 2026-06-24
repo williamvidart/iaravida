@@ -165,7 +165,8 @@ export default function CursoPage() {
               sua jornada
             </p>
             <h2 className="font-grandenhas text-5xl text-terra leading-tight">
-              De onde você está<br />para onde você vai
+              De onde você está<br />
+              <span className="block text-right">para onde você vai</span>
             </h2>
           </Reveal>
 
