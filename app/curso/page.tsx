@@ -331,7 +331,7 @@ export default function CursoPage() {
               9 módulos.<br />25 aulas.
             </h2>
             <p className="mt-4 text-sm text-terra/60">
-              Uma trilha completa — da terra às obras.
+              Uma trilha completa — desde a coleta até sua expressão mais genuína.
             </p>
           </Reveal>
 
