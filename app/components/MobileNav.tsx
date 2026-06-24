@@ -4,13 +4,12 @@ import { useState } from "react";
 
 const links = [
   { href: "#topo", label: "Início" },
-  { href: "#quem-sou", label: "Quem Sou" },
+  { href: "/curso", label: "Curso Online" },
+  { href: "/oraculo", label: "Oráculo Alma Criativa" },
+  { href: "/artes-personalizadas", label: "Artes Personalizadas" },
+  { href: "/vivencias", label: "Vivências" },
+  { href: "/prints", label: "Prints" },
   { href: "/portfolio", label: "Portfólio" },
-  { href: "/curso", label: "Curso" },
-  { href: "/telas-e-aquarelas", label: "Telas e Aquarelas" },
-  { href: "/oraculo", label: "Oráculo" },
-  { href: "#imersoes", label: "Imersões" },
-  { href: "#contato", label: "Contato" },
 ];
 
 export default function MobileNav() {
