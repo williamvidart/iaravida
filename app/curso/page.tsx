@@ -126,7 +126,8 @@ export default function CursoPage() {
           }}
         />
 
-        <div className="relative z-10 flex flex-1 flex-col items-center justify-end pb-20 px-6 text-center mt-16">
+        {/* texto centrado verticalmente no meio do hero */}
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center">
           <Reveal dir="up">
             <p className="text-xs uppercase tracking-[0.35em] text-white/70 mb-3">
               curso online
@@ -142,10 +143,14 @@ export default function CursoPage() {
               Transforme o solo que você pisa na sua maior fonte de expressão.
             </p>
           </Reveal>
+        </div>
+
+        {/* botão fixo na parte inferior */}
+        <div className="absolute bottom-12 inset-x-0 z-10 flex justify-center px-6">
           <Reveal dir="up" delay={240}>
             <a
               href="#inscricao"
-              className="mt-10 inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
+              className="inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
             >
               Quero me inscrever
             </a>
