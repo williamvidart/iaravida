@@ -76,31 +76,31 @@ const modulos = [
 
 const paraQuem = [
   {
-    emoji: "🍃",
+    img: "/paraquem1.png",
     titulo: "Arte-educador(a)",
     descricao:
       "Que irá compartilhar a técnica das cores naturais de forma consciente.",
   },
   {
-    emoji: "🎨",
+    img: "/paraquem2.png",
     titulo: "Artista",
     descricao:
       "Que sentiu o chamado de agregar conhecimento e técnicas naturais às suas obras.",
   },
   {
-    emoji: "🌱",
+    img: "/paraquem3.png",
     titulo: "Mãe, Pai ou Responsável",
     descricao:
       "Que deseja substituir as tintas convencionais por naturais nas experiências com as crianças.",
   },
   {
-    emoji: "✨",
+    img: "/paraquem4.png",
     titulo: "Empreendedor(a) Consciente",
     descricao:
       "Que busca se reaproximar da natureza e potencializar suas virtudes criativas.",
   },
   {
-    emoji: "🌍",
+    img: "/paraquem5.png",
     titulo: "Para você",
     descricao:
       "Que deseja melhorar a forma de conviver com a natureza diariamente e transbordar a criatividade existente — ou adormecida — dentro de si.",
@@ -236,7 +236,7 @@ export default function CursoPage() {
             {paraQuem.map((item, i) => (
               <Reveal key={i} dir="up" delay={i * 80}>
                 <div className="flex gap-4">
-                  <span className="text-2xl mt-0.5">{item.emoji}</span>
+                  <img src={item.img} alt="" className="h-12 w-12 rounded-full object-cover shrink-0" />
                   <div>
                     <p className="font-medium text-creme">{item.titulo}</p>
                     <p className="mt-1 text-sm leading-relaxed text-creme/60">
