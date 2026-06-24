@@ -133,7 +133,7 @@ function Stats() {
               <Stat
                 numero="43 mil"
                 titulo="Pessoas na comunidade"
-                sub="Somadas em todas as redes sociais"
+                sub="na comunidade do Instagram"
               />
             </MotionFx>
           </Reveal>
