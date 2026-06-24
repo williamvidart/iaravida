@@ -77,33 +77,27 @@ const modulos = [
 const paraQuem = [
   {
     img: "/paraquem1.png",
-    titulo: "Arte-educador(a)",
+    titulo: "Para você que facilita vivências e quer trazer a energia da Terra para os seus círculos",
     descricao:
-      "Que irá compartilhar a técnica das cores naturais de forma consciente.",
+      "Se você conduz retiros, workshops, círculos de mulheres ou dinâmicas de grupo, este curso oferece uma ferramenta sensorial e simbólica profunda. Você aprenderá a guiar seus participantes em uma experiência real de presença e ancoragem, onde a própria criação da tinta se torna um ritual de conexão com o sagrado.",
   },
   {
     img: "/paraquem2.png",
-    titulo: "Artista",
+    titulo: "Para você que busca mais naturalidade, alma e autenticidade em suas obras",
     descricao:
-      "Que sentiu o chamado de agregar conhecimento e técnicas naturais às suas obras.",
+      "Se você é artista, ilustrador ou criativo e sente que os materiais sintéticos convencionais limitam a profundidade da sua expressão. Aqui, você vai descobrir a beleza da organicidade, o aroma, a textura e a exclusividade que só os pigmentos naturais carregam, trazendo mais verdade, história viva e respeito ecológico para a sua arte.",
   },
   {
     img: "/paraquem3.png",
-    titulo: "Mãe, Pai ou Responsável",
+    titulo: "Para você que é terapeuta holístico e enxerga na arte um portal de aterramento e cura",
     descricao:
-      "Que deseja substituir as tintas convencionais por naturais nas experiências com as crianças.",
+      "Se você atua com arteterapia, psicologia integrativa ou práticas de cura sutil. O manejo da terra e a alquimia das cores naturais servem como um poderoso canal de expressão emocional. Você terá em mãos uma prática integrativa para ajudar seus interagentes a limparem o excesso da mente, silenciarem o barulho externo e resgatarem uma criatividade que talvez estivesse adormecida.",
   },
   {
     img: "/paraquem4.png",
-    titulo: "Empreendedor(a) Consciente",
+    titulo: "Para mães, pais e responsáveis que desejam desacelerar o tempo e criar memórias vivas com as crianças",
     descricao:
-      "Que busca se reaproximar da natureza e potencializar suas virtudes criativas.",
-  },
-  {
-    img: "/paraquem5.png",
-    titulo: "Para você",
-    descricao:
-      "Que deseja melhorar a forma de conviver com a natureza diariamente e transbordar a criatividade existente — ou adormecida — dentro de si.",
+      "Para você que busca uma pausa na rotina frenética para viver momentos de presença real e afeto puro com os pequenos. Ao substituir as tintas industriais pela alquimia das cores naturais da Terra, você transforma o ato de pintar em uma experiência mágica, lúdica e segura — um encontro profundo entre a infância, a criatividade e a própria Natureza.",
   },
 ];
 
@@ -232,14 +226,23 @@ export default function CursoPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 space-y-8">
+          <Reveal dir="up" delay={80}>
+            <p className="mt-6 text-[15px] leading-relaxed text-creme/70 italic border-l-2 border-creme/20 pl-4">
+              Se você sente o chamado de desacelerar o ritmo, tocar o solo e transformar a arte em um caminho de retorno à natureza, este espaço é seu.
+            </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-creme/60">
+              O <em>Aquarela da Terra</em> não é apenas sobre aprender uma técnica de pintura; é sobre resgatar uma sabedoria ancestral e integrá-la à sua vida de forma sutil, profunda e presente.
+            </p>
+          </Reveal>
+
+          <div className="mt-12 space-y-10">
             {paraQuem.map((item, i) => (
               <Reveal key={i} dir="up" delay={i * 80}>
                 <div className="flex gap-4">
-                  <img src={item.img} alt="" className="h-12 w-12 rounded-full object-cover shrink-0" />
+                  <img src={item.img} alt="" className="h-14 w-14 rounded-full object-cover shrink-0 mt-1" />
                   <div>
-                    <p className="font-medium text-creme">{item.titulo}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-creme/60">
+                    <p className="font-medium text-creme leading-snug">{item.titulo}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-creme/55">
                       {item.descricao}
                     </p>
                   </div>
@@ -247,6 +250,12 @@ export default function CursoPage() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal dir="up" delay={100}>
+            <p className="mt-12 text-[15px] leading-relaxed text-creme/70 italic border-l-2 border-rosa/50 pl-4">
+              Você se reconheceu em algum desses caminhos? Então dê o próximo passo. Permita-se tocar a terra, sintonizar-se com os ciclos naturais e colorir a sua jornada com as cores da nossa grande mãe.
+            </p>
+          </Reveal>
         </div>
       </section>
 
