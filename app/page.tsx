@@ -68,7 +68,7 @@ function Hero() {
               backgroundColor: "#b9966a",
               backgroundImage: "url('/hero.jpg')",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "25% center",
             }}
           />
         </div>
