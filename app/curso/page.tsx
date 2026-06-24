@@ -289,7 +289,7 @@ export default function CursoPage() {
             <div className="mt-10 text-center">
               <a
                 href="#inscricao"
-                className="inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
+                className="inline-flex h-13 items-center justify-center rounded-full bg-areia px-10 text-sm font-medium uppercase tracking-wide text-terra transition-colors hover:bg-rosa hover:text-creme"
               >
                 Quero criar
               </a>
