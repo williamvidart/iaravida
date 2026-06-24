@@ -365,17 +365,12 @@ export default function CursoPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* ─── IMAGEM PÓS-MÓDULOS ───────────────────────────────────── */}
-      <section className="bg-creme px-6 pb-10">
-        <div className="mx-auto max-w-md">
           <Reveal dir="up">
             <img
               src="/img6628.jpg"
               alt=""
-              className="w-full rounded-xl object-cover"
+              className="mt-0 w-full rounded-xl object-cover"
             />
           </Reveal>
         </div>
