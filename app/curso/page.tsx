@@ -370,7 +370,7 @@ export default function CursoPage() {
             <img
               src="/img6628.jpg"
               alt=""
-              className="mt-0 w-full rounded-xl object-cover"
+              className="mt-10 mb-2 w-full rounded-xl object-cover"
             />
           </Reveal>
         </div>
