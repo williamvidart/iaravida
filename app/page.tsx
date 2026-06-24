@@ -185,7 +185,7 @@ function QuemSou() {
           {/* imagem secundária — placeholder, parallax mais rápido, sobreposta */}
           <div className="absolute right-0 bottom-0 z-20">
             <MotionFx speedY={5.5}>
-              <Foto className="h-48 w-40 rounded-sm border-4 border-peach shadow-xl" tom="#b07d3f" label="foto" />
+              <Foto className="h-48 w-40 rounded-sm border-4 border-peach shadow-xl" src="/arara.png" position="center" />
             </MotionFx>
           </div>
         </div>
