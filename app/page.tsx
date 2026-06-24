@@ -81,7 +81,7 @@ function Hero() {
           }}
         />
 
-        <p className="reveal reveal-2 font-grandenhas relative mb-28 px-6 text-center text-5xl leading-[1.3] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:text-7xl">
+        <p className="reveal reveal-2 font-grandenhas relative mb-20 mt-auto px-6 text-center text-5xl leading-[1.1] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:text-7xl">
           <span className="block">A artista que habita em mim</span>
           <span className="block">honra a artista que</span>
           <span className="block">habita em você</span>
