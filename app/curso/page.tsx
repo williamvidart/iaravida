@@ -162,13 +162,21 @@ export default function CursoPage() {
       <section className="bg-creme px-6 py-20">
         <div className="mx-auto max-w-md">
           <Reveal dir="up">
-            <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">
-              sua jornada
-            </p>
-            <h2 className="font-grandenhas text-5xl text-terra leading-tight">
-              De onde você está<br />
-              <span className="block text-right">para onde você vai</span>
-            </h2>
+            <div className="relative">
+              <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">
+                sua jornada
+              </p>
+              <h2 className="font-grandenhas text-5xl text-terra leading-tight">
+                De onde você está<br />
+                <span className="block text-right">para onde você vai</span>
+              </h2>
+              <img
+                src="/icone-canva1.png"
+                alt=""
+                className="absolute -top-2 right-0 w-28 pointer-events-none"
+                style={{ mixBlendMode: "multiply" }}
+              />
+            </div>
           </Reveal>
 
           <div className="mt-12 space-y-10">
