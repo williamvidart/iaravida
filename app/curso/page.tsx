@@ -218,7 +218,7 @@ export default function CursoPage() {
             right: "14px",
             bottom: "14px",
             backgroundImage: "url('/canva7.png')",
-            backgroundSize: "cover",
+            backgroundSize: "220%",
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
           }}
