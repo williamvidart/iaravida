@@ -342,17 +342,7 @@ export default function CursoPage() {
                   <summary className="flex cursor-pointer items-start gap-4 list-none">
                     <span
                       className="font-grandenhas text-5xl leading-none mt-0.5 shrink-0"
-                      style={{ color: [
-                        "#C9A882", // areia
-                        "#B07A6E", // rosa
-                        "#9C6244", // siena
-                        "#A8845C", // ocre médio
-                        "#7A4F35", // castanho
-                        "#C4956A", // terracota claro
-                        "#6B3D2E", // mogno
-                        "#D4A574", // argila
-                        "#8B5E3C", // bronze
-                      ][i] }}
+                      style={{ color: i % 2 === 0 ? "#C4956A" : "#6B3D2E" }}
                     >
                       {m.num}
                     </span>
