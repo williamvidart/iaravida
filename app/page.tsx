@@ -191,10 +191,10 @@ function QuemSou() {
         </div>
 
         <Reveal dir="right">
-          <h2 className="font-grandenhas text-6xl text-siena text-right">Quem Sou</h2>
+          <h2 className="font-grandenhas text-6xl text-siena text-left">Quem Sou</h2>
         </Reveal>
-        <Reveal dir="left" delay={120}>
-          <img src="/logo-iara.png" alt="Iara Vida" className="mt-2 h-28 w-auto" />
+        <Reveal dir="right" delay={120}>
+          <img src="/logo-iara.png" alt="Iara Vida" className="mt-2 h-28 w-auto ml-auto" />
         </Reveal>
 
         <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-terra/75">
