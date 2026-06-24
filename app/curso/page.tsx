@@ -383,7 +383,7 @@ export default function CursoPage() {
         <div className="mx-auto max-w-sm">
           <Reveal dir="up">
             <p className="font-grandenhas text-6xl text-siena leading-none">
-              pronta?
+              pront@?
             </p>
           </Reveal>
           <Reveal dir="up" delay={100}>
