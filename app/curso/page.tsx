@@ -312,12 +312,14 @@ export default function CursoPage() {
           </Reveal>
 
           <Reveal dir="up" delay={200}>
-            <img
-              src="/terrinhas.png"
-              alt=""
-              className="mt-10 w-full rounded-3xl object-cover scale-105"
-              style={{ mixBlendMode: "multiply" }}
-            />
+            <div className="mt-10 rounded-3xl overflow-hidden">
+              <img
+                src="/terrinhas.png"
+                alt=""
+                className="w-full object-cover scale-105"
+                style={{ mixBlendMode: "multiply" }}
+              />
+            </div>
           </Reveal>
         </div>
       </section>
