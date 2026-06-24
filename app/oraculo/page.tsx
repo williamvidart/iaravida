@@ -31,7 +31,7 @@ function Hero() {
         <img src="/oraculo/produto.avif" alt="Oráculo Alma Criativa — baralho" className="block w-full" />
       </div>
 
-      <h1 className="font-grandenhas mt-6 text-3xl tracking-wide text-siena">
+      <h1 className="font-grandenhas mt-6 text-6xl leading-tight tracking-wide text-siena">
         Oráculo Alma Criativa
       </h1>
 
