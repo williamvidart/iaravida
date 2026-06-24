@@ -196,7 +196,7 @@ export default function CursoPage() {
                 <ul className="space-y-3 text-[15px] leading-relaxed text-terra">
                   <li>Você coleta seus próprios pigmentos da terra onde mora</li>
                   <li>Cria sua própria paleta sustentável e vive em harmonia com o seu corpo e com a natureza</li>
-                  <li>Pinta com confiança usando técnicas orgânicas e fluidas</li>
+                  <li>Se reconecta com a natureza e com a sua essência pintando com confiança usando técnicas fluidas</li>
                   <li>Tem uma rotina criativa que reconecta com a natureza diariamente</li>
                 </ul>
               </div>
