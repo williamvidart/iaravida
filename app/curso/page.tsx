@@ -331,7 +331,7 @@ export default function CursoPage() {
               <Reveal key={i} dir="up" delay={i * 40}>
                 <details className="group border-b border-terra/15 py-5">
                   <summary className="flex cursor-pointer items-start gap-4 list-none">
-                    <span className="font-grandenhas text-4xl text-terra/30 leading-none mt-0.5 shrink-0">
+                    <span className="font-grandenhas text-5xl text-terra/30 leading-none mt-0.5 shrink-0">
                       {m.num}
                     </span>
                     <div className="flex-1">
