@@ -412,6 +412,7 @@ export default function CursoPage() {
               <p className="text-xs uppercase tracking-[0.25em] text-terra/45 mb-1">investimento</p>
               <p className="font-grandenhas text-5xl text-terra leading-none">R$ 333</p>
               <p className="mt-1 text-sm text-terra/55">ou 12x de R$ 34</p>
+              <p className="mt-3 text-xs text-rosa italic">Valor disponível apenas neste mês de lançamento</p>
             </div>
           </Reveal>
 
