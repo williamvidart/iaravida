@@ -1,6 +1,6 @@
-import React from "react";
 import type { Metadata } from "next";
 import MobileNav from "../components/MobileNav";
+import PortfolioGrid from "../components/PortfolioGrid";
 
 export const metadata: Metadata = {
   title: "Portfólio | Iara Vida",
@@ -64,116 +64,7 @@ export default function Portfolio() {
         <h1 className="font-grandenhas mt-1 text-5xl text-terra">Portfólio</h1>
       </div>
 
-      {/* Grid — padrão: 1 grande / 2 pequenas */}
-      <div
-        className="grid px-4 pb-16"
-        style={{
-          gridTemplateColumns: "1fr 1fr",
-          gap: "8px",
-        }}
-      >
-        {fotos.map((src, i) => {
-          const isLarge = i % 3 === 0;
-
-          // Frase antes de IMG_4869 (índice 12)
-          const quote = i === 12 ? (
-            <div
-              key="quote"
-              style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}
-            >
-              <p className="font-grandenhas text-4xl leading-tight text-terra">
-                Arte é quando você coloca a sua alma no mundo e alguém se reconhece nela
-              </p>
-            </div>
-          ) : i === 27 ? (
-            <div key="quote7" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
-              <p className="font-grandenhas text-4xl leading-tight text-terra">
-                A arte tem o poder de nos trazer para o momento presente
-              </p>
-            </div>
-          ) : i === 24 ? (
-            <div key="quote6" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
-              <p className="font-grandenhas text-4xl leading-tight text-terra">
-                Criar exige sentir
-              </p>
-            </div>
-          ) : i === 21 ? (
-            <div key="quote5" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
-              <p className="font-grandenhas text-4xl leading-tight text-terra">
-                Faça arte, não para mostrar para o mundo, mas para se ver nele
-              </p>
-            </div>
-          ) : i === 33 ? (
-            <div key="quote4" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
-              <p className="font-grandenhas text-4xl leading-tight text-terra">
-                Criar é lembrar quem você é
-              </p>
-            </div>
-          ) : i === 36 ? (
-            <div key="quote3" style={{ gridColumn: "span 2", padding: "32px 24px 16px" }}>
-              <p className="font-grandenhas text-4xl leading-tight text-terra">
-                Arte é o milagre em si
-              </p>
-            </div>
-          ) : i === 18 ? (
-            <React.Fragment key="quote2">
-              <div style={{ padding: "32px 8px 16px 24px" }} className="flex items-center">
-                <p className="font-grandenhas text-4xl leading-tight text-terra">
-                  Arte é um<br />respiro divino
-                </p>
-              </div>
-              <div style={{ padding: "8px 8px 8px 0" }} className="flex items-center justify-end">
-                <img
-                  src="/canva1.png"
-                  alt=""
-                  style={{ mixBlendMode: "multiply", width: "100%" }}
-                />
-              </div>
-            </React.Fragment>
-          ) : null;
-
-          // Divisor depois da foto 4 (índice 3): geotinta esquerda + frase direita
-          const divider = i === 4 ? (
-            <React.Fragment key="divider">
-              <div style={{ padding: "4px 0 4px 8px" }} className="flex items-center">
-                <img
-                  src="/geotinta.png"
-                  alt=""
-                  style={{ mixBlendMode: "multiply", width: "100%" }}
-                />
-              </div>
-              <div style={{ padding: "8px 12px 8px 4px" }} className="flex items-center justify-end">
-                <p className="font-grandenhas text-4xl leading-tight text-terra text-right">
-                  Minha maior fonte<br />é a natureza
-                </p>
-              </div>
-            </React.Fragment>
-          ) : null;
-
-          return (
-            <React.Fragment key={i}>
-              {quote}
-              {divider}
-              <div
-                className="overflow-hidden relative"
-                style={{
-                  gridColumn: isLarge ? "span 2" : undefined,
-                  height: isLarge ? "340px" : "180px",
-                }}
-              >
-                <img
-                  src={src}
-                  alt=""
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105 select-none pointer-events-none"
-                  loading={i < 3 ? "eager" : "lazy"}
-                  draggable={false}
-                  style={{ WebkitTouchCallout: "none" } as React.CSSProperties}
-                />
-              </div>
-            </React.Fragment>
-          );
-        })}
-      </div>
+      <PortfolioGrid fotos={fotos} />
 
       {/* Contato */}
       <footer className="bg-dark px-6 py-16 text-creme text-center">
