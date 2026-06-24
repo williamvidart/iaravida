@@ -109,13 +109,13 @@ function Stats() {
           {/* lateral esquerda — desliza para a direita ao rolar */}
           <div className="absolute left-0 top-20 z-10">
             <MotionFx speedX={4}>
-              <Foto className="h-44 w-32 rounded-sm" tom="#7a5a32" label="foto" />
+              <Foto className="h-44 w-32 rounded-sm" src="/img8384.jpg" position="center" />
             </MotionFx>
           </div>
           {/* lateral direita — desliza para a esquerda ao rolar */}
           <div className="absolute right-0 top-32 z-10">
             <MotionFx speedX={-4}>
-              <Foto className="h-44 w-32 rounded-sm" tom="#9c6b3a" label="foto" />
+              <Foto className="h-44 w-32 rounded-sm" src="/img7267.jpg" position="center" />
             </MotionFx>
           </div>
           {/* central — escala (out-in) ao passar pelo centro */}
