@@ -108,14 +108,16 @@ export default function CursoPage() {
       <section className="relative min-h-[90vh] flex flex-col">
         <MobileNav />
 
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/curso1.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ objectPosition: "center" }}
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
         <div
           className="absolute inset-0"
           style={{
