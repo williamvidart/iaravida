@@ -329,9 +329,17 @@ export default function CursoPage() {
       <section className="bg-creme px-6 py-20">
         <div className="mx-auto max-w-md">
           <Reveal dir="up">
-            <h2 className="font-grandenhas text-5xl text-terra leading-tight">
-              Conteudo do Curso
-            </h2>
+            <div className="relative">
+              <img
+                src="/icone-canva2.png"
+                alt=""
+                className="absolute -top-16 -right-8 w-48 pointer-events-none icon-float"
+                style={{ mixBlendMode: "multiply" }}
+              />
+              <h2 className="font-grandenhas text-5xl text-terra leading-tight">
+                Conteudo do Curso
+              </h2>
+            </div>
             <p className="mt-4 text-sm uppercase tracking-[0.28em] text-terra/60 font-light">
               9 módulos &nbsp;·&nbsp; 25 aulas
             </p>
