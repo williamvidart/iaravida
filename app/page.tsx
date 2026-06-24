@@ -285,13 +285,11 @@ function Portfolio() {
 /* --------------------------- GALERIA (faixa parallax) ------------- */
 function Galeria() {
   return (
-    <section className="relative h-[360px] overflow-hidden">
-      {/* Fundo com parallax translateY (background_motion_fx) */}
-      <MotionFx speedY={4} className="absolute inset-x-0 -top-16 z-0">
-        <Foto className="h-[460px] w-full" src="/img3326.jpg" position="center" />
-      </MotionFx>
+    <section className="relative overflow-hidden">
+      {/* Imagem completa, sem corte */}
+      <img src="/img3326.jpg" alt="" className="block w-full" />
       <div aria-hidden className="absolute inset-0 z-10 bg-terra/55" />
-      <div className="relative z-20 flex h-full flex-col items-center justify-center px-8 text-center">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-8 text-center">
         <Reveal dir="fade">
           <p className="font-grandenhas text-6xl text-white drop-shadow-md sm:text-7xl">
             cada parede, uma história
