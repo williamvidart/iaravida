@@ -313,7 +313,7 @@ export default function CursoPage() {
 
           <Reveal dir="up" delay={200}>
             <img
-              src="/img6936.png"
+              src="/terrinhas.png"
               alt=""
               className="mt-10 w-full rounded-xl object-cover"
               style={{ mixBlendMode: "multiply" }}
