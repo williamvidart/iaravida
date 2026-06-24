@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const links = [
-  { href: "/#quem-sou", label: "Quem Sou" },
+  { href: "/#quem-sou", label: "Início" },
   { href: "/curso", label: "Curso Online" },
   { href: "/oraculo", label: "Oráculo Alma Criativa" },
   { href: "/artes-personalizadas", label: "Artes Personalizadas" },
