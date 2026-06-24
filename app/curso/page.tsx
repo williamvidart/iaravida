@@ -235,18 +235,19 @@ export default function CursoPage() {
             </p>
           </Reveal>
 
-          <div className="mt-12 space-y-10">
+          <div className="mt-12 space-y-0">
             {paraQuem.map((item, i) => (
               <Reveal key={i} dir="up" delay={i * 80}>
-                <div className="flex gap-4">
-                  <img src={item.img} alt="" className="h-14 w-14 rounded-full object-cover shrink-0 mt-1" />
-                  <div>
-                    <p className="font-medium text-creme leading-snug">{item.titulo}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-creme/55">
-                      {item.descricao}
-                    </p>
-                  </div>
-                </div>
+                <details className="group border-b border-creme/10 py-5">
+                  <summary className="flex cursor-pointer items-center gap-4 list-none">
+                    <img src={item.img} alt="" className="h-14 w-14 rounded-full object-cover shrink-0" />
+                    <p className="flex-1 font-medium text-creme leading-snug text-sm">{item.titulo}</p>
+                    <span className="text-creme/40 transition-transform duration-300 group-open:rotate-45 shrink-0 text-xl leading-none">+</span>
+                  </summary>
+                  <p className="mt-4 ml-[4.5rem] text-sm leading-relaxed text-creme/55">
+                    {item.descricao}
+                  </p>
+                </details>
               </Reveal>
             ))}
           </div>
