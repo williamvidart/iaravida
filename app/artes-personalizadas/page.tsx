@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Cinzel } from "next/font/google";
 import MobileNav from "../components/MobileNav";
 import Reveal from "../components/Reveal";
 import MotionFx from "../components/MotionFx";
 import ObraCarousel from "../components/ObraCarousel";
+
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Telas e Aquarelas | Iara Vida",
@@ -75,7 +78,7 @@ function Hero() {
         />
         <div className="relative">
           <Reveal dir="fade">
-            <p className="font-grandenhas text-7xl text-areia">arte personalizada</p>
+            <p className={`${cinzel.className} text-xs uppercase tracking-[0.35em] text-areia`}>Arte Personalizada</p>
           </Reveal>
           <Reveal dir="up" delay={120}>
             <h1 className="font-grandenhas mt-3 text-6xl leading-tight text-creme sm:text-7xl">
