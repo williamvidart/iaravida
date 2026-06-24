@@ -110,9 +110,29 @@ body {
   color: var(--creme);
 }
 
+/* Icon animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-8px) rotate(2deg); }
+  66%       { transform: translateY(-4px) rotate(-1.5deg); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%       { transform: scale(1.06); opacity: 0.85; }
+}
+@keyframes shimmer {
+  0%, 100% { filter: brightness(1); }
+  50%       { filter: brightness(1.15); }
+}
+
+.icon-float   { animation: float   6s ease-in-out infinite; }
+.icon-breathe { animation: breathe 4s ease-in-out infinite; }
+.icon-shimmer { animation: shimmer 3.5s ease-in-out infinite; }
+
 /* Respect users who prefer less motion */
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .kenburns, .cue-line { animation: none !important; }
+  .reveal, .kenburns, .cue-line,
+  .icon-float, .icon-breathe, .icon-shimmer { animation: none !important; }
   html { scroll-behavior: auto; }
 }
 

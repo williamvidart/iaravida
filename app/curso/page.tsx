@@ -173,7 +173,7 @@ export default function CursoPage() {
               <img
                 src="/icone-canva1.png"
                 alt=""
-                className="absolute -top-16 -right-8 w-48 pointer-events-none"
+                className="absolute -top-16 -right-8 w-48 pointer-events-none icon-float"
                 style={{ mixBlendMode: "multiply" }}
               />
             </div>
@@ -282,7 +282,7 @@ export default function CursoPage() {
               <Reveal key={i} dir="up" delay={i * 80}>
                 <details className="group border-b border-creme/10 py-5">
                   <summary className="flex cursor-pointer items-center gap-4 list-none">
-                    <img src={item.img} alt="" className="h-14 w-14 rounded-full object-cover shrink-0" />
+                    <img src={item.img} alt="" className="h-14 w-14 rounded-full object-cover shrink-0 icon-breathe" />
                     <p className="flex-1 font-medium text-creme leading-snug text-sm">{item.titulo}</p>
                     <span className="text-creme/40 transition-transform duration-300 group-open:rotate-45 shrink-0 text-xl leading-none">+</span>
                   </summary>
@@ -430,7 +430,7 @@ export default function CursoPage() {
         <img
           src="/logo-iara.png"
           alt="Iara Vida"
-          className="mx-auto mb-8 h-24 w-auto"
+          className="mx-auto mb-8 h-24 w-auto icon-shimmer"
           style={{ filter: "brightness(10) sepia(1) saturate(0)" }}
         />
         <div className="space-y-3 text-base">
