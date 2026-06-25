@@ -167,8 +167,8 @@ export default function CursoPage() {
                 sua jornada
               </p>
               <h2 className="font-grandenhas text-5xl text-terra leading-tight">
-                De onde você está<br />
-                <span className="block text-right">para onde você vai</span>
+                O que você<br />
+                <span className="block text-right">irá aprender</span>
               </h2>
               <img
                 src="/icone-canva1.png"
