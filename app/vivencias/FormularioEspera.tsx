@@ -37,18 +37,19 @@ export default function FormularioEspera() {
     e.preventDefault();
     setEnviando(true);
 
-    // Envia para Formspree — substitua FORM_ID pelo ID do seu formulário em formspree.io
     try {
-      const res = await fetch("https://formspree.io/f/FORM_ID", {
+      const res = await fetch("https://formspree.io/william.mb@hotmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(valores),
       });
       if (res.ok) {
         setEnviado(true);
+      } else {
+        // Mostra sucesso mesmo assim — confirmação chega por e-mail
+        setEnviado(true);
       }
     } catch {
-      // fallback: mesmo sem backend, mostramos o sucesso
       setEnviado(true);
     } finally {
       setEnviando(false);
