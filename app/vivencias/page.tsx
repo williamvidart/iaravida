@@ -78,21 +78,21 @@ export default function VivenciasPage() {
               "linear-gradient(180deg, rgba(40,28,18,0.25) 0%, rgba(40,28,18,0.15) 50%, rgba(40,28,18,0.65) 100%)",
           }}
         />
-        {/* label no topo */}
-        <div className="absolute top-20 inset-x-0 flex justify-center px-6">
+        {/* label + título no topo */}
+        <div className="absolute top-20 inset-x-0 flex flex-col items-center px-6 text-center">
           <Reveal dir="fade">
             <p className="text-xs uppercase tracking-[0.35em] text-white/70">
               Vivências presenciais
             </p>
-          </Reveal>
-        </div>
-        {/* título e subtítulo na base */}
-        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-20 px-6 text-center">
-          <Reveal dir="up">
-            <h1 className="font-grandenhas text-6xl leading-tight text-white drop-shadow-md">
+            <h1 className="font-grandenhas text-6xl leading-tight text-white drop-shadow-md mt-2">
               Além das Cores
             </h1>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/80">
+          </Reveal>
+        </div>
+        {/* subtítulo na base */}
+        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-20 px-6 text-center">
+          <Reveal dir="up">
+            <p className="max-w-xs text-sm leading-relaxed text-white/80">
               Um espaço de desbloqueio criativo na natureza — com meditação, terra e expressão livre.
             </p>
           </Reveal>
