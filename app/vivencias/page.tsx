@@ -93,7 +93,7 @@ export default function VivenciasPage() {
         <div className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-20 px-6 text-center">
           <Reveal dir="up">
             <p className="max-w-xs text-sm leading-relaxed text-white/80">
-              Um espaço de desbloqueio criativo na natureza — com meditação, terra e expressão livre.
+              Um espaço de desbloqueio criativo na natureza, com meditação, terra e expressão livre.
             </p>
           </Reveal>
         </div>
