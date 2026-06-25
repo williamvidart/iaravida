@@ -69,7 +69,7 @@ const modulos = [
     num: "08",
     titulo: "Eternize Suas Obras",
     aulas: 1,
-    foto: "/curso/img9404.jpg",
+    foto: "/curso/img9415.jpg",
     resultado: "Sua arte dura décadas e chega linda nas redes sociais",
     tags: ["conservação natural", "fotografia", "edição com IA"],
   },
