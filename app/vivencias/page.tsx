@@ -153,7 +153,7 @@ export default function VivenciasPage() {
           {/* foto full-bleed */}
           <Reveal dir="fade">
             <div className="overflow-hidden" style={{ height: "280px" }}>
-              <img src={e.foto} alt={e.titulo} className="h-full w-full object-cover" loading="lazy" />
+              <img src={e.foto} alt={e.titulo} className="h-full w-full object-cover object-top" loading="lazy" />
             </div>
           </Reveal>
 
