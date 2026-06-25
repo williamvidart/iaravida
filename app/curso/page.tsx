@@ -53,8 +53,8 @@ const modulos = [
     num: "06",
     titulo: "Arte Orgânica",
     aulas: 2,
-    foto: "/curso/img9407.jpg",
-    resultado: "Você cria pinturas fluidas sem bloqueio criativo",
+    foto: "/curso/img6655.jpg",
+    resultado: "Você aprende as técnicas da pintura orgânica com geotinta",
     tags: ["monocromia", "manchas fluidas", "soltar o controle"],
   },
   {
