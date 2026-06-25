@@ -84,7 +84,7 @@ export default function VivenciasPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-white/70">
               Vivências presenciais
             </p>
-            <h1 className="font-grandenhas text-6xl leading-tight text-white drop-shadow-md mt-2">
+            <h1 className="font-grandenhas text-6xl leading-tight text-white drop-shadow-md -mt-1">
               Além das Cores
             </h1>
           </Reveal>
