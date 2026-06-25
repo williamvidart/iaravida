@@ -62,7 +62,7 @@ const modulos = [
     titulo: "Natureza como Inspiração",
     aulas: 3,
     foto: "/curso/img9404.jpg",
-    resultado: "Você pinta folhas, a Árvore da Vida e compõe com intenção",
+    resultado: "Você aprende a fluir com a sua natureza interna pintando paisagens naturais",
     tags: ["olhar criativo", "composição", "inspiração viva"],
   },
   {
