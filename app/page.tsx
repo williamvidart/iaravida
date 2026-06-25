@@ -307,40 +307,39 @@ function Galeria() {
 }
 
 /* --------------------------- IMERSÕES / ORÁCULO (destaque) -------- */
+const mundos = [
+  { href: "/curso",               label: "Curso Online",          foto: "/curso/img9401.jpg" },
+  { href: "/oraculo",             label: "Oráculo",               foto: "/oraculo/produto.avif" },
+  { href: "/artes-personalizadas",label: "Artes Personalizadas",  foto: "/portfolio/IMG_4895.jpg" },
+  { href: "/vivencias",           label: "Vivências",             foto: "/portfolio/IMG_8811.jpg" },
+  { href: "/prints",              label: "Prints",                foto: "/portfolio/IMG_8940.jpg" },
+  { href: "/portfolio",           label: "Portfólio",             foto: "/portfolio/IMG_0762.jpg" },
+];
+
 function Imersoes() {
   return (
-    <section id="imersoes" className="overflow-hidden bg-peach px-6 py-20">
+    <section id="imersoes" className="bg-peach px-6 py-16">
       <div className="mx-auto max-w-md">
-        {/* Imagem destaque com translateY suave (speed 2) */}
-        <Reveal dir="fade">
-          <MotionFx speedY={2} className="mb-10">
-            <Foto className="h-56 w-full rounded-sm shadow-lg" tom="#bf8a4d" label="foto destaque" />
-          </MotionFx>
+        <Reveal dir="up">
+          <h2 className="font-grandenhas text-5xl text-terra mb-8 text-center">Conheça mais</h2>
         </Reveal>
 
-        <div className="text-center">
-          <Reveal dir="up">
-            <p className="font-grandenhas text-6xl text-siena">um convite</p>
-          </Reveal>
-          <Reveal dir="up" delay={100}>
-            <h2 className="mt-2 text-4xl font-bold leading-tight text-terra">Oráculo & Imersões</h2>
-          </Reveal>
-          <Reveal dir="up" delay={180}>
-            <p className="mx-auto mt-5 max-w-sm text-[15px] leading-relaxed text-terra/70">
-              Encontros e experiências para reconectar com a arte que vive em
-              você. Acompanhe os próximos retiros, imersões e o Oráculo.
-            </p>
-          </Reveal>
-          <Reveal dir="up" delay={260}>
-            <a
-              href="https://www.iaravida.com/oraculo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-rosa px-9 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
-            >
-              Quero saber mais
-            </a>
-          </Reveal>
+        <div className="grid grid-cols-2 gap-3">
+          {mundos.map((m, i) => (
+            <Reveal key={m.href} dir="up" delay={i * 60}>
+              <a href={m.href} className="group block overflow-hidden rounded-2xl relative h-44 shadow-sm">
+                <img
+                  src={m.foto}
+                  alt={m.label}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-terra/75 via-terra/10 to-transparent" />
+                <p className="absolute bottom-0 left-0 right-0 p-3 font-grandenhas text-xl leading-tight text-white">
+                  {m.label}
+                </p>
+              </a>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
