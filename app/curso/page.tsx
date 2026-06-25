@@ -227,41 +227,17 @@ export default function CursoPage() {
         </div>
       </section>
 
-      {/* ─── IMAGEM + FRASE ───────────────────────────────────────── */}
-      <section
-        style={{
-          position: "relative",
-          height: "320px",
-          backgroundColor: "var(--areia)",
-          padding: "14px",
-          boxSizing: "border-box",
-        }}
-      >
-        {/* image fills the padded area — bg-image for consistent cross-platform cover */}
-        <div
-          style={{
-            position: "absolute",
-            top: "14px",
-            left: "14px",
-            right: "14px",
-            bottom: "14px",
-            backgroundImage: "url('/canva7.png')",
-            backgroundSize: "220%",
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-          }}
+      {/* ─── VÍDEO + FRASE ───────────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ height: "320px" }}>
+        <video
+          src="/curso/vid6434.mov"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        {/* dark overlay inside the same inset */}
-        <div
-          style={{
-            position: "absolute",
-            top: "14px",
-            left: "14px",
-            right: "14px",
-            bottom: "14px",
-            backgroundColor: "rgba(61,31,21,0.50)",
-          }}
-        />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(61,31,21,0.50)" }} />
         <div className="relative z-10 flex h-full items-center justify-center text-center px-8">
           <Reveal dir="fade">
             <p className="font-grandenhas text-5xl leading-tight text-white drop-shadow-md">
