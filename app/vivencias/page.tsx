@@ -9,49 +9,54 @@ export const metadata: Metadata = {
     "Um espaço de desbloqueio criativo na natureza. Meditação, pigmentos da terra e expressão livre com condução da Iara.",
 };
 
-const galeria = [
-  "/vivencias/img8368.jpg",
-  "/vivencias/img8384.jpg",
-  "/vivencias/img8386.jpg",
-  "/vivencias/img8136.jpg",
-  "/vivencias/img8373.jpg",
-  "/vivencias/img8376.jpg",
-  "/vivencias/img8379.jpg",
-  "/vivencias/img8388.jpg",
-  "/vivencias/img8375.jpg",
-  "/vivencias/img8345.jpg",
-  "/vivencias/img8389.jpg",
-  "/vivencias/img8390.jpg",
-  "/vivencias/img8391.jpg",
-  "/vivencias/img8372.jpg",
-  "/vivencias/img8393.jpg",
-  "/vivencias/img7753.jpg",
-  "/vivencias/img8369.jpg",
-  "/vivencias/img8397.jpg",
-  "/vivencias/img7754.jpg",
-];
-
 const etapas = [
   {
     num: "01",
     titulo: "Abertura do Campo",
     desc: "Meditação guiada da criança interior. Um convite para pintar com leveza, saindo do perfeccionismo e entrando na presença.",
+    foto: "/vivencias/img8345.jpg",
+    bg: "bg-creme",
+    align: "left" as const,
   },
   {
     num: "02",
     titulo: "Introdução à Terra",
     desc: "Você aprende sobre os pigmentos naturais — de onde vêm, como são coletados e o que cada cor carrega de informação da terra.",
+    foto: "/vivencias/img8375.jpg",
+    bg: "bg-dark",
+    align: "right" as const,
   },
   {
     num: "03",
     titulo: "Expressão Livre",
     desc: "Com as mãos, pincéis e geotinta, você cria sem julgamento. Um lugar de permissão para SER e para o que quiser emergir.",
+    foto: "/vivencias/img8379.jpg",
+    bg: "bg-peach",
+    align: "left" as const,
   },
   {
     num: "04",
     titulo: "Integração",
     desc: "Fechamento em roda. O que a arte revelou? O que fica? Uma escuta gentil do que nasceu durante a vivência.",
+    foto: "/vivencias/img8369.jpg",
+    bg: "bg-creme",
+    align: "right" as const,
   },
+];
+
+const momentos = [
+  "/vivencias/img8384.jpg",
+  "/vivencias/img8373.jpg",
+  "/vivencias/img8393.jpg",
+  "/vivencias/img8390.jpg",
+  "/vivencias/img8391.jpg",
+  "/vivencias/img7753.jpg",
+  "/vivencias/img8388.jpg",
+  "/vivencias/img8372.jpg",
+  "/vivencias/img8389.jpg",
+  "/vivencias/img7754.jpg",
+  "/vivencias/img8397.jpg",
+  "/vivencias/img8368.jpg",
 ];
 
 export default function VivenciasPage() {
@@ -130,48 +135,51 @@ export default function VivenciasPage() {
         </div>
       </section>
 
-      {/* ── JORNADA ─────────────────────────────────────────── */}
-      <section className="bg-peach px-6 py-16">
+      {/* ── JORNADA — header ────────────────────────────────── */}
+      <section className="bg-peach px-6 pt-16 pb-0">
         <div className="mx-auto max-w-md">
           <Reveal dir="up">
             <p className="text-xs uppercase tracking-[0.35em] text-terra/50 mb-2">como acontece</p>
-            <h2 className="font-grandenhas text-5xl text-terra mb-10">
+            <h2 className="font-grandenhas text-5xl text-terra">
               A jornada da vivência
             </h2>
           </Reveal>
-          <div className="space-y-6">
-            {etapas.map((e, i) => (
-              <Reveal key={e.num} dir="left" delay={i * 80}>
-                <div className="flex gap-5">
-                  <span className="font-grandenhas text-4xl text-siena/40 leading-none mt-1 shrink-0">
-                    {e.num}
-                  </span>
-                  <div>
-                    <p className="font-medium text-terra text-base">{e.titulo}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-terra/65">{e.desc}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* ── GALERIA ─────────────────────────────────────────── */}
+      {/* ── JORNADA — etapas com foto ───────────────────────── */}
+      {etapas.map((e, i) => (
+        <section key={e.num} className={e.bg}>
+          {/* foto full-bleed */}
+          <Reveal dir="fade">
+            <div className="overflow-hidden" style={{ height: "280px" }}>
+              <img src={e.foto} alt={e.titulo} className="h-full w-full object-cover" loading="lazy" />
+            </div>
+          </Reveal>
+
+          {/* texto */}
+          <Reveal dir={e.align === "left" ? "left" : "right"}>
+            <div className={`px-6 py-8 ${e.align === "right" ? "text-right" : ""}`}>
+              <span className={`font-grandenhas text-6xl leading-none ${e.bg === "bg-dark" ? "text-creme/15" : "text-terra/10"}`}>
+                {e.num}
+              </span>
+              <h3 className={`font-grandenhas text-3xl mt-1 ${e.bg === "bg-dark" ? "text-areia" : "text-terra"}`}>
+                {e.titulo}
+              </h3>
+              <p className={`mt-2 text-sm leading-relaxed ${e.bg === "bg-dark" ? "text-creme/65" : "text-terra/65"}`}>
+                {e.desc}
+              </p>
+            </div>
+          </Reveal>
+        </section>
+      ))}
+
+      {/* ── MOMENTOS (galeria curada) ────────────────────────── */}
       <section className="py-0">
-        <div className="grid grid-cols-2" style={{ gap: "3px" }}>
-          {galeria.map((src, i) => (
-            <div
-              key={i}
-              className="overflow-hidden"
-              style={{ height: i % 5 === 0 ? "280px" : "180px", gridColumn: i % 5 === 0 ? "span 2" : undefined }}
-            >
-              <img
-                src={src}
-                alt=""
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
+        <div className="grid grid-cols-3" style={{ gap: "2px" }}>
+          {momentos.map((src, i) => (
+            <div key={i} className="overflow-hidden" style={{ height: "130px" }}>
+              <img src={src} alt="" className="h-full w-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
