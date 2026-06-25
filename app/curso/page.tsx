@@ -166,7 +166,7 @@ export default function CursoPage() {
               <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">
                 sua jornada
               </p>
-              <h2 className="font-grandenhas text-5xl text-terra leading-tight">
+              <h2 className="font-grandenhas text-[3.2rem] text-terra leading-tight whitespace-nowrap scale-x-[0.92] origin-left">
                 O que você irá aprender
               </h2>
               <img
