@@ -77,7 +77,7 @@ const modulos = [
     num: "09",
     titulo: "Rotina Criativa",
     aulas: 5,
-    foto: "/curso/img9415.jpg",
+    foto: "/curso/img9405.jpg",
     resultado: "Criar vira hábito — você não depende mais de inspiração",
     tags: ["diário criativo", "bloqueio criativo", "Oráculo Alma Criativa"],
   },
