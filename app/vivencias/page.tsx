@@ -79,7 +79,7 @@ export default function VivenciasPage() {
           }}
         />
         {/* label + título no topo */}
-        <div className="absolute top-20 inset-x-0 flex flex-col items-center px-6 text-center">
+        <div className="absolute top-28 inset-x-0 flex flex-col items-center px-6 text-center">
           <Reveal dir="fade">
             <p className="text-xs uppercase tracking-[0.35em] text-white/70">
               Vivências presenciais
