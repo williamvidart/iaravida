@@ -1,6 +1,9 @@
 import MobileNav from "./components/MobileNav";
 import Reveal from "./components/Reveal";
 import MotionFx from "./components/MotionFx";
+import { Cinzel } from "next/font/google";
+
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
   return (
@@ -321,7 +324,7 @@ function Imersoes() {
     <section id="imersoes" className="bg-peach px-6 py-16">
       <div className="mx-auto max-w-md">
         <Reveal dir="up">
-          <h2 className="font-grandenhas text-5xl text-terra mb-8 text-center">Conheça mais</h2>
+          <h2 className={`${cinzel.className} text-sm uppercase tracking-[0.35em] text-terra/70 mb-8 text-center`}>Conheça mais</h2>
         </Reveal>
 
         <div className="grid grid-cols-2 gap-3">
