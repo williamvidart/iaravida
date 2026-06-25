@@ -372,7 +372,7 @@ export default function CursoPage() {
                     <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
                       módulo {m.num} &nbsp;·&nbsp; {m.aulas} {m.aulas === 1 ? "aula" : "aulas"}
                     </span>
-                    <p className="font-grandenhas text-2xl leading-tight text-white">
+                    <p className="font-grandenhas text-4xl leading-tight text-white">
                       {m.titulo}
                     </p>
                   </div>
