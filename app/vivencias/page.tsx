@@ -122,7 +122,7 @@ export default function VivenciasPage() {
               </p>
             </Reveal>
             <Reveal dir="up" delay={290}>
-              <p className="font-grandenhas text-3xl text-siena">
+              <p className="font-grandenhas text-5xl text-siena">
                 Um ambiente de acolhimento.
               </p>
             </Reveal>
