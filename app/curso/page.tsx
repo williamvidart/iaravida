@@ -29,7 +29,7 @@ const modulos = [
     num: "03",
     titulo: "Do Barro ao Pigmento",
     aulas: 2,
-    foto: "/curso/img9409.jpg",
+    foto: "/curso/img9412.jpg",
     resultado: "Você transforma terra bruta em pó de pigmento puro",
     tags: ["filtragem", "decantação", "refinamento"],
   },
