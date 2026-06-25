@@ -167,7 +167,7 @@ export default function CursoPage() {
                 sua jornada
               </p>
               <h2 className="font-grandenhas text-4xl text-terra leading-tight">
-                O que você irá aprender
+                De alguém que —<br />para alguém que
               </h2>
               <img
                 src="/icone-canva1.png"
