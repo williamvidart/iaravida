@@ -78,11 +78,17 @@ export default function VivenciasPage() {
               "linear-gradient(180deg, rgba(40,28,18,0.25) 0%, rgba(40,28,18,0.15) 50%, rgba(40,28,18,0.65) 100%)",
           }}
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-end pb-20 px-6 text-center">
-          <Reveal dir="up">
-            <p className="text-xs uppercase tracking-[0.35em] text-white/70 mb-3">
+        {/* label no topo */}
+        <div className="absolute top-20 inset-x-0 flex justify-center px-6">
+          <Reveal dir="fade">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/70">
               Vivências presenciais
             </p>
+          </Reveal>
+        </div>
+        {/* título e subtítulo na base */}
+        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-20 px-6 text-center">
+          <Reveal dir="up">
             <h1 className="font-grandenhas text-6xl leading-tight text-white drop-shadow-md">
               Além das Cores
             </h1>
