@@ -17,11 +17,20 @@ const galeria = [
   "/vivencias/img8386.jpg",
   "/vivencias/img8136.jpg",
   "/vivencias/img8373.jpg",
+  "/vivencias/img8376.jpg",
+  "/vivencias/img8379.jpg",
   "/vivencias/img8388.jpg",
   "/vivencias/img8375.jpg",
+  "/vivencias/img8345.jpg",
   "/vivencias/img8389.jpg",
   "/vivencias/img8390.jpg",
+  "/vivencias/img8391.jpg",
   "/vivencias/img8372.jpg",
+  "/vivencias/img8393.jpg",
+  "/vivencias/img7753.jpg",
+  "/vivencias/img8369.jpg",
+  "/vivencias/img8397.jpg",
+  "/vivencias/img7754.jpg",
 ];
 
 const etapas = [
