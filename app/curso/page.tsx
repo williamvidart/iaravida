@@ -379,7 +379,7 @@ export default function CursoPage() {
                 </div>
                 {/* Conteúdo */}
                 <div className="p-4">
-                  <p className="text-[14px] font-medium leading-snug text-terra">
+                  <p className="text-base font-medium leading-snug text-terra">
                     ✓ {m.resultado}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-1.5">
