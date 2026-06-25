@@ -11,9 +11,7 @@ export const metadata: Metadata = {
 
 const galeria = [
   "/vivencias/img8368.jpg",
-  "/vivencias/img8382.jpg",
   "/vivencias/img8384.jpg",
-  "/vivencias/img8387.jpg",
   "/vivencias/img8386.jpg",
   "/vivencias/img8136.jpg",
   "/vivencias/img8373.jpg",
