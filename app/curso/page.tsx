@@ -162,11 +162,11 @@ export default function CursoPage() {
       <section className="bg-creme px-6 py-20">
         <div className="mx-auto max-w-md">
           <Reveal dir="up">
-            <div className="relative">
+            <div className="relative text-center">
               <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">
                 sua jornada
               </p>
-              <h2 className="font-grandenhas text-[3.2rem] text-terra leading-tight whitespace-nowrap scale-x-[0.92] origin-left">
+              <h2 className="font-grandenhas text-4xl text-terra leading-tight">
                 O que você irá aprender
               </h2>
               <img
