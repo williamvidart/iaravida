@@ -123,6 +123,11 @@ export default function VivenciasPage() {
                 Não é aula de pintura. É um lugar de desbloqueio, de segurança e permissão para SER. Para criar sem julgamento, sem comparação, sem a pressão de fazer bonito.
               </p>
             </Reveal>
+            <Reveal dir="up" delay={290}>
+              <p className="font-grandenhas text-3xl text-siena">
+                Um ambiente de acolhimento.
+              </p>
+            </Reveal>
           </div>
         </div>
       </section>
