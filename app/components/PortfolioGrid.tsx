@@ -17,7 +17,7 @@ function useReveal(delay = 0) {
       ([entry]) => {
         if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
       },
-      { threshold: 0.08, rootMargin: "0px 0px -4% 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px 0px 0px" }
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -117,7 +117,7 @@ export default function PortfolioGrid({ fotos }: { fotos: string[] }) {
     >
       {fotos.map((src, i) => {
         const isLarge = i % 3 === 0;
-        const delay = (i % 6) * 60;
+        const delay = (i % 2) * 40;
 
         const quote =
           i === 12 ? (
