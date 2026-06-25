@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const modulos = [
   {
     num: "01",
-    titulo: "Materiais & Início",
+    titulo: "Materiais & Inicio",
     aulas: 3,
     foto: "/curso/img9401.jpg",
     resultado: "Você entende tudo que precisa e se sente pronta para começar",
