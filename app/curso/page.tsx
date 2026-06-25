@@ -29,6 +29,7 @@ const modulos = [
     num: "03",
     titulo: "Do Barro ao Pigmento",
     aulas: 2,
+    escuro: true,
     foto: "/curso/img9412.jpg",
     resultado: "Você transforma terra bruta em pó em pigmento puro",
     tags: ["filtragem", "decantação", "refinamento"],
@@ -37,6 +38,7 @@ const modulos = [
     num: "04",
     titulo: "Montando Sua Paleta",
     aulas: 3,
+    escuro: true,
     foto: "/curso/img9414.jpg",
     resultado: "Você cria uma paleta de aquarela 100% natural e sua",
     tags: ["goma arábica", "óleos essenciais", "conservação"],
@@ -61,6 +63,7 @@ const modulos = [
     num: "07",
     titulo: "Natureza como Inspiração",
     aulas: 3,
+    escuro: true,
     foto: "/curso/img9404.jpg",
     resultado: "Você aprende a fluir com a sua natureza interna pintando paisagens naturais",
     tags: ["olhar criativo", "composição", "inspiração viva"],
@@ -69,6 +72,7 @@ const modulos = [
     num: "08",
     titulo: "Eternize Suas Obras",
     aulas: 1,
+    escuro: true,
     foto: "/curso/img9415.jpg",
     resultado: "Sua arte dura décadas e chega linda nas redes sociais",
     tags: ["conservação natural", "fotografia", "edição com IA"],
@@ -366,7 +370,7 @@ export default function CursoPage() {
                     alt={m.titulo}
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-terra/80 via-terra/10 to-transparent" />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${m.escuro ? "from-terra/95 via-terra/40 to-terra/10" : "from-terra/80 via-terra/10 to-transparent"}`} />
                   {/* Número + título sobre a foto */}
                   <div className="absolute bottom-0 left-0 p-4">
                     <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
