@@ -166,9 +166,10 @@ export default function CursoPage() {
               <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-2">
                 sua jornada
               </p>
-              <h2 className="font-grandenhas text-4xl text-terra leading-tight">
-                De alguém que —<br />para alguém que
-              </h2>
+              <div className="flex justify-between font-grandenhas text-4xl text-terra leading-tight">
+                <span>De alguém que</span>
+                <span>para alguém que</span>
+              </div>
               <img
                 src="/icone-canva1.png"
                 alt=""
