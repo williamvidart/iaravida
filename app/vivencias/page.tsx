@@ -110,7 +110,7 @@ export default function VivenciasPage() {
           <div className="space-y-5 text-[15px] leading-relaxed text-terra/75">
             <Reveal dir="up" delay={80}>
               <p>
-                "Além das Cores" é um espaço que eu crio para o artista que existe em cada pessoa se expressar livremente — com minha condução, mas sem a minha direção.
+                "Além das Cores" é um espaço que eu crio para o artista que existe em cada pessoa se expressar livremente — com minha condução, mas pela direção do seu coração.
               </p>
             </Reveal>
             <Reveal dir="up" delay={150}>
