@@ -115,7 +115,7 @@ export default function VivenciasPage() {
             </Reveal>
             <Reveal dir="up" delay={150}>
               <p>
-                Sempre acontece na natureza. Em lugares que carregam chão real, ar limpo e silêncio suficiente para ouvir o que está dentro de você.
+                Sempre acontece na natureza. Em lugares que auxiliam a sua escuta interna, com ar puro, paisagens exuberantes e som dos pássaros.
               </p>
             </Reveal>
             <Reveal dir="up" delay={220}>
