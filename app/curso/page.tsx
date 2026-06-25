@@ -178,37 +178,37 @@ export default function CursoPage() {
             </div>
           </Reveal>
 
-          <div className="mt-12 space-y-10">
-            {/* Ponto A */}
-            <Reveal dir="left">
-              <div className="border-l-2 border-terra/20 pl-5">
-                <p className="text-xs uppercase tracking-[0.25em] text-terra/40 mb-3">antes</p>
-                <ul className="space-y-3 text-[15px] leading-relaxed text-terra/65">
-                  <li>Você sente vontade de criar, mas não sabe por onde começar</li>
-                  <li>Usa tintas industriais e sente que está se intoxicando e intoxicando o planeta</li>
-                  <li>Sente que se distanciou da natureza sem perceber</li>
-                  <li>Tem criatividade mas se sente bloqueada por não se dar tempo na rotina corrida</li>
-                </ul>
-              </div>
-            </Reveal>
-
-            {/* Seta */}
-            <div className="flex justify-center">
-              <div className="h-12 w-px bg-terra/25" />
-            </div>
-
-            {/* Ponto B */}
-            <Reveal dir="right">
-              <div className="border-l-2 border-siena pl-5">
-                <p className="text-xs uppercase tracking-[0.25em] text-siena/60 mb-3">depois</p>
-                <ul className="space-y-3 text-[15px] leading-relaxed text-terra">
-                  <li>Ganha autonomia artística, coleta sua própria terra e pinta com autenticidade</li>
-                  <li>Cria sua própria paleta sustentável e vive em harmonia com o seu corpo e com a natureza</li>
-                  <li>Se reconecta com a natureza e com a sua essência pintando com confiança usando técnicas fluidas</li>
-                  <li>Tem uma rotina criativa que reconecta com a natureza diariamente</li>
-                </ul>
-              </div>
-            </Reveal>
+          <div className="mt-12 space-y-4">
+            {[
+              {
+                antes: "Quer criar mas não sabe por onde começar",
+                depois: "Cria com segurança, do pigmento à tela",
+              },
+              {
+                antes: "Usa tintas industriais que intoxicam você e o planeta",
+                depois: "Faz sua própria paleta sustentável da terra",
+              },
+              {
+                antes: "Sente que se distanciou da natureza sem perceber",
+                depois: "Reconecta com a natureza a cada pincelada",
+              },
+              {
+                antes: "Criatividade bloqueada pela rotina corrida",
+                depois: "Rotina criativa que nutre corpo e alma",
+              },
+            ].map((item, i) => (
+              <Reveal key={i} dir="up" delay={i * 80}>
+                <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 rounded-2xl bg-white/60 px-4 py-4 shadow-sm">
+                  <p className="text-[13px] leading-snug text-terra/55">{item.antes}</p>
+                  <div className="flex flex-col items-center gap-1">
+                    <div className="h-px w-6 bg-terra/20" />
+                    <span className="text-lg text-siena">→</span>
+                    <div className="h-px w-6 bg-siena/30" />
+                  </div>
+                  <p className="text-[13px] leading-snug text-terra font-medium">{item.depois}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
