@@ -38,7 +38,7 @@ const modulos = [
     titulo: "Montando Sua Paleta",
     aulas: 3,
     foto: "/curso/img9414.jpg",
-    resultado: "Você tem uma paleta de aquarela 100% natural e sua",
+    resultado: "Você cria uma paleta de aquarela 100% natural e sua",
     tags: ["goma arábica", "óleos essenciais", "conservação"],
   },
   {
