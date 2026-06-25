@@ -61,7 +61,7 @@ const modulos = [
     num: "07",
     titulo: "Natureza como Inspiração",
     aulas: 3,
-    foto: "/curso/img9411.jpg",
+    foto: "/curso/img9404.jpg",
     resultado: "Você pinta folhas, a Árvore da Vida e compõe com intenção",
     tags: ["olhar criativo", "composição", "inspiração viva"],
   },
