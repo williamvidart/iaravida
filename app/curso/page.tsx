@@ -11,66 +11,75 @@ export const metadata: Metadata = {
 const modulos = [
   {
     num: "01",
-    titulo: "Boas-vindas — Materiais para o seu despertar",
+    titulo: "Materiais & Início",
     aulas: 3,
-    descricao:
-      "A trajetória de cura através das geotintas, os materiais e ferramentas necessários e uma visão do que você vai criar.",
+    foto: "/curso/img9401.jpg",
+    resultado: "Você entende tudo que precisa e se sente pronta para começar",
+    tags: ["kit de materiais", "visão geral do curso"],
   },
   {
     num: "02",
-    titulo: "O Mapa das Cores — Onde e como coletar suas terras",
+    titulo: "Coletando Suas Terras",
     aulas: 2,
-    descricao:
-      "Como identificar o solo, onde encontrar argila e o guia completo de coleta na natureza.",
+    foto: "/curso/img9400.jpg",
+    resultado: "Você sai de casa e volta com a sua própria tinta",
+    tags: ["identificar solo", "coletar argila", "mapa de cores"],
   },
   {
     num: "03",
-    titulo: "Filtragem e Refinamento",
+    titulo: "Do Barro ao Pigmento",
     aulas: 2,
-    descricao:
-      "Do barro bruto ao pó pigmento: liberando a cor e o processo de decantação — o tempo e a separação.",
+    foto: "/curso/img9409.jpg",
+    resultado: "Você transforma terra bruta em pó de pigmento puro",
+    tags: ["filtragem", "decantação", "refinamento"],
   },
   {
     num: "04",
-    titulo: "Aglutinantes, Conservação e Montagem da Paleta",
+    titulo: "Montando Sua Paleta",
     aulas: 3,
-    descricao:
-      "Preparo da goma arábica, o toque dos óleos essenciais para conservação e a montagem da sua paleta de aquarela natural.",
+    foto: "/curso/img9414.jpg",
+    resultado: "Você tem uma paleta de aquarela 100% natural e sua",
+    tags: ["goma arábica", "óleos essenciais", "conservação"],
   },
   {
     num: "05",
-    titulo: "O Primeiro Toque — Testes e Pintura",
+    titulo: "O Primeiro Toque",
     aulas: 4,
-    descricao:
-      "Ativando sua paleta, pintando seu mapa cromático, arte abstrata com a mão não dominante e as técnicas da aquarela da terra.",
+    foto: "/curso/img9406.jpg",
+    resultado: "Você pinta sua primeira obra com tinta da terra",
+    tags: ["mapa cromático", "arte abstrata", "técnicas base"],
   },
   {
     num: "06",
-    titulo: "Os Princípios da Arte Orgânica",
+    titulo: "Arte Orgânica",
     aulas: 2,
-    descricao:
-      "Arte monocromática e a brincadeira das manchas fluidas — deixando a tinta conduzir.",
+    foto: "/curso/img9407.jpg",
+    resultado: "Você cria pinturas fluidas sem bloqueio criativo",
+    tags: ["monocromia", "manchas fluidas", "soltar o controle"],
   },
   {
     num: "07",
-    titulo: "A Natureza Como Fonte de Inspiração",
+    titulo: "Natureza como Inspiração",
     aulas: 3,
-    descricao:
-      "O olhar criativo para coletar inspirações, pintando folhas e a Árvore da Vida com princípios de composição.",
+    foto: "/curso/img9411.jpg",
+    resultado: "Você pinta folhas, a Árvore da Vida e compõe com intenção",
+    tags: ["olhar criativo", "composição", "inspiração viva"],
   },
   {
     num: "08",
     titulo: "Eternize Suas Obras",
     aulas: 1,
-    descricao:
-      "Conservadores naturais, fotografia das obras e edição com inteligência artificial.",
+    foto: "/curso/img9403.jpg",
+    resultado: "Sua arte dura décadas e chega linda nas redes sociais",
+    tags: ["conservação natural", "fotografia", "edição com IA"],
   },
   {
     num: "09",
     titulo: "Rotina Criativa",
     aulas: 5,
-    descricao:
-      "Arte como autoconhecimento, diário criativo, criança interior, como lidar com o bloqueio criativo e o Oráculo Alma Criativa.",
+    foto: "/curso/img9415.jpg",
+    resultado: "Criar vira hábito — você não depende mais de inspiração",
+    tags: ["diário criativo", "bloqueio criativo", "Oráculo Alma Criativa"],
   },
 ];
 
@@ -326,59 +335,64 @@ export default function CursoPage() {
       </section>
 
       {/* ─── MÓDULOS ──────────────────────────────────────────────── */}
-      <section className="bg-creme px-6 py-20">
-        <div className="mx-auto max-w-md">
+      <section className="bg-creme py-20">
+        <div className="mx-auto max-w-md px-6">
           <Reveal dir="up">
             <div className="relative">
               <img
                 src="/icone-canva2.png"
                 alt=""
-                className="absolute -top-16 -right-8 w-48 pointer-events-none icon-float"
+                className="absolute -top-16 -right-8 w-36 pointer-events-none icon-float"
                 style={{ mixBlendMode: "multiply" }}
               />
               <h2 className="font-grandenhas text-5xl text-terra leading-tight">
                 Conteudo do Curso
               </h2>
             </div>
-            <p className="mt-4 text-sm uppercase tracking-[0.28em] text-terra/60 font-light">
+            <p className="mt-3 text-sm uppercase tracking-[0.28em] text-terra/60 font-light">
               9 módulos &nbsp;·&nbsp; 25 aulas
             </p>
-            <p className="mt-2 text-sm text-terra/50 italic">
-              Uma trilha completa — desde a coleta até sua expressão mais genuína.
-            </p>
           </Reveal>
+        </div>
 
-          <div className="mt-12 space-y-0">
-            {modulos.map((m, i) => (
-              <Reveal key={i} dir="up" delay={i * 40}>
-                <details className="group border-b border-terra/15 py-5">
-                  <summary className="flex cursor-pointer items-start gap-4 list-none">
-                    <span
-                      className="font-grandenhas text-5xl leading-none mt-0.5 shrink-0"
-                      style={{ color: i % 2 === 0 ? "#C4956A" : "#6B3D2E" }}
-                    >
-                      {m.num}
+        <div className="mt-10 space-y-4 px-6">
+          {modulos.map((m, i) => (
+            <Reveal key={i} dir="up" delay={i * 50}>
+              <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
+                {/* Foto */}
+                <div className="relative h-48">
+                  <img
+                    src={m.foto}
+                    alt={m.titulo}
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-terra/80 via-terra/10 to-transparent" />
+                  {/* Número + título sobre a foto */}
+                  <div className="absolute bottom-0 left-0 p-4">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                      módulo {m.num} &nbsp;·&nbsp; {m.aulas} {m.aulas === 1 ? "aula" : "aulas"}
                     </span>
-                    <div className="flex-1">
-                      <p className="text-[15px] font-medium text-terra leading-snug">
-                        {m.titulo}
-                      </p>
-                      <p className="text-xs text-terra/45 mt-1">
-                        {m.aulas} {m.aulas === 1 ? "aula" : "aulas"}
-                      </p>
-                    </div>
-                    <span className="text-terra/40 mt-1 transition-transform duration-300 group-open:rotate-45 shrink-0 text-xl leading-none">
-                      +
-                    </span>
-                  </summary>
-                  <p className="mt-4 ml-10 text-sm leading-relaxed text-terra/60">
-                    {m.descricao}
+                    <p className="font-grandenhas text-2xl leading-tight text-white">
+                      {m.titulo}
+                    </p>
+                  </div>
+                </div>
+                {/* Conteúdo */}
+                <div className="p-4">
+                  <p className="text-[14px] font-medium leading-snug text-terra">
+                    ✓ {m.resultado}
                   </p>
-                </details>
-              </Reveal>
-            ))}
-          </div>
-
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {m.tags.map((t, j) => (
+                      <span key={j} className="rounded-full bg-areia/60 px-3 py-1 text-[11px] text-terra/70">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
