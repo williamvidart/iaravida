@@ -120,7 +120,7 @@ export default function VivenciasPage() {
             </Reveal>
             <Reveal dir="up" delay={220}>
               <p>
-                Não é aula de pintura. É um lugar de desbloqueio — de segurança e permissão para SER. Para criar sem julgamento, sem comparação, sem a pressão de fazer bonito.
+                Não é aula de pintura. É um lugar de desbloqueio, de segurança e permissão para SER. Para criar sem julgamento, sem comparação, sem a pressão de fazer bonito.
               </p>
             </Reveal>
           </div>
