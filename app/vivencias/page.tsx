@@ -66,9 +66,9 @@ export default function VivenciasPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/vivencias/img8368.jpg')",
+            backgroundImage: "url('/vivencias/img8136v.jpg')",
             backgroundSize: "cover",
-            backgroundPosition: "center 30%",
+            backgroundPosition: "center center",
           }}
         />
         <div
