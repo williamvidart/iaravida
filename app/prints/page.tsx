@@ -15,7 +15,7 @@ const colecoes = [
     nome: "Cerrado",
     desc: "A vegetação torcida, a terra vermelha e o céu imenso do Cerrado em papel aquarela.",
     prints: [
-      { id: "c1", titulo: "Tucano",   srcs: ["/prints/tucano.png"] },
+      { id: "c1", titulo: "Tucano",   srcs: ["/prints/tucano.png", "/prints/tucano-arte.jpg"] },
       { id: "c2", titulo: "Arara",    srcs: ["/prints/img3328.png"] },
       { id: "c3", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png"] },
       { id: "c4", titulo: "Em breve", srcs: [null] },
