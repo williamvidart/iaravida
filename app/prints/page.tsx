@@ -27,7 +27,7 @@ const colecoes = [
     nome: "Cristo",
     desc: "Obras inspiradas na espiritualidade, na entrega e no sagrado que existe em cada gesto.",
     prints: [
-      { id: "cr1", titulo: "Flores",   srcs: ["/prints/cristo-flores.jpg"] },
+      { id: "cr1", titulo: "Lírios do Campo", srcs: ["/prints/cristo-flores.jpg"] },
       { id: "cr2", titulo: "Fé",       srcs: ["/prints/cristo-fe.jpg"] },
       { id: "cr3", titulo: "Em breve", srcs: [null] },
       { id: "cr4", titulo: "Em breve", srcs: [null] },
