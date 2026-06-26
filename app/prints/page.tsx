@@ -149,6 +149,36 @@ export default function PrintsPage() {
                 </p>
               </div>
             </Reveal>
+            <Reveal dir="up" delay={240}>
+              <div className="flex gap-4 items-start">
+                <span className="font-grandenhas text-3xl text-creme/20 leading-none shrink-0">04</span>
+                <div>
+                  <strong className="text-creme font-medium">Tamanhos disponíveis</strong>
+                  <div className="mt-2 flex gap-6 text-creme/60">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.15em] text-creme/40 mb-0.5">A4</p>
+                      <p>21 × 29,7 cm</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.15em] text-creme/40 mb-0.5">A3</p>
+                      <p>29,7 × 42 cm</p>
+                    </div>
+                  </div>
+                  <p className="mt-3">
+                    Quer um tamanho diferente ou um material especial?{" "}
+                    <a
+                      href="https://instagram.com/iaravidart"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-areia underline underline-offset-2 hover:opacity-70 transition-opacity"
+                    >
+                      Entre em contato comigo
+                    </a>{" "}
+                    e encontramos juntas a melhor opção.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
