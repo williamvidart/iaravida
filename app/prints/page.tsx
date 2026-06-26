@@ -19,7 +19,7 @@ const colecoes = [
       { id: "c1", titulo: "Tucano",   srcs: ["/prints/tucano-arte.jpg", "/prints/tucano.png"], filters: [undefined, "brightness(0.82) saturate(0.95) contrast(1.05)"] },
       { id: "c2", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png", "/prints/carcara-mockup.jpg"] },
       { id: "c3", titulo: "Arara",    srcs: ["/prints/img3328.png", "/prints/arara-mockup.jpg", "/prints/arara-mao.png"], positions: ["center center", "57% center", "center center"] },
-      { id: "c4", titulo: "Em breve", srcs: [null] },
+      { id: "c4", titulo: "Artista",  srcs: ["/prints/lembrete-cura-artista.jpg"] },
     ],
   },
   {

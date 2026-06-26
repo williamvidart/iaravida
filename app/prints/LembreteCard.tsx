@@ -12,7 +12,6 @@ const frases = [
   { id: "deus",            src: "/prints/lembrete-deus.jpg",                 nome: "Deus" },
   { id: "cerrado",         src: "/prints/lembrete-cerrado.jpg",              nome: "Cerrado" },
   { id: "pequenas-acoes",  src: "/prints/lembrete-pequenas-acoes.jpg",       nome: "Pequenas Ações" },
-  { id: "cura",            src: "/prints/lembrete-cura-artista.jpg",         nome: "Cura" },
   { id: "sombras",         src: "/prints/lembrete-sombras.jpg",              nome: "Sombras" },
 ];
 
