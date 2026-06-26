@@ -18,10 +18,12 @@ function whatsappLink(titulo: string, tamanho: Tamanho) {
 export default function PrintCard({
   titulo,
   srcs,
+  positions = [],
   dark = false,
 }: {
   titulo: string;
   srcs: (string | null)[];
+  positions?: string[];
   dark?: boolean;
 }) {
   const [tam, setTam] = useState<Tamanho>("A4");
@@ -63,7 +65,7 @@ export default function PrintCard({
             >
               {imagens.map((src, i) => (
                 <div key={i} className="h-full w-full shrink-0 snap-start">
-                  <img src={src} alt={titulo} className="h-full w-full object-cover" loading="lazy" />
+                  <img src={src} alt={titulo} className="h-full w-full object-cover" style={{ objectPosition: positions[i] ?? "center center" }} loading="lazy" />
                 </div>
               ))}
             </div>
@@ -117,47 +119,42 @@ export default function PrintCard({
               ))}
             </div>
 
-            <div className="mt-2.5 flex items-center justify-between">
-              <div>
-                {dark ? (
-                  <>
-                    <span className="text-base font-semibold" style={{ color: "rgba(255,255,255,0.95)" }}>
-                      R$ {precos[tam].toLocaleString("pt-BR")}
-                    </span>
-                    <span className="ml-1.5 text-[10px] uppercase tracking-[0.1em]" style={{ color: "rgba(255,255,255,0.45)" }}>
-                      frete incluso
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <span className="text-base font-semibold text-siena">
-                      R$ {precos[tam].toLocaleString("pt-BR")}
-                    </span>
-                    <span className="ml-1.5 text-[10px] text-terra/40 uppercase tracking-[0.1em]">
-                      frete incluso
-                    </span>
-                  </>
-                )}
-              </div>
+            <div className="mt-2.5 flex flex-col gap-1">
               {dark ? (
-                <a
-                  href={whatsappLink(titulo, tam)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs uppercase tracking-[0.2em] border-b border-creme/40 pb-0.5 transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(255,255,255,0.85)" }}
-                >
-                  Encomendar
-                </a>
+                <>
+                  <span className="text-base font-semibold" style={{ color: "rgba(255,255,255,0.95)" }}>
+                    R$ {precos[tam].toLocaleString("pt-BR")}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.1em]" style={{ color: "rgba(255,255,255,0.45)" }}>
+                    frete incluso
+                  </span>
+                  <a
+                    href={whatsappLink(titulo, tam)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 self-start text-xs uppercase tracking-[0.2em] border-b border-creme/40 pb-0.5 transition-opacity hover:opacity-70"
+                    style={{ color: "rgba(255,255,255,0.85)" }}
+                  >
+                    Encomendar
+                  </a>
+                </>
               ) : (
-                <a
-                  href={whatsappLink(titulo, tam)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs uppercase tracking-[0.2em] text-siena border-b border-siena/40 pb-0.5 transition-opacity hover:opacity-70"
-                >
-                  Encomendar
-                </a>
+                <>
+                  <span className="text-base font-semibold text-siena">
+                    R$ {precos[tam].toLocaleString("pt-BR")}
+                  </span>
+                  <span className="text-[10px] text-terra/40 uppercase tracking-[0.1em]">
+                    frete incluso
+                  </span>
+                  <a
+                    href={whatsappLink(titulo, tam)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 self-start text-xs uppercase tracking-[0.2em] text-siena border-b border-siena/40 pb-0.5 transition-opacity hover:opacity-70"
+                  >
+                    Encomendar
+                  </a>
+                </>
               )}
             </div>
           </>

@@ -16,8 +16,8 @@ const colecoes = [
     desc: "A vegetação torcida, a terra vermelha e o céu imenso do Cerrado em papel aquarela.",
     prints: [
       { id: "c1", titulo: "Tucano",   srcs: ["/prints/tucano.png", "/prints/tucano-arte.jpg"] },
-      { id: "c2", titulo: "Arara",    srcs: ["/prints/img3328.png"] },
-      { id: "c3", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png"] },
+      { id: "c2", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png"] },
+      { id: "c3", titulo: "Arara",    srcs: ["/prints/arara-mockup.jpg", "/prints/img3328.png"], positions: ["60% center", "center center"] },
       { id: "c4", titulo: "Em breve", srcs: [null] },
     ],
   },
@@ -107,7 +107,7 @@ export default function PrintsPage() {
             <div className="grid grid-cols-2 gap-4">
               {col.prints.map((p, i) => (
                 <Reveal key={p.id} dir="up" delay={i * 60}>
-                  <PrintCard titulo={p.titulo} srcs={p.srcs} dark={col.slug === "cerrado" || col.slug === "marrocco"} />
+                  <PrintCard titulo={p.titulo} srcs={p.srcs} positions={(p as any).positions} dark={col.slug === "cerrado" || col.slug === "marrocco"} />
                 </Reveal>
               ))}
             </div>
