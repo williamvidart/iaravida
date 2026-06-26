@@ -17,14 +17,16 @@ const etapas = [
     foto: "/vivencias/img8345.jpg",
     bg: "bg-creme",
     align: "left" as const,
+    objectPosition: "center 15%",
   },
   {
     num: "02",
     titulo: "Introdução à Terra",
     desc: "Você aprende sobre os pigmentos naturais — de onde vêm, como são coletados e o que cada cor carrega de informação da terra.",
-    foto: "/vivencias/img8375.jpg",
+    foto: "/vivencias/img8368.jpg",
     bg: "bg-dark",
     align: "right" as const,
+    objectPosition: "center 20%",
   },
   {
     num: "03",
@@ -56,7 +58,7 @@ const momentos = [
   "/vivencias/img8389.jpg",
   "/vivencias/img7754.jpg",
   "/vivencias/img8397.jpg",
-  "/vivencias/img8368.jpg",
+  "/vivencias/img8375.jpg",
 ];
 
 export default function VivenciasPage() {
@@ -153,7 +155,7 @@ export default function VivenciasPage() {
           {/* foto full-bleed */}
           <Reveal dir="fade">
             <div className="overflow-hidden" style={{ height: "360px" }}>
-              <img src={e.foto} alt={e.titulo} className="h-full w-full object-cover object-center" loading="lazy" />
+              <img src={e.foto} alt={e.titulo} className="h-full w-full object-cover" style={{ objectPosition: (e as any).objectPosition ?? "center center" }} loading="lazy" />
             </div>
           </Reveal>
 
