@@ -105,7 +105,7 @@ function Hero() {
 /* --------------------------- STATS (colônia com motion) ------------ */
 function Stats() {
   return (
-    <section className="overflow-hidden px-6 py-20" style={{ backgroundColor: "#D4C7BE" }}>
+    <section className="overflow-hidden px-6 py-20" style={{ backgroundColor: "#C0806E" }}>
       <div className="mx-auto max-w-md">
         {/* Colagem de fotos com motion: central escala, laterais deslizam opostas */}
         <div className="relative mx-auto h-[420px]">
@@ -151,8 +151,8 @@ function Stats() {
           </Reveal>
 
           <Reveal dir="fade" delay={240}>
-            <div className="flex justify-center gap-8 pt-2 text-xs uppercase tracking-[0.2em] text-terra/60">
-              <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-siena">Instagram</a>
+            <div className="flex justify-center gap-8 pt-2 text-xs uppercase tracking-[0.2em] text-creme/60">
+              <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-creme">Instagram</a>
             </div>
           </Reveal>
         </div>
@@ -164,10 +164,10 @@ function Stats() {
 function Stat({ numero, titulo, sub }: { numero: string; titulo: string; sub: string }) {
   return (
     <div className="text-center">
-      <div className="font-grandenhas text-6xl text-siena">+de</div>
-      <div className="text-5xl font-semibold leading-none text-terra">{numero}</div>
-      <div className="mt-3 text-base font-medium text-terra">{titulo}</div>
-      <div className="mt-1 text-sm text-terra/55">{sub}</div>
+      <div className="font-grandenhas text-6xl text-creme/60">+de</div>
+      <div className="text-5xl font-semibold leading-none text-creme">{numero}</div>
+      <div className="mt-3 text-base font-medium text-creme">{titulo}</div>
+      <div className="mt-1 text-sm text-creme/65">{sub}</div>
     </div>
   );
 }
@@ -352,7 +352,7 @@ function Imersoes() {
 /* ----------------------------- FOOTER ----------------------------- */
 function Footer() {
   return (
-    <footer id="contato" className="px-6 py-16 text-terra" style={{ backgroundColor: "#D4C7BE" }}>
+    <footer id="contato" className="px-6 py-16 text-creme" style={{ backgroundColor: "#C0806E" }}>
       <Reveal dir="up">
         <div className="mx-auto max-w-md text-center">
           <h2 className="text-2xl font-medium leading-snug">
@@ -362,17 +362,17 @@ function Footer() {
           </h2>
 
           <div className="mt-8 space-y-2 text-lg">
-            <a href="mailto:contato@iaravida.com" className="block transition-colors hover:text-siena">contato@iaravida.com</a>
-            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="block transition-colors hover:text-siena">@iaravidart</a>
+            <a href="mailto:contato@iaravida.com" className="block transition-colors hover:text-areia">contato@iaravida.com</a>
+            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="block transition-colors hover:text-areia">@iaravidart</a>
           </div>
 
-          <div className="mt-10 flex justify-center gap-8 text-xs uppercase tracking-[0.2em] text-terra/60">
-            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-siena">Instagram</a>
-            <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-siena">Oráculo</a>
+          <div className="mt-10 flex justify-center gap-8 text-xs uppercase tracking-[0.2em] text-creme/60">
+            <a href="https://instagram.com/iaravidart" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-creme">Instagram</a>
+            <a href="https://www.iaravida.com/oraculo" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-creme">Oráculo</a>
           </div>
 
-          <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto mt-10 h-24 w-auto" style={{ filter: "sepia(1) saturate(0.4) brightness(0.4)" }} />
-          <p className="mt-2 text-xs text-terra/50">© {new Date().getFullYear()} Iara Vida. Todos os direitos reservados.</p>
+          <img src="/logo-iara.png" alt="Iara Vida" className="mx-auto mt-10 h-24 w-auto" style={{ filter: "brightness(10) sepia(1) saturate(0)" }} />
+          <p className="mt-2 text-xs text-creme/50">© {new Date().getFullYear()} Iara Vida. Todos os direitos reservados.</p>
         </div>
       </Reveal>
     </footer>
