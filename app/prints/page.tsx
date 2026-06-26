@@ -30,7 +30,7 @@ const colecoes = [
       { id: "cr1", titulo: "Lírios do Campo", srcs: ["/prints/cristo-flores.jpg"] },
       { id: "cr2", titulo: "Fé",       srcs: ["/prints/cristo-fe.jpg"] },
       { id: "cr3", titulo: "Amor Incondicional", srcs: ["/prints/cristo-amor.jpg"] },
-      { id: "cr4", titulo: "Em breve", srcs: [null] },
+      { id: "cr4", titulo: "Caminho",  srcs: ["/prints/cristo-caminho.jpg"], positions: ["center 40%"] },
     ],
   },
   {
