@@ -4,7 +4,7 @@ import { useState } from "react";
 const WA_NUMBER = "5511999999999";
 
 const frases = [
-  { id: "artista-claro",   src: "/prints/lembrete-2.png",                    nome: "Artista (claro)" },
+  { id: "artista-escuro",  src: "/prints/lembrete-artista-nao-desistiu.jpg", nome: "Artista" },
   { id: "alma",            src: "/prints/lembrete-alma.jpg",                 nome: "Alma" },
   { id: "sente",           src: "/prints/lembrete-sente.jpg",                nome: "Sentir" },
   { id: "paixao",          src: "/prints/lembrete-paixao.jpg",               nome: "Paixão" },
