@@ -10,7 +10,7 @@ const frases = [
   { id: "sente",           src: "/prints/lembrete-sente.jpg",                nome: "Sentir" },
   { id: "paixao",          src: "/prints/lembrete-paixao.jpg",               nome: "Paixão" },
   { id: "deus",            src: "/prints/lembrete-deus.jpg",                 nome: "Deus" },
-  { id: "cerrado",         src: "/prints/lembrete-cerrado.jpg",              nome: "Cerrado" },
+  { id: "cura",            src: "/prints/lembrete-cura-artista.jpg",         nome: "Cura" },
   { id: "pequenas-acoes",  src: "/prints/lembrete-pequenas-acoes.jpg",       nome: "Pequenas Ações" },
   { id: "sombras",         src: "/prints/lembrete-sombras.jpg",              nome: "Sombras" },
 ];
