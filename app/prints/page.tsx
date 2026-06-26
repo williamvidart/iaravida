@@ -187,7 +187,7 @@ export default function PrintsPage() {
       <section className="bg-creme px-6 py-16 text-center">
         <div className="mx-auto max-w-xs">
           <Reveal dir="up">
-            <p className="font-grandenhas text-4xl text-siena mb-3">Dúvidas?</p>
+            <p className="font-grandenhas text-4xl text-siena mb-3">D<span style={{ fontSize: "1.07em" }}>ú</span>vidas?</p>
             <p className="text-sm leading-relaxed text-terra/65 mb-8">
               Me chame no Instagram — respondo com carinho.
             </p>
