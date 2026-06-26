@@ -18,9 +18,11 @@ function whatsappLink(titulo: string, tamanho: Tamanho) {
 export default function PrintCard({
   titulo,
   srcs,
+  dark = false,
 }: {
   titulo: string;
   srcs: (string | null)[];
+  dark?: boolean;
 }) {
   const [tam, setTam] = useState<Tamanho>("A4");
   const [slide, setSlide] = useState(0);
@@ -53,7 +55,6 @@ export default function PrintCard({
       >
         {temImagem ? (
           <>
-            {/* track */}
             <div
               ref={trackRef}
               onScroll={onScroll}
@@ -67,7 +68,6 @@ export default function PrintCard({
               ))}
             </div>
 
-            {/* dots */}
             {multi && (
               <div className="absolute bottom-2 inset-x-0 flex justify-center gap-1.5">
                 {imagens.map((_, i) => (
@@ -75,9 +75,7 @@ export default function PrintCard({
                     key={i}
                     onClick={() => goTo(i)}
                     className={`rounded-full transition-all ${
-                      i === slide
-                        ? "w-4 h-1.5 bg-creme"
-                        : "w-1.5 h-1.5 bg-creme/50"
+                      i === slide ? "w-4 h-1.5 bg-creme" : "w-1.5 h-1.5 bg-creme/50"
                     }`}
                   />
                 ))}
@@ -95,7 +93,9 @@ export default function PrintCard({
       <div className="mt-3 px-0.5">
         {temImagem ? (
           <>
-            <p className="text-sm font-medium text-terra leading-snug">{titulo}</p>
+            <p className={`text-sm font-medium leading-snug ${dark ? "text-creme" : "text-terra"}`}>
+              {titulo}
+            </p>
 
             {/* seletor de tamanho */}
             <div className="flex gap-2 mt-2.5">
@@ -103,10 +103,13 @@ export default function PrintCard({
                 <button
                   key={t}
                   onClick={() => setTam(t)}
+                  style={tam !== t && dark ? { color: "rgba(255,255,255,0.55)" } : undefined}
                   className={`flex-1 rounded-lg py-1.5 text-xs uppercase tracking-[0.15em] border transition-colors ${
                     tam === t
                       ? "bg-siena text-creme border-siena"
-                      : "bg-transparent text-terra/60 border-terra/20 hover:border-siena/50"
+                      : dark
+                        ? "bg-transparent border-creme/25 hover:border-creme/60"
+                        : "bg-transparent text-terra/60 border-terra/20 hover:border-siena/50"
                   }`}
                 >
                   {t}
@@ -116,21 +119,46 @@ export default function PrintCard({
 
             <div className="mt-2.5 flex items-center justify-between">
               <div>
-                <span className="text-base font-semibold text-siena">
-                  R$ {precos[tam].toLocaleString("pt-BR")}
-                </span>
-                <span className="ml-1.5 text-[10px] text-terra/40 uppercase tracking-[0.1em]">
-                  frete incluso
-                </span>
+                {dark ? (
+                  <>
+                    <span className="text-base font-semibold" style={{ color: "rgba(255,255,255,0.95)" }}>
+                      R$ {precos[tam].toLocaleString("pt-BR")}
+                    </span>
+                    <span className="ml-1.5 text-[10px] uppercase tracking-[0.1em]" style={{ color: "rgba(255,255,255,0.45)" }}>
+                      frete incluso
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-base font-semibold text-siena">
+                      R$ {precos[tam].toLocaleString("pt-BR")}
+                    </span>
+                    <span className="ml-1.5 text-[10px] text-terra/40 uppercase tracking-[0.1em]">
+                      frete incluso
+                    </span>
+                  </>
+                )}
               </div>
-              <a
-                href={whatsappLink(titulo, tam)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.2em] text-siena border-b border-siena/40 pb-0.5 transition-opacity hover:opacity-70"
-              >
-                Encomendar
-              </a>
+              {dark ? (
+                <a
+                  href={whatsappLink(titulo, tam)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs uppercase tracking-[0.2em] border-b border-creme/40 pb-0.5 transition-opacity hover:opacity-70"
+                  style={{ color: "rgba(255,255,255,0.85)" }}
+                >
+                  Encomendar
+                </a>
+              ) : (
+                <a
+                  href={whatsappLink(titulo, tam)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs uppercase tracking-[0.2em] text-siena border-b border-siena/40 pb-0.5 transition-opacity hover:opacity-70"
+                >
+                  Encomendar
+                </a>
+              )}
             </div>
           </>
         ) : (

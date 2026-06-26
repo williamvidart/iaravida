@@ -107,7 +107,7 @@ export default function PrintsPage() {
             <div className="grid grid-cols-2 gap-4">
               {col.prints.map((p, i) => (
                 <Reveal key={p.id} dir="up" delay={i * 60}>
-                  <PrintCard titulo={p.titulo} srcs={p.srcs} />
+                  <PrintCard titulo={p.titulo} srcs={p.srcs} dark={col.slug === "cerrado" || col.slug === "marrocco"} />
                 </Reveal>
               ))}
             </div>
