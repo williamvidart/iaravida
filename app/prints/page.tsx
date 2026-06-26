@@ -15,9 +15,9 @@ const colecoes = [
     nome: "Cerrado",
     desc: "A vegetação torcida, a terra vermelha e o céu imenso do Cerrado em papel aquarela.",
     prints: [
-      { id: "c1", titulo: "Tucano",   srcs: ["/prints/tucano.png", "/prints/tucano-arte.jpg"] },
-      { id: "c2", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png"] },
-      { id: "c3", titulo: "Arara",    srcs: ["/prints/arara-mockup.jpg", "/prints/img3328.png"], positions: ["60% center", "center center"] },
+      { id: "c1", titulo: "Tucano",   srcs: ["/prints/tucano-arte.jpg", "/prints/tucano.png"], filters: [undefined, "brightness(0.82) saturate(0.95) contrast(1.05)"] },
+      { id: "c2", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png", "/prints/carcara-mockup.jpg"] },
+      { id: "c3", titulo: "Arara",    srcs: ["/prints/img3328.png", "/prints/arara-mockup.jpg", "/prints/arara-mao.png"], positions: ["center center", "57% center", "center center"] },
       { id: "c4", titulo: "Em breve", srcs: [null] },
     ],
   },
@@ -37,10 +37,8 @@ const colecoes = [
     nome: "Marrocco",
     desc: "Cores, padrões e a luz dourada de Marrocos impressos com pigmentos e aquarela.",
     prints: [
-      { id: "m1", titulo: "Palmeiras", srcs: ["/prints/img9067.png"] },
-      { id: "m2", titulo: "Em breve",  srcs: [null] },
-      { id: "m3", titulo: "Em breve",  srcs: [null] },
-      { id: "m4", titulo: "Em breve",  srcs: [null] },
+      { id: "m1", titulo: "Fonte",    srcs: ["/prints/img9067.png", "/prints/palmeiras-arte.jpg"] },
+      { id: "m2", titulo: "Deserto", srcs: ["/prints/deserto-mockup.jpg", "/prints/deserto-arte.jpg"] },
     ],
   },
   {
@@ -48,10 +46,10 @@ const colecoes = [
     nome: "Lembrete",
     desc: "Palavras e imagens que lembram do que importa. Para ter sempre à vista.",
     prints: [
-      { id: "l1", titulo: "Em breve", srcs: [null] },
-      { id: "l2", titulo: "Em breve", srcs: [null] },
-      { id: "l3", titulo: "Em breve", srcs: [null] },
-      { id: "l4", titulo: "Em breve", srcs: [null] },
+      { id: "l1", titulo: "Artista",  srcs: ["/prints/lembrete-2.png", "/prints/lembrete-artista-nao-desistiu.jpg"] },
+      { id: "l2", titulo: "Alma",     srcs: ["/prints/lembrete-alma.jpg", "/prints/lembrete-sente.jpg"] },
+      { id: "l3", titulo: "Paixão",   srcs: ["/prints/lembrete-paixao.jpg", "/prints/lembrete-deus.jpg"] },
+      { id: "l4", titulo: "Cerrado",  srcs: ["/prints/lembrete-cerrado.jpg", "/prints/lembrete-pequenas-acoes.jpg"] },
     ],
   },
 ];
@@ -91,7 +89,7 @@ export default function PrintsPage() {
           } : undefined}
         >
           {(col.slug === "cerrado" || col.slug === "marrocco") && (
-            <div className="absolute inset-0 bg-terra/50" />
+            <div className={`absolute inset-0 ${col.slug === "cerrado" ? "bg-terra/68" : "bg-terra/50"}`} />
           )}
           <div className="relative max-w-md mx-auto">
             {/* header da coleção */}
@@ -104,10 +102,10 @@ export default function PrintsPage() {
             </Reveal>
 
             {/* grade de prints */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className={`grid gap-4 ${col.slug === "marrocco" ? "grid-cols-1 w-1/2 mx-auto" : "grid-cols-2"}`}>
               {col.prints.map((p, i) => (
                 <Reveal key={p.id} dir="up" delay={i * 60}>
-                  <PrintCard titulo={p.titulo} srcs={p.srcs} positions={(p as any).positions} dark={col.slug === "cerrado" || col.slug === "marrocco"} />
+                  <PrintCard titulo={p.titulo} srcs={p.srcs} positions={(p as any).positions} filters={(p as any).filters} dark={col.slug === "cerrado" || col.slug === "marrocco"} />
                 </Reveal>
               ))}
             </div>

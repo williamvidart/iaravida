@@ -19,11 +19,13 @@ export default function PrintCard({
   titulo,
   srcs,
   positions = [],
+  filters = [],
   dark = false,
 }: {
   titulo: string;
   srcs: (string | null)[];
   positions?: string[];
+  filters?: string[];
   dark?: boolean;
 }) {
   const [tam, setTam] = useState<Tamanho>("A4");
@@ -65,7 +67,7 @@ export default function PrintCard({
             >
               {imagens.map((src, i) => (
                 <div key={i} className="h-full w-full shrink-0 snap-start">
-                  <img src={src} alt={titulo} className="h-full w-full object-cover" style={{ objectPosition: positions[i] ?? "center center" }} loading="lazy" />
+                  <img src={src} alt={titulo} className="h-full w-full object-cover" style={{ objectPosition: positions[i] ?? "center center", filter: filters[i] ?? undefined }} loading="lazy" />
                 </div>
               ))}
             </div>
