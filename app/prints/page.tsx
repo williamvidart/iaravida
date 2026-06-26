@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import MobileNav from "../components/MobileNav";
 import Reveal from "../components/Reveal";
 import PrintCard from "./PrintCard";
+import LembreteCard from "./LembreteCard";
 
 export const metadata: Metadata = {
   title: "Prints | Iara Vida",
@@ -45,12 +46,7 @@ const colecoes = [
     slug: "lembrete",
     nome: "Lembrete",
     desc: "Palavras e imagens que lembram do que importa. Para ter sempre à vista.",
-    prints: [
-      { id: "l1", titulo: "Artista",  srcs: ["/prints/lembrete-2.png", "/prints/lembrete-artista-nao-desistiu.jpg"] },
-      { id: "l2", titulo: "Alma",     srcs: ["/prints/lembrete-alma.jpg", "/prints/lembrete-sente.jpg"] },
-      { id: "l3", titulo: "Paixão",   srcs: ["/prints/lembrete-paixao.jpg", "/prints/lembrete-deus.jpg"] },
-      { id: "l4", titulo: "Cerrado",  srcs: ["/prints/lembrete-cerrado.jpg", "/prints/lembrete-pequenas-acoes.jpg"] },
-    ],
+    prints: [],
   },
 ];
 
@@ -102,13 +98,19 @@ export default function PrintsPage() {
             </Reveal>
 
             {/* grade de prints */}
-            <div className={`grid gap-4 ${col.slug === "marrocco" ? "grid-cols-1 w-1/2 mx-auto" : "grid-cols-2"}`}>
-              {col.prints.map((p, i) => (
-                <Reveal key={p.id} dir="up" delay={i * 60}>
-                  <PrintCard titulo={p.titulo} srcs={p.srcs} positions={(p as any).positions} filters={(p as any).filters} dark={col.slug === "cerrado" || col.slug === "marrocco"} />
-                </Reveal>
-              ))}
-            </div>
+            {col.slug === "lembrete" ? (
+              <Reveal dir="up">
+                <LembreteCard />
+              </Reveal>
+            ) : (
+              <div className={`grid gap-4 ${col.slug === "marrocco" ? "grid-cols-1 w-1/2 mx-auto" : "grid-cols-2"}`}>
+                {col.prints.map((p, i) => (
+                  <Reveal key={p.id} dir="up" delay={i * 60}>
+                    <PrintCard titulo={p.titulo} srcs={p.srcs} positions={(p as any).positions} filters={(p as any).filters} dark={col.slug === "cerrado" || col.slug === "marrocco"} />
+                  </Reveal>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       ))}
