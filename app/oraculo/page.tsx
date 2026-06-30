@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Oráculo Alma Criativa — um baralho para reconectar com seu artista interior e criar a partir do que é verdadeiro. Por Iara Vida.",
 };
 
-const BUY_URL = "#"; // TODO: link do checkout/carrinho da Iara
+const BUY_URL = "https://criadoresmagneticos.lojavirtualnuvem.com.br/produtos/oraculo-uqziz/";
 
 export default function Oraculo() {
   return (
