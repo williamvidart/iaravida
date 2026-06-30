@@ -181,7 +181,13 @@ export default function VivenciasPage() {
         <div className="grid grid-cols-3" style={{ gap: "2px" }}>
           {momentos.map((src, i) => (
             <div key={i} className="overflow-hidden" style={{ height: "130px" }}>
-              <img src={src} alt="" className="h-full w-full object-cover" loading="lazy" />
+              <img
+                src={src}
+                alt=""
+                className="h-full w-full object-cover"
+                style={{ objectPosition: i === 1 ? "center 20%" : "center center" }}
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
