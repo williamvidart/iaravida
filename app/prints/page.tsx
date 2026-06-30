@@ -20,6 +20,9 @@ const colecoes = [
       { id: "c2", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png", "/prints/carcara-mockup.jpg"] },
       { id: "c3", titulo: "Arara",    srcs: ["/prints/img3328.png", "/prints/arara-mockup.jpg", "/prints/arara-mao.png"], positions: ["center center", "57% center", "center center"] },
       { id: "c4", titulo: "Cerrado",  srcs: ["/prints/lembrete-cerrado.jpg"] },
+      { id: "c5", titulo: "Em breve", srcs: [null] },
+      { id: "c6", titulo: "Em breve", srcs: [null] },
+      { id: "c7", titulo: "Em breve", srcs: [null] },
     ],
   },
   {
