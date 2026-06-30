@@ -6,7 +6,7 @@ type Tamanho = "A4" | "A3";
 
 const precos: Record<Tamanho, number> = { A4: 222, A3: 333 };
 
-const WA_NUMBER = "5511999999999";
+const WA_NUMBER = "5548988017788";
 
 function whatsappLink(titulo: string, tamanho: Tamanho) {
   const msg = encodeURIComponent(

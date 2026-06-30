@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const WA_NUMBER = "5511999999999";
+const WA_NUMBER = "5548988017788";
 
 const frases = [
   { id: "artista-escuro",  src: "/prints/lembrete-artista-nao-desistiu.jpg", nome: "Artista" },
