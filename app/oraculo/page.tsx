@@ -39,12 +39,8 @@ function Hero() {
 
       <a
         href={BUY_URL}
-        className="mt-5 inline-flex items-center gap-2 rounded-full bg-rosa px-7 py-3 text-sm tracking-wide text-creme transition-opacity hover:opacity-90"
+        className="mt-5 inline-flex items-center rounded-full bg-rosa px-7 py-3 text-sm tracking-wide text-creme transition-opacity hover:opacity-90"
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-          <path d="M6 7h12l-1 12H7L6 7Z" strokeLinejoin="round" />
-          <path d="M9 7a3 3 0 0 1 6 0" strokeLinecap="round" />
-        </svg>
         Adicionar ao carrinho
       </a>
     </section>
@@ -70,20 +66,26 @@ function Conteudo() {
       ))}
 
       {/* CTA sobreposto — "Garanta o seu" */}
-      <a
-        href={BUY_URL}
-        className="absolute left-1/2 top-[30.6%] -translate-x-1/2 whitespace-nowrap rounded-full bg-[#e6d2c3] px-9 py-3 text-sm tracking-[0.25em] text-[#c3995b] shadow-sm transition-opacity hover:opacity-90"
-      >
-        Garanta o seu
-      </a>
+      <div className="absolute left-1/2 top-[30.6%] -translate-x-1/2 flex flex-col items-center">
+        <a
+          href={BUY_URL}
+          className="whitespace-nowrap rounded-full bg-[#e6d2c3] px-9 py-3 text-sm tracking-[0.25em] text-[#c3995b] shadow-sm transition-opacity hover:opacity-90"
+        >
+          Garanta o seu
+        </a>
+        <div className="h-14 w-72 bg-gradient-to-b from-[#e6d2c3] to-transparent" />
+      </div>
 
       {/* CTA sobreposto — "Eu quero" */}
-      <a
-        href={BUY_URL}
-        className="absolute left-1/2 top-[73%] -translate-x-1/2 whitespace-nowrap rounded-full bg-[#e6d2c3] px-10 py-3 text-sm tracking-[0.25em] text-[#c3995b] shadow-sm transition-opacity hover:opacity-90"
-      >
-        Eu quero
-      </a>
+      <div className="absolute left-1/2 top-[73%] -translate-x-1/2 flex flex-col items-center">
+        <a
+          href={BUY_URL}
+          className="whitespace-nowrap rounded-full bg-[#e6d2c3] px-10 py-3 text-sm tracking-[0.25em] text-[#c3995b] shadow-sm transition-opacity hover:opacity-90"
+        >
+          Eu quero
+        </a>
+        <div className="h-14 w-72 bg-gradient-to-b from-[#e6d2c3] to-transparent" />
+      </div>
     </section>
   );
 }
