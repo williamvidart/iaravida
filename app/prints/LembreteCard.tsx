@@ -57,7 +57,7 @@ export default function LembreteCard() {
           </span>
         </div>
         <div className="mt-2.5 flex flex-col gap-1">
-          <span className="text-base font-semibold text-siena">R$ 111</span>
+          <span className="text-base font-semibold text-siena">R$ 199</span>
           <span className="text-[10px] text-terra/40 uppercase tracking-[0.1em]">frete incluso</span>
           <a
             href={link}
