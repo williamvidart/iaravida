@@ -73,7 +73,7 @@ function Conteudo() {
         >
           Garanta o seu
         </a>
-        <div className="h-14 w-72 bg-gradient-to-b from-[#e6d2c3] to-transparent" />
+        <div className="h-12 w-64" style={{ background: "linear-gradient(to bottom, #fcfdf8 60%, transparent)" }} />
       </div>
 
       {/* CTA sobreposto — "Eu quero" */}
@@ -84,7 +84,7 @@ function Conteudo() {
         >
           Eu quero
         </a>
-        <div className="h-14 w-72 bg-gradient-to-b from-[#e6d2c3] to-transparent" />
+        <div className="h-12 w-64" style={{ background: "linear-gradient(to bottom, #fffcf7 60%, transparent)" }} />
       </div>
     </section>
   );
