@@ -38,7 +38,7 @@ export default function FormularioEspera() {
     setEnviando(true);
 
     try {
-      const res = await fetch("https://formspree.io/iaravidart@gmail.com", {
+      const res = await fetch("https://formspree.io/f/xlgywoyw", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(valores),
