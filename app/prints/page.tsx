@@ -20,9 +20,6 @@ const colecoes = [
       { id: "c2", titulo: "Carcará",  srcs: ["/prints/ilustracao-a.png", "/prints/carcara-mockup.jpg"] },
       { id: "c3", titulo: "Arara",    srcs: ["/prints/img3328.png", "/prints/arara-mockup.jpg", "/prints/arara-mao.png"], positions: ["center center", "57% center", "center center"] },
       { id: "c4", titulo: "Cerrado",  srcs: ["/prints/lembrete-cerrado.jpg"] },
-      { id: "c5", titulo: "Em breve", srcs: [null] },
-      { id: "c6", titulo: "Em breve", srcs: [null] },
-      { id: "c7", titulo: "Em breve", srcs: [null] },
     ],
   },
   {
@@ -73,8 +70,8 @@ export default function PrintsPage() {
 
       {/* ── COLEÇÕES ────────────────────────────────────────── */}
       {colecoes.map((col, ci) => (
+        <div key={col.slug}>
         <section
-          key={col.slug}
           id={col.slug}
           className={`${col.slug === "cerrado" || col.slug === "marrocco" ? "relative" : bgColecao[ci]} px-4 pt-14 pb-16`}
           style={col.slug === "cerrado" ? {
@@ -116,6 +113,22 @@ export default function PrintsPage() {
             )}
           </div>
         </section>
+
+        {/* overflow prints fora do bg image (ex: Em breve do Cerrado) */}
+        {(col as any).overflowPrints && (
+          <section className="bg-creme px-4 pb-10">
+            <div className="max-w-md mx-auto">
+              <div className="grid grid-cols-2 gap-4">
+                {(col as any).overflowPrints.map((p: any, i: number) => (
+                  <Reveal key={p.id} dir="up" delay={i * 60}>
+                    <PrintCard titulo={p.titulo} srcs={p.srcs} />
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        </div>
       ))}
 
       {/* ── SOBRE OS PRINTS ─────────────────────────────────── */}
@@ -186,21 +199,21 @@ export default function PrintsPage() {
         </div>
       </section>
 
-      {/* ── CTA FINAL ───────────────────────────────────────── */}
-      <section className="bg-creme px-6 py-16 text-center">
-        <div className="mx-auto max-w-xs">
+      {/* ── ARTE PERSONALIZADA ──────────────────────────────── */}
+      <section className="bg-peach px-6 py-16 text-center">
+        <div className="mx-auto max-w-sm">
           <Reveal dir="up">
-            <p className="font-grandenhas text-4xl text-siena mb-3">Duvidas?</p>
-            <p className="text-sm leading-relaxed text-terra/65 mb-8">
-              Me chame no Instagram — respondo com carinho.
+            <p className="text-xs uppercase tracking-[0.3em] text-terra/50 mb-6">Arte sob medida</p>
+            <p className="font-grandenhas text-4xl text-terra leading-tight mb-4">
+              Ficou interessad@ em alguma outra arte que não está aqui?
             </p>
             <a
               href="https://instagram.com/iaravidart"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-2xl bg-siena px-8 py-4 text-xs uppercase tracking-[0.3em] text-creme transition-opacity hover:opacity-80"
+              className="inline-block rounded-2xl bg-terra px-8 py-4 text-xs uppercase tracking-[0.3em] text-creme transition-opacity hover:opacity-80"
             >
-              Falar com a Iara
+              Entre em contato comigo
             </a>
           </Reveal>
         </div>

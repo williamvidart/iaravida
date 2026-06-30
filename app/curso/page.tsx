@@ -425,7 +425,7 @@ export default function CursoPage() {
 
           <Reveal dir="up" delay={300}>
             <a
-              href="https://hotmart.com/product/aquarela-da-terra"
+              href="https://pay.hotmart.com/Q105586859B"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
