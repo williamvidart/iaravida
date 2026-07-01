@@ -399,43 +399,50 @@ export default function CursoPage() {
       {/* ─── CTA FINAL ────────────────────────────────────────────── */}
       <section id="inscricao" className="bg-peach px-6 pt-12 pb-24 text-center">
         <div className="mx-auto max-w-sm">
+          {/* badge lançamento */}
           <Reveal dir="up">
+            <div className="inline-flex items-center gap-2 rounded-full border border-siena/30 px-4 py-1.5 mb-6">
+              <span className="h-1.5 w-1.5 rounded-full bg-siena animate-pulse" />
+              <span className="text-xs uppercase tracking-[0.25em] text-siena">Lançamento 12 de julho</span>
+            </div>
+          </Reveal>
+
+          <Reveal dir="up" delay={60}>
             <p className="font-grandenhas text-6xl text-siena leading-none">
               pront@?
             </p>
           </Reveal>
-          <Reveal dir="up" delay={100}>
+          <Reveal dir="up" delay={120}>
             <h2 className="mt-3 text-3xl font-bold text-terra leading-tight">
-              Comece a criar<br />com a terra
+              Entre para a lista<br />de espera
             </h2>
           </Reveal>
           <Reveal dir="up" delay={180}>
             <p className="mt-5 text-[15px] leading-relaxed text-terra/70">
-              O solo que você pisa já guarda a sua paleta. Você só precisa aprender a ouvi-lo.
+              O curso abre no dia 12 de julho. Quem está na lista recebe o aviso primeiro — e garante o valor de lançamento.
             </p>
           </Reveal>
           <Reveal dir="up" delay={220}>
             <div className="mt-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-terra/45 mb-1">investimento</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-terra/45 mb-1">valor de lançamento</p>
               <p className="font-grandenhas text-5xl text-terra leading-none">R$ 333</p>
               <p className="mt-1 text-sm text-terra/55">ou 12x de R$ 34</p>
-              <p className="mt-3 text-xs text-rosa italic">Valor disponível apenas neste mês de lançamento</p>
             </div>
           </Reveal>
 
           <Reveal dir="up" delay={300}>
             <a
-              href="https://pay.hotmart.com/Q105586859B"
+              href="https://wa.me/5548988017788?text=LISTA%20DE%20ESPERA"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex h-13 items-center justify-center rounded-full bg-rosa px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-siena"
+              className="mt-10 inline-flex h-13 items-center justify-center rounded-full bg-siena px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-rosa"
             >
-              Quero me inscrever
+              Quero entrar para a lista
             </a>
           </Reveal>
           <Reveal dir="fade" delay={340}>
             <p className="mt-6 text-xs text-terra/40">
-              Acesso imediato pela Hotmart
+              Você será avisad@ assim que as inscrições abrirem
             </p>
           </Reveal>
         </div>
