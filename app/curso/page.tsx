@@ -433,7 +433,7 @@ export default function CursoPage() {
 
           <Reveal dir="up" delay={300}>
             <a
-              href="https://wa.me/5548988017788?text=LISTA%20DE%20ESPERA"
+              href="https://wa.me/5548988017788?text=Lista%20de%20espera%20✨"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex h-13 items-center justify-center rounded-full bg-siena px-10 text-sm font-medium uppercase tracking-wide text-creme transition-colors hover:bg-rosa"
