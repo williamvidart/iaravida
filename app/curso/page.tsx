@@ -425,6 +425,7 @@ export default function CursoPage() {
           <Reveal dir="up" delay={220}>
             <div className="mt-8">
               <p className="text-xs uppercase tracking-[0.25em] text-terra/45 mb-1">valor de lançamento</p>
+              <p className="text-sm text-terra/40 line-through mb-1">R$ 457</p>
               <p className="font-grandenhas text-5xl text-terra leading-none">R$ 333</p>
               <p className="mt-1 text-sm text-terra/55">ou 12x de R$ 34</p>
             </div>
